@@ -19,7 +19,7 @@
 // "https://pyphs.github.io/pyphs/".
 // 
 // Created on:
-//     2020/05/11 15:37:50
+//     2020/05/12 11:47:11
 // 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -79,71 +79,95 @@
     //==========================================================================
     // Acessors to Arguments, return vector<double>
     const vector<double> & VOCAL_TRACT::x_vector() const {    
-        static vector<double> v = vector<double>(21);    
+        static vector<double> v = vector<double>(31);    
         v[0] = *nu_L1;    
         v[1] = *nu_12;    
         v[2] = *nu_23;    
         v[3] = *nu_34;    
-        v[4] = *nu_R4;    
-        v[5] = *Pi_y1;    
-        v[6] = *Pi_y2;    
-        v[7] = *Pi_y3;    
-        v[8] = *Pi_y4;    
-        v[9] = *V_1;    
-        v[10] = *V_2;    
-        v[11] = *V_3;    
-        v[12] = *V_4;    
-        v[13] = *rho_1;    
-        v[14] = *rho_2;    
-        v[15] = *rho_3;    
-        v[16] = *rho_4;    
-        v[17] = *x_k1;    
-        v[18] = *x_k2;    
-        v[19] = *x_k3;    
-        v[20] = *x_k4;    
+        v[4] = *nu_45;    
+        v[5] = *nu_56;    
+        v[6] = *nu_R6;    
+        v[7] = *Pi_y1;    
+        v[8] = *Pi_y2;    
+        v[9] = *Pi_y3;    
+        v[10] = *Pi_y4;    
+        v[11] = *Pi_y5;    
+        v[12] = *Pi_y6;    
+        v[13] = *V_1;    
+        v[14] = *V_2;    
+        v[15] = *V_3;    
+        v[16] = *V_4;    
+        v[17] = *V_5;    
+        v[18] = *V_6;    
+        v[19] = *rho_1;    
+        v[20] = *rho_2;    
+        v[21] = *rho_3;    
+        v[22] = *rho_4;    
+        v[23] = *rho_5;    
+        v[24] = *rho_6;    
+        v[25] = *x_k1;    
+        v[26] = *x_k2;    
+        v[27] = *x_k3;    
+        v[28] = *x_k4;    
+        v[29] = *x_k5;    
+        v[30] = *x_k6;    
         return v;
     }
     const vector<double> & VOCAL_TRACT::dx_vector() const {    
-        static vector<double> v = vector<double>(21);    
+        static vector<double> v = vector<double>(31);    
         v[0] = *dnu_L1;    
         v[1] = *dnu_12;    
         v[2] = *dnu_23;    
         v[3] = *dnu_34;    
-        v[4] = *dnu_R4;    
-        v[5] = *dPi_y1;    
-        v[6] = *dPi_y2;    
-        v[7] = *dPi_y3;    
-        v[8] = *dPi_y4;    
-        v[9] = *dV_1;    
-        v[10] = *dV_2;    
-        v[11] = *dV_3;    
-        v[12] = *dV_4;    
-        v[13] = *drho_1;    
-        v[14] = *drho_2;    
-        v[15] = *drho_3;    
-        v[16] = *drho_4;    
-        v[17] = *dx_k1;    
-        v[18] = *dx_k2;    
-        v[19] = *dx_k3;    
-        v[20] = *dx_k4;    
+        v[4] = *dnu_45;    
+        v[5] = *dnu_56;    
+        v[6] = *dnu_R6;    
+        v[7] = *dPi_y1;    
+        v[8] = *dPi_y2;    
+        v[9] = *dPi_y3;    
+        v[10] = *dPi_y4;    
+        v[11] = *dPi_y5;    
+        v[12] = *dPi_y6;    
+        v[13] = *dV_1;    
+        v[14] = *dV_2;    
+        v[15] = *dV_3;    
+        v[16] = *dV_4;    
+        v[17] = *dV_5;    
+        v[18] = *dV_6;    
+        v[19] = *drho_1;    
+        v[20] = *drho_2;    
+        v[21] = *drho_3;    
+        v[22] = *drho_4;    
+        v[23] = *drho_5;    
+        v[24] = *drho_6;    
+        v[25] = *dx_k1;    
+        v[26] = *dx_k2;    
+        v[27] = *dx_k3;    
+        v[28] = *dx_k4;    
+        v[29] = *dx_k5;    
+        v[30] = *dx_k6;    
         return v;
     }
     const vector<double> & VOCAL_TRACT::w_vector() const {    
-        static vector<double> v = vector<double>(5);    
+        static vector<double> v = vector<double>(7);    
         v[0] = *v_k1;    
         v[1] = *v_k2;    
         v[2] = *v_k3;    
         v[3] = *v_k4;    
-        v[4] = *q;    
+        v[4] = *v_k5;    
+        v[5] = *v_k6;    
+        v[6] = *q;    
         return v;
     }
     const vector<double> & VOCAL_TRACT::u_vector() const {    
-        static vector<double> v = vector<double>(5);    
+        static vector<double> v = vector<double>(7);    
         v[0] = *Psi_L;    
         v[1] = *v_m1;    
         v[2] = *v_m2;    
         v[3] = *v_m3;    
         v[4] = *v_m4;    
+        v[5] = *v_m5;    
+        v[6] = *v_m6;    
         return v;
     }
     const vector<double> & VOCAL_TRACT::p_vector() const {    
@@ -151,177 +175,245 @@
         return v;
     }
     const vector<double> & VOCAL_TRACT::vnl_vector() const {    
-        static vector<double> v = vector<double>(26);    
+        static vector<double> v = vector<double>(38);    
         v[0] = *dnu_L1;    
         v[1] = *dnu_12;    
         v[2] = *dnu_23;    
         v[3] = *dnu_34;    
-        v[4] = *dnu_R4;    
-        v[5] = *dPi_y1;    
-        v[6] = *dPi_y2;    
-        v[7] = *dPi_y3;    
-        v[8] = *dPi_y4;    
-        v[9] = *dV_1;    
-        v[10] = *dV_2;    
-        v[11] = *dV_3;    
-        v[12] = *dV_4;    
-        v[13] = *drho_1;    
-        v[14] = *drho_2;    
-        v[15] = *drho_3;    
-        v[16] = *drho_4;    
-        v[17] = *dx_k1;    
-        v[18] = *dx_k2;    
-        v[19] = *dx_k3;    
-        v[20] = *dx_k4;    
-        v[21] = *v_k1;    
-        v[22] = *v_k2;    
-        v[23] = *v_k3;    
-        v[24] = *v_k4;    
-        v[25] = *q;    
+        v[4] = *dnu_45;    
+        v[5] = *dnu_56;    
+        v[6] = *dnu_R6;    
+        v[7] = *dPi_y1;    
+        v[8] = *dPi_y2;    
+        v[9] = *dPi_y3;    
+        v[10] = *dPi_y4;    
+        v[11] = *dPi_y5;    
+        v[12] = *dPi_y6;    
+        v[13] = *dV_1;    
+        v[14] = *dV_2;    
+        v[15] = *dV_3;    
+        v[16] = *dV_4;    
+        v[17] = *dV_5;    
+        v[18] = *dV_6;    
+        v[19] = *drho_1;    
+        v[20] = *drho_2;    
+        v[21] = *drho_3;    
+        v[22] = *drho_4;    
+        v[23] = *drho_5;    
+        v[24] = *drho_6;    
+        v[25] = *dx_k1;    
+        v[26] = *dx_k2;    
+        v[27] = *dx_k3;    
+        v[28] = *dx_k4;    
+        v[29] = *dx_k5;    
+        v[30] = *dx_k6;    
+        v[31] = *v_k1;    
+        v[32] = *v_k2;    
+        v[33] = *v_k3;    
+        v[34] = *v_k4;    
+        v[35] = *v_k5;    
+        v[36] = *v_k6;    
+        v[37] = *q;    
         return v;
     }
     const vector<double> & VOCAL_TRACT::o_vector() const {    
-        static vector<double> v = vector<double>(16);    
+        static vector<double> v = vector<double>(26);    
         v[0] = *mu_1;    
         v[1] = *mu_2;    
         v[2] = *mu_3;    
         v[3] = *mu_4;    
-        v[4] = *(mu_1_add_mu_2);    
-        v[5] = *(mu_2_add_mu_3);    
-        v[6] = *(mu_3_add_mu_4);    
-        v[7] = *(mu_1minus_mu_2);    
-        v[8] = *(mu_2minus_mu_3);    
-        v[9] = *(mu_3minus_mu_4);    
-        v[10] = *RHS_1;    
-        v[11] = *RHS_2;    
-        v[12] = *RHS_3;    
-        v[13] = *Delta_12;    
-        v[14] = *Delta_23;    
-        v[15] = *Delta_34;    
+        v[4] = *mu_5;    
+        v[5] = *mu_6;    
+        v[6] = *(mu_1_add_mu_2);    
+        v[7] = *(mu_2_add_mu_3);    
+        v[8] = *(mu_3_add_mu_4);    
+        v[9] = *(mu_4_add_mu_5);    
+        v[10] = *(mu_5_add_mu_6);    
+        v[11] = *(mu_1minus_mu_2);    
+        v[12] = *(mu_2minus_mu_3);    
+        v[13] = *(mu_3minus_mu_4);    
+        v[14] = *(mu_4minus_mu_5);    
+        v[15] = *(mu_5minus_mu_6);    
+        v[16] = *RHS_1;    
+        v[17] = *RHS_2;    
+        v[18] = *RHS_3;    
+        v[19] = *RHS_4;    
+        v[20] = *RHS_5;    
+        v[21] = *Delta_12;    
+        v[22] = *Delta_23;    
+        v[23] = *Delta_34;    
+        v[24] = *Delta_45;    
+        v[25] = *Delta_56;    
         return v;
     }
     //==========================================================================
     // Acessors to Arguments, return Matrix<double, n, m>
-    const Matrix<double,21, 1> & VOCAL_TRACT::x() const {    
-        static Matrix<double,21, 1> m;    
+    const Matrix<double,31, 1> & VOCAL_TRACT::x() const {    
+        static Matrix<double,31, 1> m;    
         m(0, 0) = *nu_L1;    
         m(1, 0) = *nu_12;    
         m(2, 0) = *nu_23;    
         m(3, 0) = *nu_34;    
-        m(4, 0) = *nu_R4;    
-        m(5, 0) = *Pi_y1;    
-        m(6, 0) = *Pi_y2;    
-        m(7, 0) = *Pi_y3;    
-        m(8, 0) = *Pi_y4;    
-        m(9, 0) = *V_1;    
-        m(10, 0) = *V_2;    
-        m(11, 0) = *V_3;    
-        m(12, 0) = *V_4;    
-        m(13, 0) = *rho_1;    
-        m(14, 0) = *rho_2;    
-        m(15, 0) = *rho_3;    
-        m(16, 0) = *rho_4;    
-        m(17, 0) = *x_k1;    
-        m(18, 0) = *x_k2;    
-        m(19, 0) = *x_k3;    
-        m(20, 0) = *x_k4;    
+        m(4, 0) = *nu_45;    
+        m(5, 0) = *nu_56;    
+        m(6, 0) = *nu_R6;    
+        m(7, 0) = *Pi_y1;    
+        m(8, 0) = *Pi_y2;    
+        m(9, 0) = *Pi_y3;    
+        m(10, 0) = *Pi_y4;    
+        m(11, 0) = *Pi_y5;    
+        m(12, 0) = *Pi_y6;    
+        m(13, 0) = *V_1;    
+        m(14, 0) = *V_2;    
+        m(15, 0) = *V_3;    
+        m(16, 0) = *V_4;    
+        m(17, 0) = *V_5;    
+        m(18, 0) = *V_6;    
+        m(19, 0) = *rho_1;    
+        m(20, 0) = *rho_2;    
+        m(21, 0) = *rho_3;    
+        m(22, 0) = *rho_4;    
+        m(23, 0) = *rho_5;    
+        m(24, 0) = *rho_6;    
+        m(25, 0) = *x_k1;    
+        m(26, 0) = *x_k2;    
+        m(27, 0) = *x_k3;    
+        m(28, 0) = *x_k4;    
+        m(29, 0) = *x_k5;    
+        m(30, 0) = *x_k6;    
         return m;
     }
-    const Matrix<double,21, 1> & VOCAL_TRACT::dx() const {    
-        static Matrix<double,21, 1> m;    
+    const Matrix<double,31, 1> & VOCAL_TRACT::dx() const {    
+        static Matrix<double,31, 1> m;    
         m(0, 0) = *dnu_L1;    
         m(1, 0) = *dnu_12;    
         m(2, 0) = *dnu_23;    
         m(3, 0) = *dnu_34;    
-        m(4, 0) = *dnu_R4;    
-        m(5, 0) = *dPi_y1;    
-        m(6, 0) = *dPi_y2;    
-        m(7, 0) = *dPi_y3;    
-        m(8, 0) = *dPi_y4;    
-        m(9, 0) = *dV_1;    
-        m(10, 0) = *dV_2;    
-        m(11, 0) = *dV_3;    
-        m(12, 0) = *dV_4;    
-        m(13, 0) = *drho_1;    
-        m(14, 0) = *drho_2;    
-        m(15, 0) = *drho_3;    
-        m(16, 0) = *drho_4;    
-        m(17, 0) = *dx_k1;    
-        m(18, 0) = *dx_k2;    
-        m(19, 0) = *dx_k3;    
-        m(20, 0) = *dx_k4;    
+        m(4, 0) = *dnu_45;    
+        m(5, 0) = *dnu_56;    
+        m(6, 0) = *dnu_R6;    
+        m(7, 0) = *dPi_y1;    
+        m(8, 0) = *dPi_y2;    
+        m(9, 0) = *dPi_y3;    
+        m(10, 0) = *dPi_y4;    
+        m(11, 0) = *dPi_y5;    
+        m(12, 0) = *dPi_y6;    
+        m(13, 0) = *dV_1;    
+        m(14, 0) = *dV_2;    
+        m(15, 0) = *dV_3;    
+        m(16, 0) = *dV_4;    
+        m(17, 0) = *dV_5;    
+        m(18, 0) = *dV_6;    
+        m(19, 0) = *drho_1;    
+        m(20, 0) = *drho_2;    
+        m(21, 0) = *drho_3;    
+        m(22, 0) = *drho_4;    
+        m(23, 0) = *drho_5;    
+        m(24, 0) = *drho_6;    
+        m(25, 0) = *dx_k1;    
+        m(26, 0) = *dx_k2;    
+        m(27, 0) = *dx_k3;    
+        m(28, 0) = *dx_k4;    
+        m(29, 0) = *dx_k5;    
+        m(30, 0) = *dx_k6;    
         return m;
     }
-    const Matrix<double,5, 1> & VOCAL_TRACT::w() const {    
-        static Matrix<double,5, 1> m;    
+    const Matrix<double,7, 1> & VOCAL_TRACT::w() const {    
+        static Matrix<double,7, 1> m;    
         m(0, 0) = *v_k1;    
         m(1, 0) = *v_k2;    
         m(2, 0) = *v_k3;    
         m(3, 0) = *v_k4;    
-        m(4, 0) = *q;    
+        m(4, 0) = *v_k5;    
+        m(5, 0) = *v_k6;    
+        m(6, 0) = *q;    
         return m;
     }
-    const Matrix<double,5, 1> & VOCAL_TRACT::u() const {    
-        static Matrix<double,5, 1> m;    
+    const Matrix<double,7, 1> & VOCAL_TRACT::u() const {    
+        static Matrix<double,7, 1> m;    
         m(0, 0) = *Psi_L;    
         m(1, 0) = *v_m1;    
         m(2, 0) = *v_m2;    
         m(3, 0) = *v_m3;    
         m(4, 0) = *v_m4;    
+        m(5, 0) = *v_m5;    
+        m(6, 0) = *v_m6;    
         return m;
     }
     const Matrix<double,0, 0> & VOCAL_TRACT::p() const {    
         static Matrix<double,0, 0> m;    
         return m;
     }
-    const Matrix<double,26, 1> & VOCAL_TRACT::vnl() const {    
-        static Matrix<double,26, 1> m;    
+    const Matrix<double,38, 1> & VOCAL_TRACT::vnl() const {    
+        static Matrix<double,38, 1> m;    
         m(0, 0) = *dnu_L1;    
         m(1, 0) = *dnu_12;    
         m(2, 0) = *dnu_23;    
         m(3, 0) = *dnu_34;    
-        m(4, 0) = *dnu_R4;    
-        m(5, 0) = *dPi_y1;    
-        m(6, 0) = *dPi_y2;    
-        m(7, 0) = *dPi_y3;    
-        m(8, 0) = *dPi_y4;    
-        m(9, 0) = *dV_1;    
-        m(10, 0) = *dV_2;    
-        m(11, 0) = *dV_3;    
-        m(12, 0) = *dV_4;    
-        m(13, 0) = *drho_1;    
-        m(14, 0) = *drho_2;    
-        m(15, 0) = *drho_3;    
-        m(16, 0) = *drho_4;    
-        m(17, 0) = *dx_k1;    
-        m(18, 0) = *dx_k2;    
-        m(19, 0) = *dx_k3;    
-        m(20, 0) = *dx_k4;    
-        m(21, 0) = *v_k1;    
-        m(22, 0) = *v_k2;    
-        m(23, 0) = *v_k3;    
-        m(24, 0) = *v_k4;    
-        m(25, 0) = *q;    
+        m(4, 0) = *dnu_45;    
+        m(5, 0) = *dnu_56;    
+        m(6, 0) = *dnu_R6;    
+        m(7, 0) = *dPi_y1;    
+        m(8, 0) = *dPi_y2;    
+        m(9, 0) = *dPi_y3;    
+        m(10, 0) = *dPi_y4;    
+        m(11, 0) = *dPi_y5;    
+        m(12, 0) = *dPi_y6;    
+        m(13, 0) = *dV_1;    
+        m(14, 0) = *dV_2;    
+        m(15, 0) = *dV_3;    
+        m(16, 0) = *dV_4;    
+        m(17, 0) = *dV_5;    
+        m(18, 0) = *dV_6;    
+        m(19, 0) = *drho_1;    
+        m(20, 0) = *drho_2;    
+        m(21, 0) = *drho_3;    
+        m(22, 0) = *drho_4;    
+        m(23, 0) = *drho_5;    
+        m(24, 0) = *drho_6;    
+        m(25, 0) = *dx_k1;    
+        m(26, 0) = *dx_k2;    
+        m(27, 0) = *dx_k3;    
+        m(28, 0) = *dx_k4;    
+        m(29, 0) = *dx_k5;    
+        m(30, 0) = *dx_k6;    
+        m(31, 0) = *v_k1;    
+        m(32, 0) = *v_k2;    
+        m(33, 0) = *v_k3;    
+        m(34, 0) = *v_k4;    
+        m(35, 0) = *v_k5;    
+        m(36, 0) = *v_k6;    
+        m(37, 0) = *q;    
         return m;
     }
-    const Matrix<double,16, 1> & VOCAL_TRACT::o() const {    
-        static Matrix<double,16, 1> m;    
+    const Matrix<double,26, 1> & VOCAL_TRACT::o() const {    
+        static Matrix<double,26, 1> m;    
         m(0, 0) = *mu_1;    
         m(1, 0) = *mu_2;    
         m(2, 0) = *mu_3;    
         m(3, 0) = *mu_4;    
-        m(4, 0) = *(mu_1_add_mu_2);    
-        m(5, 0) = *(mu_2_add_mu_3);    
-        m(6, 0) = *(mu_3_add_mu_4);    
-        m(7, 0) = *(mu_1minus_mu_2);    
-        m(8, 0) = *(mu_2minus_mu_3);    
-        m(9, 0) = *(mu_3minus_mu_4);    
-        m(10, 0) = *RHS_1;    
-        m(11, 0) = *RHS_2;    
-        m(12, 0) = *RHS_3;    
-        m(13, 0) = *Delta_12;    
-        m(14, 0) = *Delta_23;    
-        m(15, 0) = *Delta_34;    
+        m(4, 0) = *mu_5;    
+        m(5, 0) = *mu_6;    
+        m(6, 0) = *(mu_1_add_mu_2);    
+        m(7, 0) = *(mu_2_add_mu_3);    
+        m(8, 0) = *(mu_3_add_mu_4);    
+        m(9, 0) = *(mu_4_add_mu_5);    
+        m(10, 0) = *(mu_5_add_mu_6);    
+        m(11, 0) = *(mu_1minus_mu_2);    
+        m(12, 0) = *(mu_2minus_mu_3);    
+        m(13, 0) = *(mu_3minus_mu_4);    
+        m(14, 0) = *(mu_4minus_mu_5);    
+        m(15, 0) = *(mu_5minus_mu_6);    
+        m(16, 0) = *RHS_1;    
+        m(17, 0) = *RHS_2;    
+        m(18, 0) = *RHS_3;    
+        m(19, 0) = *RHS_4;    
+        m(20, 0) = *RHS_5;    
+        m(21, 0) = *Delta_12;    
+        m(22, 0) = *Delta_23;    
+        m(23, 0) = *Delta_34;    
+        m(24, 0) = *Delta_45;    
+        m(25, 0) = *Delta_56;    
         return m;
     }
     //==========================================================================
@@ -331,53 +423,75 @@
         *nu_12 = v[1];
         *nu_23 = v[2];
         *nu_34 = v[3];
-        *nu_R4 = v[4];
-        *Pi_y1 = v[5];
-        *Pi_y2 = v[6];
-        *Pi_y3 = v[7];
-        *Pi_y4 = v[8];
-        *V_1 = v[9];
-        *V_2 = v[10];
-        *V_3 = v[11];
-        *V_4 = v[12];
-        *rho_1 = v[13];
-        *rho_2 = v[14];
-        *rho_3 = v[15];
-        *rho_4 = v[16];
-        *x_k1 = v[17];
-        *x_k2 = v[18];
-        *x_k3 = v[19];
-        *x_k4 = v[20];
+        *nu_45 = v[4];
+        *nu_56 = v[5];
+        *nu_R6 = v[6];
+        *Pi_y1 = v[7];
+        *Pi_y2 = v[8];
+        *Pi_y3 = v[9];
+        *Pi_y4 = v[10];
+        *Pi_y5 = v[11];
+        *Pi_y6 = v[12];
+        *V_1 = v[13];
+        *V_2 = v[14];
+        *V_3 = v[15];
+        *V_4 = v[16];
+        *V_5 = v[17];
+        *V_6 = v[18];
+        *rho_1 = v[19];
+        *rho_2 = v[20];
+        *rho_3 = v[21];
+        *rho_4 = v[22];
+        *rho_5 = v[23];
+        *rho_6 = v[24];
+        *x_k1 = v[25];
+        *x_k2 = v[26];
+        *x_k3 = v[27];
+        *x_k4 = v[28];
+        *x_k5 = v[29];
+        *x_k6 = v[30];
     }
     void VOCAL_TRACT::set_dx(const vector<double> & v) {
         *dnu_L1 = v[0];
         *dnu_12 = v[1];
         *dnu_23 = v[2];
         *dnu_34 = v[3];
-        *dnu_R4 = v[4];
-        *dPi_y1 = v[5];
-        *dPi_y2 = v[6];
-        *dPi_y3 = v[7];
-        *dPi_y4 = v[8];
-        *dV_1 = v[9];
-        *dV_2 = v[10];
-        *dV_3 = v[11];
-        *dV_4 = v[12];
-        *drho_1 = v[13];
-        *drho_2 = v[14];
-        *drho_3 = v[15];
-        *drho_4 = v[16];
-        *dx_k1 = v[17];
-        *dx_k2 = v[18];
-        *dx_k3 = v[19];
-        *dx_k4 = v[20];
+        *dnu_45 = v[4];
+        *dnu_56 = v[5];
+        *dnu_R6 = v[6];
+        *dPi_y1 = v[7];
+        *dPi_y2 = v[8];
+        *dPi_y3 = v[9];
+        *dPi_y4 = v[10];
+        *dPi_y5 = v[11];
+        *dPi_y6 = v[12];
+        *dV_1 = v[13];
+        *dV_2 = v[14];
+        *dV_3 = v[15];
+        *dV_4 = v[16];
+        *dV_5 = v[17];
+        *dV_6 = v[18];
+        *drho_1 = v[19];
+        *drho_2 = v[20];
+        *drho_3 = v[21];
+        *drho_4 = v[22];
+        *drho_5 = v[23];
+        *drho_6 = v[24];
+        *dx_k1 = v[25];
+        *dx_k2 = v[26];
+        *dx_k3 = v[27];
+        *dx_k4 = v[28];
+        *dx_k5 = v[29];
+        *dx_k6 = v[30];
     }
     void VOCAL_TRACT::set_w(const vector<double> & v) {
         *v_k1 = v[0];
         *v_k2 = v[1];
         *v_k3 = v[2];
         *v_k4 = v[3];
-        *q = v[4];
+        *v_k5 = v[4];
+        *v_k6 = v[5];
+        *q = v[6];
     }
     void VOCAL_TRACT::set_u(const vector<double> & v) {
         *Psi_L = v[0];
@@ -385,6 +499,8 @@
         *v_m2 = v[2];
         *v_m3 = v[3];
         *v_m4 = v[4];
+        *v_m5 = v[5];
+        *v_m6 = v[6];
     }
     void VOCAL_TRACT::set_p(const vector<double> & v) {
     }
@@ -393,156 +509,224 @@
         *dnu_12 = v[1];
         *dnu_23 = v[2];
         *dnu_34 = v[3];
-        *dnu_R4 = v[4];
-        *dPi_y1 = v[5];
-        *dPi_y2 = v[6];
-        *dPi_y3 = v[7];
-        *dPi_y4 = v[8];
-        *dV_1 = v[9];
-        *dV_2 = v[10];
-        *dV_3 = v[11];
-        *dV_4 = v[12];
-        *drho_1 = v[13];
-        *drho_2 = v[14];
-        *drho_3 = v[15];
-        *drho_4 = v[16];
-        *dx_k1 = v[17];
-        *dx_k2 = v[18];
-        *dx_k3 = v[19];
-        *dx_k4 = v[20];
-        *v_k1 = v[21];
-        *v_k2 = v[22];
-        *v_k3 = v[23];
-        *v_k4 = v[24];
-        *q = v[25];
+        *dnu_45 = v[4];
+        *dnu_56 = v[5];
+        *dnu_R6 = v[6];
+        *dPi_y1 = v[7];
+        *dPi_y2 = v[8];
+        *dPi_y3 = v[9];
+        *dPi_y4 = v[10];
+        *dPi_y5 = v[11];
+        *dPi_y6 = v[12];
+        *dV_1 = v[13];
+        *dV_2 = v[14];
+        *dV_3 = v[15];
+        *dV_4 = v[16];
+        *dV_5 = v[17];
+        *dV_6 = v[18];
+        *drho_1 = v[19];
+        *drho_2 = v[20];
+        *drho_3 = v[21];
+        *drho_4 = v[22];
+        *drho_5 = v[23];
+        *drho_6 = v[24];
+        *dx_k1 = v[25];
+        *dx_k2 = v[26];
+        *dx_k3 = v[27];
+        *dx_k4 = v[28];
+        *dx_k5 = v[29];
+        *dx_k6 = v[30];
+        *v_k1 = v[31];
+        *v_k2 = v[32];
+        *v_k3 = v[33];
+        *v_k4 = v[34];
+        *v_k5 = v[35];
+        *v_k6 = v[36];
+        *q = v[37];
     }
     void VOCAL_TRACT::set_o(const vector<double> & v) {
         *mu_1 = v[0];
         *mu_2 = v[1];
         *mu_3 = v[2];
         *mu_4 = v[3];
-        *(mu_1_add_mu_2) = v[4];
-        *(mu_2_add_mu_3) = v[5];
-        *(mu_3_add_mu_4) = v[6];
-        *(mu_1minus_mu_2) = v[7];
-        *(mu_2minus_mu_3) = v[8];
-        *(mu_3minus_mu_4) = v[9];
-        *RHS_1 = v[10];
-        *RHS_2 = v[11];
-        *RHS_3 = v[12];
-        *Delta_12 = v[13];
-        *Delta_23 = v[14];
-        *Delta_34 = v[15];
+        *mu_5 = v[4];
+        *mu_6 = v[5];
+        *(mu_1_add_mu_2) = v[6];
+        *(mu_2_add_mu_3) = v[7];
+        *(mu_3_add_mu_4) = v[8];
+        *(mu_4_add_mu_5) = v[9];
+        *(mu_5_add_mu_6) = v[10];
+        *(mu_1minus_mu_2) = v[11];
+        *(mu_2minus_mu_3) = v[12];
+        *(mu_3minus_mu_4) = v[13];
+        *(mu_4minus_mu_5) = v[14];
+        *(mu_5minus_mu_6) = v[15];
+        *RHS_1 = v[16];
+        *RHS_2 = v[17];
+        *RHS_3 = v[18];
+        *RHS_4 = v[19];
+        *RHS_5 = v[20];
+        *Delta_12 = v[21];
+        *Delta_23 = v[22];
+        *Delta_34 = v[23];
+        *Delta_45 = v[24];
+        *Delta_56 = v[25];
     }
     //==========================================================================
     // Mutators for Arguments, type = Matrix<double, n, m>
-    void VOCAL_TRACT::set_x(const Matrix<double, 21, 1> & m) {
+    void VOCAL_TRACT::set_x(const Matrix<double, 31, 1> & m) {
         *nu_L1 = m(0, 0);
         *nu_12 = m(1, 0);
         *nu_23 = m(2, 0);
         *nu_34 = m(3, 0);
-        *nu_R4 = m(4, 0);
-        *Pi_y1 = m(5, 0);
-        *Pi_y2 = m(6, 0);
-        *Pi_y3 = m(7, 0);
-        *Pi_y4 = m(8, 0);
-        *V_1 = m(9, 0);
-        *V_2 = m(10, 0);
-        *V_3 = m(11, 0);
-        *V_4 = m(12, 0);
-        *rho_1 = m(13, 0);
-        *rho_2 = m(14, 0);
-        *rho_3 = m(15, 0);
-        *rho_4 = m(16, 0);
-        *x_k1 = m(17, 0);
-        *x_k2 = m(18, 0);
-        *x_k3 = m(19, 0);
-        *x_k4 = m(20, 0);
+        *nu_45 = m(4, 0);
+        *nu_56 = m(5, 0);
+        *nu_R6 = m(6, 0);
+        *Pi_y1 = m(7, 0);
+        *Pi_y2 = m(8, 0);
+        *Pi_y3 = m(9, 0);
+        *Pi_y4 = m(10, 0);
+        *Pi_y5 = m(11, 0);
+        *Pi_y6 = m(12, 0);
+        *V_1 = m(13, 0);
+        *V_2 = m(14, 0);
+        *V_3 = m(15, 0);
+        *V_4 = m(16, 0);
+        *V_5 = m(17, 0);
+        *V_6 = m(18, 0);
+        *rho_1 = m(19, 0);
+        *rho_2 = m(20, 0);
+        *rho_3 = m(21, 0);
+        *rho_4 = m(22, 0);
+        *rho_5 = m(23, 0);
+        *rho_6 = m(24, 0);
+        *x_k1 = m(25, 0);
+        *x_k2 = m(26, 0);
+        *x_k3 = m(27, 0);
+        *x_k4 = m(28, 0);
+        *x_k5 = m(29, 0);
+        *x_k6 = m(30, 0);
     }
-    void VOCAL_TRACT::set_dx(const Matrix<double, 21, 1> & m) {
+    void VOCAL_TRACT::set_dx(const Matrix<double, 31, 1> & m) {
         *dnu_L1 = m(0, 0);
         *dnu_12 = m(1, 0);
         *dnu_23 = m(2, 0);
         *dnu_34 = m(3, 0);
-        *dnu_R4 = m(4, 0);
-        *dPi_y1 = m(5, 0);
-        *dPi_y2 = m(6, 0);
-        *dPi_y3 = m(7, 0);
-        *dPi_y4 = m(8, 0);
-        *dV_1 = m(9, 0);
-        *dV_2 = m(10, 0);
-        *dV_3 = m(11, 0);
-        *dV_4 = m(12, 0);
-        *drho_1 = m(13, 0);
-        *drho_2 = m(14, 0);
-        *drho_3 = m(15, 0);
-        *drho_4 = m(16, 0);
-        *dx_k1 = m(17, 0);
-        *dx_k2 = m(18, 0);
-        *dx_k3 = m(19, 0);
-        *dx_k4 = m(20, 0);
+        *dnu_45 = m(4, 0);
+        *dnu_56 = m(5, 0);
+        *dnu_R6 = m(6, 0);
+        *dPi_y1 = m(7, 0);
+        *dPi_y2 = m(8, 0);
+        *dPi_y3 = m(9, 0);
+        *dPi_y4 = m(10, 0);
+        *dPi_y5 = m(11, 0);
+        *dPi_y6 = m(12, 0);
+        *dV_1 = m(13, 0);
+        *dV_2 = m(14, 0);
+        *dV_3 = m(15, 0);
+        *dV_4 = m(16, 0);
+        *dV_5 = m(17, 0);
+        *dV_6 = m(18, 0);
+        *drho_1 = m(19, 0);
+        *drho_2 = m(20, 0);
+        *drho_3 = m(21, 0);
+        *drho_4 = m(22, 0);
+        *drho_5 = m(23, 0);
+        *drho_6 = m(24, 0);
+        *dx_k1 = m(25, 0);
+        *dx_k2 = m(26, 0);
+        *dx_k3 = m(27, 0);
+        *dx_k4 = m(28, 0);
+        *dx_k5 = m(29, 0);
+        *dx_k6 = m(30, 0);
     }
-    void VOCAL_TRACT::set_w(const Matrix<double, 5, 1> & m) {
+    void VOCAL_TRACT::set_w(const Matrix<double, 7, 1> & m) {
         *v_k1 = m(0, 0);
         *v_k2 = m(1, 0);
         *v_k3 = m(2, 0);
         *v_k4 = m(3, 0);
-        *q = m(4, 0);
+        *v_k5 = m(4, 0);
+        *v_k6 = m(5, 0);
+        *q = m(6, 0);
     }
-    void VOCAL_TRACT::set_u(const Matrix<double, 5, 1> & m) {
+    void VOCAL_TRACT::set_u(const Matrix<double, 7, 1> & m) {
         *Psi_L = m(0, 0);
         *v_m1 = m(1, 0);
         *v_m2 = m(2, 0);
         *v_m3 = m(3, 0);
         *v_m4 = m(4, 0);
+        *v_m5 = m(5, 0);
+        *v_m6 = m(6, 0);
     }
     void VOCAL_TRACT::set_p(const Matrix<double, 0, 0> & m) {
     }
-    void VOCAL_TRACT::set_vnl(const Matrix<double, 26, 1> & m) {
+    void VOCAL_TRACT::set_vnl(const Matrix<double, 38, 1> & m) {
         *dnu_L1 = m(0, 0);
         *dnu_12 = m(1, 0);
         *dnu_23 = m(2, 0);
         *dnu_34 = m(3, 0);
-        *dnu_R4 = m(4, 0);
-        *dPi_y1 = m(5, 0);
-        *dPi_y2 = m(6, 0);
-        *dPi_y3 = m(7, 0);
-        *dPi_y4 = m(8, 0);
-        *dV_1 = m(9, 0);
-        *dV_2 = m(10, 0);
-        *dV_3 = m(11, 0);
-        *dV_4 = m(12, 0);
-        *drho_1 = m(13, 0);
-        *drho_2 = m(14, 0);
-        *drho_3 = m(15, 0);
-        *drho_4 = m(16, 0);
-        *dx_k1 = m(17, 0);
-        *dx_k2 = m(18, 0);
-        *dx_k3 = m(19, 0);
-        *dx_k4 = m(20, 0);
-        *v_k1 = m(21, 0);
-        *v_k2 = m(22, 0);
-        *v_k3 = m(23, 0);
-        *v_k4 = m(24, 0);
-        *q = m(25, 0);
+        *dnu_45 = m(4, 0);
+        *dnu_56 = m(5, 0);
+        *dnu_R6 = m(6, 0);
+        *dPi_y1 = m(7, 0);
+        *dPi_y2 = m(8, 0);
+        *dPi_y3 = m(9, 0);
+        *dPi_y4 = m(10, 0);
+        *dPi_y5 = m(11, 0);
+        *dPi_y6 = m(12, 0);
+        *dV_1 = m(13, 0);
+        *dV_2 = m(14, 0);
+        *dV_3 = m(15, 0);
+        *dV_4 = m(16, 0);
+        *dV_5 = m(17, 0);
+        *dV_6 = m(18, 0);
+        *drho_1 = m(19, 0);
+        *drho_2 = m(20, 0);
+        *drho_3 = m(21, 0);
+        *drho_4 = m(22, 0);
+        *drho_5 = m(23, 0);
+        *drho_6 = m(24, 0);
+        *dx_k1 = m(25, 0);
+        *dx_k2 = m(26, 0);
+        *dx_k3 = m(27, 0);
+        *dx_k4 = m(28, 0);
+        *dx_k5 = m(29, 0);
+        *dx_k6 = m(30, 0);
+        *v_k1 = m(31, 0);
+        *v_k2 = m(32, 0);
+        *v_k3 = m(33, 0);
+        *v_k4 = m(34, 0);
+        *v_k5 = m(35, 0);
+        *v_k6 = m(36, 0);
+        *q = m(37, 0);
     }
-    void VOCAL_TRACT::set_o(const Matrix<double, 16, 1> & m) {
+    void VOCAL_TRACT::set_o(const Matrix<double, 26, 1> & m) {
         *mu_1 = m(0, 0);
         *mu_2 = m(1, 0);
         *mu_3 = m(2, 0);
         *mu_4 = m(3, 0);
-        *(mu_1_add_mu_2) = m(4, 0);
-        *(mu_2_add_mu_3) = m(5, 0);
-        *(mu_3_add_mu_4) = m(6, 0);
-        *(mu_1minus_mu_2) = m(7, 0);
-        *(mu_2minus_mu_3) = m(8, 0);
-        *(mu_3minus_mu_4) = m(9, 0);
-        *RHS_1 = m(10, 0);
-        *RHS_2 = m(11, 0);
-        *RHS_3 = m(12, 0);
-        *Delta_12 = m(13, 0);
-        *Delta_23 = m(14, 0);
-        *Delta_34 = m(15, 0);
+        *mu_5 = m(4, 0);
+        *mu_6 = m(5, 0);
+        *(mu_1_add_mu_2) = m(6, 0);
+        *(mu_2_add_mu_3) = m(7, 0);
+        *(mu_3_add_mu_4) = m(8, 0);
+        *(mu_4_add_mu_5) = m(9, 0);
+        *(mu_5_add_mu_6) = m(10, 0);
+        *(mu_1minus_mu_2) = m(11, 0);
+        *(mu_2minus_mu_3) = m(12, 0);
+        *(mu_3minus_mu_4) = m(13, 0);
+        *(mu_4minus_mu_5) = m(14, 0);
+        *(mu_5minus_mu_6) = m(15, 0);
+        *RHS_1 = m(16, 0);
+        *RHS_2 = m(17, 0);
+        *RHS_3 = m(18, 0);
+        *RHS_4 = m(19, 0);
+        *RHS_5 = m(20, 0);
+        *Delta_12 = m(21, 0);
+        *Delta_23 = m(22, 0);
+        *Delta_34 = m(23, 0);
+        *Delta_45 = m(24, 0);
+        *Delta_56 = m(25, 0);
     }
     //==========================================================================
     // Mutators for a single argument, types are double with int index
@@ -560,55 +744,85 @@
             *nu_34 = value;
         }
         if(index == 4) {
-            *nu_R4 = value;
+            *nu_45 = value;
         }
         if(index == 5) {
-            *Pi_y1 = value;
+            *nu_56 = value;
         }
         if(index == 6) {
-            *Pi_y2 = value;
+            *nu_R6 = value;
         }
         if(index == 7) {
-            *Pi_y3 = value;
+            *Pi_y1 = value;
         }
         if(index == 8) {
-            *Pi_y4 = value;
+            *Pi_y2 = value;
         }
         if(index == 9) {
-            *V_1 = value;
+            *Pi_y3 = value;
         }
         if(index == 10) {
-            *V_2 = value;
+            *Pi_y4 = value;
         }
         if(index == 11) {
-            *V_3 = value;
+            *Pi_y5 = value;
         }
         if(index == 12) {
-            *V_4 = value;
+            *Pi_y6 = value;
         }
         if(index == 13) {
-            *rho_1 = value;
+            *V_1 = value;
         }
         if(index == 14) {
-            *rho_2 = value;
+            *V_2 = value;
         }
         if(index == 15) {
-            *rho_3 = value;
+            *V_3 = value;
         }
         if(index == 16) {
-            *rho_4 = value;
+            *V_4 = value;
         }
         if(index == 17) {
-            *x_k1 = value;
+            *V_5 = value;
         }
         if(index == 18) {
-            *x_k2 = value;
+            *V_6 = value;
         }
         if(index == 19) {
-            *x_k3 = value;
+            *rho_1 = value;
         }
         if(index == 20) {
+            *rho_2 = value;
+        }
+        if(index == 21) {
+            *rho_3 = value;
+        }
+        if(index == 22) {
+            *rho_4 = value;
+        }
+        if(index == 23) {
+            *rho_5 = value;
+        }
+        if(index == 24) {
+            *rho_6 = value;
+        }
+        if(index == 25) {
+            *x_k1 = value;
+        }
+        if(index == 26) {
+            *x_k2 = value;
+        }
+        if(index == 27) {
+            *x_k3 = value;
+        }
+        if(index == 28) {
             *x_k4 = value;
+        }
+        if(index == 29) {
+            *x_k5 = value;
+        }
+        if(index == 30) {
+            *x_k6 = value;
         }
     }
     void VOCAL_TRACT::set_dx(const double & value, unsigned int & index) {
@@ -625,55 +839,85 @@
             *dnu_34 = value;
         }
         if(index == 4) {
-            *dnu_R4 = value;
+            *dnu_45 = value;
         }
         if(index == 5) {
-            *dPi_y1 = value;
+            *dnu_56 = value;
         }
         if(index == 6) {
-            *dPi_y2 = value;
+            *dnu_R6 = value;
         }
         if(index == 7) {
-            *dPi_y3 = value;
+            *dPi_y1 = value;
         }
         if(index == 8) {
-            *dPi_y4 = value;
+            *dPi_y2 = value;
         }
         if(index == 9) {
-            *dV_1 = value;
+            *dPi_y3 = value;
         }
         if(index == 10) {
-            *dV_2 = value;
+            *dPi_y4 = value;
         }
         if(index == 11) {
-            *dV_3 = value;
+            *dPi_y5 = value;
         }
         if(index == 12) {
-            *dV_4 = value;
+            *dPi_y6 = value;
         }
         if(index == 13) {
-            *drho_1 = value;
+            *dV_1 = value;
         }
         if(index == 14) {
-            *drho_2 = value;
+            *dV_2 = value;
         }
         if(index == 15) {
-            *drho_3 = value;
+            *dV_3 = value;
         }
         if(index == 16) {
-            *drho_4 = value;
+            *dV_4 = value;
         }
         if(index == 17) {
-            *dx_k1 = value;
+            *dV_5 = value;
         }
         if(index == 18) {
-            *dx_k2 = value;
+            *dV_6 = value;
         }
         if(index == 19) {
-            *dx_k3 = value;
+            *drho_1 = value;
         }
         if(index == 20) {
+            *drho_2 = value;
+        }
+        if(index == 21) {
+            *drho_3 = value;
+        }
+        if(index == 22) {
+            *drho_4 = value;
+        }
+        if(index == 23) {
+            *drho_5 = value;
+        }
+        if(index == 24) {
+            *drho_6 = value;
+        }
+        if(index == 25) {
+            *dx_k1 = value;
+        }
+        if(index == 26) {
+            *dx_k2 = value;
+        }
+        if(index == 27) {
+            *dx_k3 = value;
+        }
+        if(index == 28) {
             *dx_k4 = value;
+        }
+        if(index == 29) {
+            *dx_k5 = value;
+        }
+        if(index == 30) {
+            *dx_k6 = value;
         }
     }
     void VOCAL_TRACT::set_w(const double & value, unsigned int & index) {
@@ -690,6 +934,12 @@
             *v_k4 = value;
         }
         if(index == 4) {
+            *v_k5 = value;
+        }
+        if(index == 5) {
+            *v_k6 = value;
+        }
+        if(index == 6) {
             *q = value;
         }
     }
@@ -709,6 +959,12 @@
         if(index == 4) {
             *v_m4 = value;
         }
+        if(index == 5) {
+            *v_m5 = value;
+        }
+        if(index == 6) {
+            *v_m6 = value;
+        }
     }
     void VOCAL_TRACT::set_p(const double & value, unsigned int & index) {
     }
@@ -726,69 +982,105 @@
             *dnu_34 = value;
         }
         if(index == 4) {
-            *dnu_R4 = value;
+            *dnu_45 = value;
         }
         if(index == 5) {
-            *dPi_y1 = value;
+            *dnu_56 = value;
         }
         if(index == 6) {
-            *dPi_y2 = value;
+            *dnu_R6 = value;
         }
         if(index == 7) {
-            *dPi_y3 = value;
+            *dPi_y1 = value;
         }
         if(index == 8) {
-            *dPi_y4 = value;
+            *dPi_y2 = value;
         }
         if(index == 9) {
-            *dV_1 = value;
+            *dPi_y3 = value;
         }
         if(index == 10) {
-            *dV_2 = value;
+            *dPi_y4 = value;
         }
         if(index == 11) {
-            *dV_3 = value;
+            *dPi_y5 = value;
         }
         if(index == 12) {
-            *dV_4 = value;
+            *dPi_y6 = value;
         }
         if(index == 13) {
-            *drho_1 = value;
+            *dV_1 = value;
         }
         if(index == 14) {
-            *drho_2 = value;
+            *dV_2 = value;
         }
         if(index == 15) {
-            *drho_3 = value;
+            *dV_3 = value;
         }
         if(index == 16) {
-            *drho_4 = value;
+            *dV_4 = value;
         }
         if(index == 17) {
-            *dx_k1 = value;
+            *dV_5 = value;
         }
         if(index == 18) {
-            *dx_k2 = value;
+            *dV_6 = value;
         }
         if(index == 19) {
-            *dx_k3 = value;
+            *drho_1 = value;
         }
         if(index == 20) {
-            *dx_k4 = value;
+            *drho_2 = value;
         }
         if(index == 21) {
-            *v_k1 = value;
+            *drho_3 = value;
         }
         if(index == 22) {
-            *v_k2 = value;
+            *drho_4 = value;
         }
         if(index == 23) {
-            *v_k3 = value;
+            *drho_5 = value;
         }
         if(index == 24) {
-            *v_k4 = value;
+            *drho_6 = value;
         }
         if(index == 25) {
+            *dx_k1 = value;
+        }
+        if(index == 26) {
+            *dx_k2 = value;
+        }
+        if(index == 27) {
+            *dx_k3 = value;
+        }
+        if(index == 28) {
+            *dx_k4 = value;
+        }
+        if(index == 29) {
+            *dx_k5 = value;
+        }
+        if(index == 30) {
+            *dx_k6 = value;
+        }
+        if(index == 31) {
+            *v_k1 = value;
+        }
+        if(index == 32) {
+            *v_k2 = value;
+        }
+        if(index == 33) {
+            *v_k3 = value;
+        }
+        if(index == 34) {
+            *v_k4 = value;
+        }
+        if(index == 35) {
+            *v_k5 = value;
+        }
+        if(index == 36) {
+            *v_k6 = value;
+        }
+        if(index == 37) {
             *q = value;
         }
     }
@@ -806,66 +1098,96 @@
             *mu_4 = value;
         }
         if(index == 4) {
-            *(mu_1_add_mu_2) = value;
+            *mu_5 = value;
         }
         if(index == 5) {
-            *(mu_2_add_mu_3) = value;
+            *mu_6 = value;
         }
         if(index == 6) {
-            *(mu_3_add_mu_4) = value;
+            *(mu_1_add_mu_2) = value;
         }
         if(index == 7) {
-            *(mu_1minus_mu_2) = value;
+            *(mu_2_add_mu_3) = value;
         }
         if(index == 8) {
-            *(mu_2minus_mu_3) = value;
+            *(mu_3_add_mu_4) = value;
         }
         if(index == 9) {
-            *(mu_3minus_mu_4) = value;
+            *(mu_4_add_mu_5) = value;
         }
         if(index == 10) {
-            *RHS_1 = value;
+            *(mu_5_add_mu_6) = value;
         }
         if(index == 11) {
-            *RHS_2 = value;
+            *(mu_1minus_mu_2) = value;
         }
         if(index == 12) {
-            *RHS_3 = value;
+            *(mu_2minus_mu_3) = value;
         }
         if(index == 13) {
-            *Delta_12 = value;
+            *(mu_3minus_mu_4) = value;
         }
         if(index == 14) {
-            *Delta_23 = value;
+            *(mu_4minus_mu_5) = value;
         }
         if(index == 15) {
+            *(mu_5minus_mu_6) = value;
+        }
+        if(index == 16) {
+            *RHS_1 = value;
+        }
+        if(index == 17) {
+            *RHS_2 = value;
+        }
+        if(index == 18) {
+            *RHS_3 = value;
+        }
+        if(index == 19) {
+            *RHS_4 = value;
+        }
+        if(index == 20) {
+            *RHS_5 = value;
+        }
+        if(index == 21) {
+            *Delta_12 = value;
+        }
+        if(index == 22) {
+            *Delta_23 = value;
+        }
+        if(index == 23) {
             *Delta_34 = value;
+        }
+        if(index == 24) {
+            *Delta_45 = value;
+        }
+        if(index == 25) {
+            *Delta_56 = value;
         }
     }
     //==========================================================================
     // Functions Results Accessors (matrix)
-    const Matrix<double,16, 1> & VOCAL_TRACT::ud_o() const {
+    const Matrix<double,26, 1> & VOCAL_TRACT::ud_o() const {
         return _ud_o;
     }
-    const Matrix<double,26, 1> & VOCAL_TRACT::Gnl() const {
+    const Matrix<double,38, 1> & VOCAL_TRACT::Gnl() const {
         return _Gnl;
     }
-    const Matrix<double,26, 26> & VOCAL_TRACT::jacGnlnl() const {
+    const Matrix<double,38, 38> & VOCAL_TRACT::jacGnlnl() const {
         return _jacGnlnl;
     }
-    const Matrix<double,21, 1> & VOCAL_TRACT::dxH() const {
+    const Matrix<double,31, 1> & VOCAL_TRACT::dxH() const {
         return _dxH;
     }
-    const Matrix<double,5, 1> & VOCAL_TRACT::z() const {
+    const Matrix<double,7, 1> & VOCAL_TRACT::z() const {
         return _z;
     }
-    const Matrix<double,5, 1> & VOCAL_TRACT::y() const {
+    const Matrix<double,7, 1> & VOCAL_TRACT::y() const {
         return _y;
     }
     //==========================================================================
     // Functions Results Accessors (vector)
     const vector<double> & VOCAL_TRACT::ud_o_vector() const {    
-        static vector<double> v = vector<double>(16);    
+        static vector<double> v = vector<double>(26);    
         v[0] = _ud_o(0, 0);    
         v[1] = _ud_o(1, 0);    
         v[2] = _ud_o(2, 0);    
@@ -882,10 +1204,20 @@
         v[13] = _ud_o(13, 0);    
         v[14] = _ud_o(14, 0);    
         v[15] = _ud_o(15, 0);    
+        v[16] = _ud_o(16, 0);    
+        v[17] = _ud_o(17, 0);    
+        v[18] = _ud_o(18, 0);    
+        v[19] = _ud_o(19, 0);    
+        v[20] = _ud_o(20, 0);    
+        v[21] = _ud_o(21, 0);    
+        v[22] = _ud_o(22, 0);    
+        v[23] = _ud_o(23, 0);    
+        v[24] = _ud_o(24, 0);    
+        v[25] = _ud_o(25, 0);    
         return v;
     }
     const vector<double> & VOCAL_TRACT::Gnl_vector() const {    
-        static vector<double> v = vector<double>(26);    
+        static vector<double> v = vector<double>(38);    
         v[0] = _Gnl(0, 0);    
         v[1] = _Gnl(1, 0);    
         v[2] = _Gnl(2, 0);    
@@ -912,10 +1244,22 @@
         v[23] = _Gnl(23, 0);    
         v[24] = _Gnl(24, 0);    
         v[25] = _Gnl(25, 0);    
+        v[26] = _Gnl(26, 0);    
+        v[27] = _Gnl(27, 0);    
+        v[28] = _Gnl(28, 0);    
+        v[29] = _Gnl(29, 0);    
+        v[30] = _Gnl(30, 0);    
+        v[31] = _Gnl(31, 0);    
+        v[32] = _Gnl(32, 0);    
+        v[33] = _Gnl(33, 0);    
+        v[34] = _Gnl(34, 0);    
+        v[35] = _Gnl(35, 0);    
+        v[36] = _Gnl(36, 0);    
+        v[37] = _Gnl(37, 0);    
         return v;
     }
     const vector<double> & VOCAL_TRACT::jacGnlnl_vector() const {    
-        static vector<double> v = vector<double>(26);    
+        static vector<double> v = vector<double>(38);    
         v[0] = _jacGnlnl(0, 0);    
         v[1] = _jacGnlnl(1, 0);    
         v[2] = _jacGnlnl(2, 0);    
@@ -942,10 +1286,22 @@
         v[23] = _jacGnlnl(23, 0);    
         v[24] = _jacGnlnl(24, 0);    
         v[25] = _jacGnlnl(25, 0);    
+        v[26] = _jacGnlnl(26, 0);    
+        v[27] = _jacGnlnl(27, 0);    
+        v[28] = _jacGnlnl(28, 0);    
+        v[29] = _jacGnlnl(29, 0);    
+        v[30] = _jacGnlnl(30, 0);    
+        v[31] = _jacGnlnl(31, 0);    
+        v[32] = _jacGnlnl(32, 0);    
+        v[33] = _jacGnlnl(33, 0);    
+        v[34] = _jacGnlnl(34, 0);    
+        v[35] = _jacGnlnl(35, 0);    
+        v[36] = _jacGnlnl(36, 0);    
+        v[37] = _jacGnlnl(37, 0);    
         return v;
     }
     const vector<double> & VOCAL_TRACT::dxH_vector() const {    
-        static vector<double> v = vector<double>(21);    
+        static vector<double> v = vector<double>(31);    
         v[0] = _dxH(0, 0);    
         v[1] = _dxH(1, 0);    
         v[2] = _dxH(2, 0);    
@@ -967,24 +1323,38 @@
         v[18] = _dxH(18, 0);    
         v[19] = _dxH(19, 0);    
         v[20] = _dxH(20, 0);    
+        v[21] = _dxH(21, 0);    
+        v[22] = _dxH(22, 0);    
+        v[23] = _dxH(23, 0);    
+        v[24] = _dxH(24, 0);    
+        v[25] = _dxH(25, 0);    
+        v[26] = _dxH(26, 0);    
+        v[27] = _dxH(27, 0);    
+        v[28] = _dxH(28, 0);    
+        v[29] = _dxH(29, 0);    
+        v[30] = _dxH(30, 0);    
         return v;
     }
     const vector<double> & VOCAL_TRACT::z_vector() const {    
-        static vector<double> v = vector<double>(5);    
+        static vector<double> v = vector<double>(7);    
         v[0] = _z(0, 0);    
         v[1] = _z(1, 0);    
         v[2] = _z(2, 0);    
         v[3] = _z(3, 0);    
         v[4] = _z(4, 0);    
+        v[5] = _z(5, 0);    
+        v[6] = _z(6, 0);    
         return v;
     }
     const vector<double> & VOCAL_TRACT::y_vector() const {    
-        static vector<double> v = vector<double>(5);    
+        static vector<double> v = vector<double>(7);    
         v[0] = _y(0, 0);    
         v[1] = _y(1, 0);    
         v[2] = _y(2, 0);    
         v[3] = _y(3, 0);    
         v[4] = _y(4, 0);    
+        v[5] = _y(5, 0);    
+        v[6] = _y(6, 0);    
         return v;
     }
     //==========================================================================
@@ -1009,19 +1379,19 @@
     }
     //==========================================================================
     // Oprations Results Accessors
-    const Matrix<double,21, 1> & VOCAL_TRACT::ud_x() const {
+    const Matrix<double,31, 1> & VOCAL_TRACT::ud_x() const {
         return _ud_x;
     }
-    const Matrix<double,26, 1> & VOCAL_TRACT::Fnl() const {
+    const Matrix<double,38, 1> & VOCAL_TRACT::Fnl() const {
         return _Fnl;
     }
-    const Matrix<double,26, 26> & VOCAL_TRACT::jacFnl() const {
+    const Matrix<double,38, 38> & VOCAL_TRACT::jacFnl() const {
         return _jacFnl;
     }
-    const Matrix<double,26, 26> & VOCAL_TRACT::ijacFnl() const {
+    const Matrix<double,38, 38> & VOCAL_TRACT::ijacFnl() const {
         return _ijacFnl;
     }
-    const Matrix<double,26, 1> & VOCAL_TRACT::save_Fnl() const {
+    const Matrix<double,38, 1> & VOCAL_TRACT::save_Fnl() const {
         return _save_Fnl;
     }
     const double & VOCAL_TRACT::res_Fnl() const {
@@ -1030,13 +1400,13 @@
     const double & VOCAL_TRACT::step_Fnl() const {
         return _step_Fnl;
     }
-    const Matrix<double,26, 1> & VOCAL_TRACT::ud_vnl() const {
+    const Matrix<double,38, 1> & VOCAL_TRACT::ud_vnl() const {
         return _ud_vnl;
     }
     //==========================================================================
     // Oprations Results Accessors
     vector<double> VOCAL_TRACT::ud_x_vector() const {    
-        static vector<double> v = vector<double>(21);    
+        static vector<double> v = vector<double>(31);    
         v[0] = _ud_x(0, 0);    
         v[1] = _ud_x(1, 0);    
         v[2] = _ud_x(2, 0);    
@@ -1058,10 +1428,20 @@
         v[18] = _ud_x(18, 0);    
         v[19] = _ud_x(19, 0);    
         v[20] = _ud_x(20, 0);    
+        v[21] = _ud_x(21, 0);    
+        v[22] = _ud_x(22, 0);    
+        v[23] = _ud_x(23, 0);    
+        v[24] = _ud_x(24, 0);    
+        v[25] = _ud_x(25, 0);    
+        v[26] = _ud_x(26, 0);    
+        v[27] = _ud_x(27, 0);    
+        v[28] = _ud_x(28, 0);    
+        v[29] = _ud_x(29, 0);    
+        v[30] = _ud_x(30, 0);    
         return v;
     }
     vector<double> VOCAL_TRACT::Fnl_vector() const {    
-        static vector<double> v = vector<double>(26);    
+        static vector<double> v = vector<double>(38);    
         v[0] = _Fnl(0, 0);    
         v[1] = _Fnl(1, 0);    
         v[2] = _Fnl(2, 0);    
@@ -1088,10 +1468,22 @@
         v[23] = _Fnl(23, 0);    
         v[24] = _Fnl(24, 0);    
         v[25] = _Fnl(25, 0);    
+        v[26] = _Fnl(26, 0);    
+        v[27] = _Fnl(27, 0);    
+        v[28] = _Fnl(28, 0);    
+        v[29] = _Fnl(29, 0);    
+        v[30] = _Fnl(30, 0);    
+        v[31] = _Fnl(31, 0);    
+        v[32] = _Fnl(32, 0);    
+        v[33] = _Fnl(33, 0);    
+        v[34] = _Fnl(34, 0);    
+        v[35] = _Fnl(35, 0);    
+        v[36] = _Fnl(36, 0);    
+        v[37] = _Fnl(37, 0);    
         return v;
     }
     vector<double> VOCAL_TRACT::save_Fnl_vector() const {    
-        static vector<double> v = vector<double>(26);    
+        static vector<double> v = vector<double>(38);    
         v[0] = _save_Fnl(0, 0);    
         v[1] = _save_Fnl(1, 0);    
         v[2] = _save_Fnl(2, 0);    
@@ -1118,10 +1510,22 @@
         v[23] = _save_Fnl(23, 0);    
         v[24] = _save_Fnl(24, 0);    
         v[25] = _save_Fnl(25, 0);    
+        v[26] = _save_Fnl(26, 0);    
+        v[27] = _save_Fnl(27, 0);    
+        v[28] = _save_Fnl(28, 0);    
+        v[29] = _save_Fnl(29, 0);    
+        v[30] = _save_Fnl(30, 0);    
+        v[31] = _save_Fnl(31, 0);    
+        v[32] = _save_Fnl(32, 0);    
+        v[33] = _save_Fnl(33, 0);    
+        v[34] = _save_Fnl(34, 0);    
+        v[35] = _save_Fnl(35, 0);    
+        v[36] = _save_Fnl(36, 0);    
+        v[37] = _save_Fnl(37, 0);    
         return v;
     }
     vector<double> VOCAL_TRACT::ud_vnl_vector() const {    
-        static vector<double> v = vector<double>(26);    
+        static vector<double> v = vector<double>(38);    
         v[0] = _ud_vnl(0, 0);    
         v[1] = _ud_vnl(1, 0);    
         v[2] = _ud_vnl(2, 0);    
@@ -1148,6 +1552,18 @@
         v[23] = _ud_vnl(23, 0);    
         v[24] = _ud_vnl(24, 0);    
         v[25] = _ud_vnl(25, 0);    
+        v[26] = _ud_vnl(26, 0);    
+        v[27] = _ud_vnl(27, 0);    
+        v[28] = _ud_vnl(28, 0);    
+        v[29] = _ud_vnl(29, 0);    
+        v[30] = _ud_vnl(30, 0);    
+        v[31] = _ud_vnl(31, 0);    
+        v[32] = _ud_vnl(32, 0);    
+        v[33] = _ud_vnl(33, 0);    
+        v[34] = _ud_vnl(34, 0);    
+        v[35] = _ud_vnl(35, 0);    
+        v[36] = _ud_vnl(36, 0);    
+        v[37] = _ud_vnl(37, 0);    
         return v;
     }
     //==========================================================================
@@ -1155,20 +1571,20 @@
     VOCAL_TRACT::VOCAL_TRACT(){    
         //==========================================================================
         // Functions Results Initialisation Data
-        double ud_o_data[] = {0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.};
-        double Gnl_data[] = {0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.};
-        double jacGnlnl_data[] = {(*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., -(*r_1), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1, 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., -(*r_2), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1, 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., -(*r_3), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1, 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., -(*r_4), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1, 0., 0., 0., 0., 0., (*Z_ray), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1};
-        double dxH_data[] = {0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.};
-        double z_data[] = {0., 0., 0., 0., 0.};
-        double y_data[] = {0., 0., 0., 0., 0.};    
+        double ud_o_data[] = {0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.};
+        double Gnl_data[] = {0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.};
+        double jacGnlnl_data[] = {(*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., (*F_S), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., -(*r_1), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1, 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., -(*r_2), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1, 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., -(*r_3), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1, 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., -(*r_4), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1, 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., -(*r_5), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1, 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., -(*r_6), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1, 0., 0., 0., 0., 0., 0., 0., (*Z_ray), 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1};
+        double dxH_data[] = {0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.};
+        double z_data[] = {0., 0., 0., 0., 0., 0., 0.};
+        double y_data[] = {0., 0., 0., 0., 0., 0., 0.};    
         //==========================================================================
         // Functions Results Initialisation    
-        _ud_o = Map<Matrix<double,16, 1>> (ud_o_data);    
-        _Gnl = Map<Matrix<double,26, 1>> (Gnl_data);    
-        _jacGnlnl = Map<Matrix<double,26, 26>> (jacGnlnl_data);    
-        _dxH = Map<Matrix<double,21, 1>> (dxH_data);    
-        _z = Map<Matrix<double,5, 1>> (z_data);    
-        _y = Map<Matrix<double,5, 1>> (y_data);    
+        _ud_o = Map<Matrix<double,26, 1>> (ud_o_data);    
+        _Gnl = Map<Matrix<double,38, 1>> (Gnl_data);    
+        _jacGnlnl = Map<Matrix<double,38, 38>> (jacGnlnl_data);    
+        _dxH = Map<Matrix<double,31, 1>> (dxH_data);    
+        _z = Map<Matrix<double,7, 1>> (z_data);    
+        _y = Map<Matrix<double,7, 1>> (y_data);    
         //==========================================================================
         // Initialization    
         init();
@@ -1187,18 +1603,28 @@
     _ud_o(1, 0) = ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))/pow((*ell_2), 2);
     _ud_o(2, 0) = ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))/pow((*ell_3), 2);
     _ud_o(3, 0) = ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2);
-    _ud_o(4, 0) = (*mu_1) + (*mu_2);
-    _ud_o(5, 0) = (*mu_2) + (*mu_3);
-    _ud_o(6, 0) = (*mu_3) + (*mu_4);
-    _ud_o(7, 0) = (*mu_1) - (*mu_2);
-    _ud_o(8, 0) = (*mu_2) - (*mu_3);
-    _ud_o(9, 0) = (*mu_3) - (*mu_4);
-    _ud_o(10, 0) = -1.0/2.0*(*(mu_1minus_mu_2))*(*nu_12) + (1.0/2.0)*(*mu_1)*(*nu_L1) - 1.0/2.0*(*mu_2)*(*nu_23);
-    _ud_o(11, 0) = -1.0/2.0*(*(mu_2minus_mu_3))*(*nu_23) + (1.0/2.0)*(*mu_2)*(*nu_12) - 1.0/2.0*(*mu_3)*(*nu_34);
-    _ud_o(12, 0) = -1.0/2.0*(*(mu_3minus_mu_4))*(*nu_34) + (1.0/2.0)*(*mu_3)*(*nu_23) - 1.0/2.0*(*mu_4)*(*nu_R4);
-    _ud_o(13, 0) = (*RHS_1);
-    _ud_o(14, 0) = (*RHS_2);
-    _ud_o(15, 0) = (*RHS_3);
+    _ud_o(4, 0) = ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))/pow((*ell_5), 2);
+    _ud_o(5, 0) = ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))/pow((*ell_6), 2);
+    _ud_o(6, 0) = (*mu_1) + (*mu_2);
+    _ud_o(7, 0) = (*mu_2) + (*mu_3);
+    _ud_o(8, 0) = (*mu_3) + (*mu_4);
+    _ud_o(9, 0) = (*mu_4) + (*mu_5);
+    _ud_o(10, 0) = (*mu_5) + (*mu_6);
+    _ud_o(11, 0) = (*mu_1) - (*mu_2);
+    _ud_o(12, 0) = (*mu_2) - (*mu_3);
+    _ud_o(13, 0) = (*mu_3) - (*mu_4);
+    _ud_o(14, 0) = (*mu_4) - (*mu_5);
+    _ud_o(15, 0) = (*mu_5) - (*mu_6);
+    _ud_o(16, 0) = -1.0/2.0*(*(mu_1minus_mu_2))*(*nu_12) + (1.0/2.0)*(*mu_1)*(*nu_L1) - 1.0/2.0*(*mu_2)*(*nu_23);
+    _ud_o(17, 0) = -1.0/2.0*(*(mu_2minus_mu_3))*(*nu_23) + (1.0/2.0)*(*mu_2)*(*nu_12) - 1.0/2.0*(*mu_3)*(*nu_34);
+    _ud_o(18, 0) = -1.0/2.0*(*(mu_3minus_mu_4))*(*nu_34) + (1.0/2.0)*(*mu_3)*(*nu_23) - 1.0/2.0*(*mu_4)*(*nu_45);
+    _ud_o(19, 0) = -1.0/2.0*(*(mu_4minus_mu_5))*(*nu_45) + (1.0/2.0)*(*mu_4)*(*nu_34) - 1.0/2.0*(*mu_5)*(*nu_56);
+    _ud_o(20, 0) = -1.0/2.0*(*(mu_5minus_mu_6))*(*nu_56) + (1.0/2.0)*(*mu_5)*(*nu_45) - 1.0/2.0*(*mu_6)*(*nu_R6);
+    _ud_o(21, 0) = (*RHS_1);
+    _ud_o(22, 0) = (*RHS_2);
+    _ud_o(23, 0) = (*RHS_3);
+    _ud_o(24, 0) = (*RHS_4);
+    _ud_o(25, 0) = (*RHS_5);
     };
     void VOCAL_TRACT::Gnl_update(){
     _Gnl(0, 0) = (*F_S)*(*dnu_L1) + (*Pi_y1)*(((*dPi_y1) < -1.4901161193847656e-8) ? (
@@ -1301,13 +1727,13 @@
     : (
        (-3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (3.0/2.0)*pow((*Pi_y4) + (*dPi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))))/(*dPi_y4)
     )))/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (((*drho_4) < -1.4901161193847656e-8) ? (
-       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/(*drho_4)
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/(*drho_4)
     )
     : (((*drho_4) < 1.4901161193847656e-8) ? (
-       (*P_0)*(*gamma)*(*rho_4)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*rho_0) + (*rho_4), 2)) + (*drho_4)*(0.5*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + 1.5*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*rho_0) + (*rho_4), 3))) + ((*V_0_4) + (*V_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2)
+       (*P_0)*(*gamma)*(*rho_4)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*rho_0) + (*rho_4), 2)) + (*drho_4)*(0.5*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + 1.5*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*rho_0) + (*rho_4), 3))) + ((*V_0_4) + (*V_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2)
     )
     : (
-       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/(*drho_4)
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/(*drho_4)
     )))/((*V_0_4) + (*V_4)) - (((*drho_3) < -1.4901161193847656e-8) ? (
        (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_3), 2)*((*V_0_3) + (*V_3))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_3) + (*V_3))*pow((*drho_3) + (*rho_3), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*drho_3) + (*rho_0) + (*rho_3))) - 3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))*((*drho_3) + (*rho_0) + (*rho_3))/pow((*ell_3), 2))/(*drho_3)
     )
@@ -1317,7 +1743,7 @@
     : (
        (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_3), 2)*((*V_0_3) + (*V_3))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_3) + (*V_3))*pow((*drho_3) + (*rho_3), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*drho_3) + (*rho_0) + (*rho_3))) - 3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))*((*drho_3) + (*rho_0) + (*rho_3))/pow((*ell_3), 2))/(*drho_3)
     )))/((*V_0_3) + (*V_3));
-    _Gnl(4, 0) = (*F_S)*(*dnu_R4) - (*Pi_y4)*(((*dPi_y4) < -1.4901161193847656e-8) ? (
+    _Gnl(4, 0) = (*F_S)*(*dnu_45) - (*Pi_y4)*(((*dPi_y4) < -1.4901161193847656e-8) ? (
        (-3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (3.0/2.0)*pow((*Pi_y4) + (*dPi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))))/(*dPi_y4)
     )
     : (((*dPi_y4) < 1.4901161193847656e-8) ? (
@@ -1325,16 +1751,82 @@
     )
     : (
        (-3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (3.0/2.0)*pow((*Pi_y4) + (*dPi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))))/(*dPi_y4)
-    )))/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (*Z_ray)*(*q) - (((*drho_4) < -1.4901161193847656e-8) ? (
-       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/(*drho_4)
+    )))/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (*Pi_y5)*(((*dPi_y5) < -1.4901161193847656e-8) ? (
+       (-3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (3.0/2.0)*pow((*Pi_y5) + (*dPi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))))/(*dPi_y5)
     )
-    : (((*drho_4) < 1.4901161193847656e-8) ? (
-       (*P_0)*(*gamma)*(*rho_4)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*rho_0) + (*rho_4), 2)) + (*drho_4)*(0.5*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + 1.5*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*rho_0) + (*rho_4), 3))) + ((*V_0_4) + (*V_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2)
+    : (((*dPi_y5) < 1.4901161193847656e-8) ? (
+       3*(*Pi_y5)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + 1.5*(*dPi_y5)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5)))
     )
     : (
-       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/(*drho_4)
+       (-3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (3.0/2.0)*pow((*Pi_y5) + (*dPi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))))/(*dPi_y5)
+    )))/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (((*drho_5) < -1.4901161193847656e-8) ? (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_5), 2)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))*pow((*drho_5) + (*rho_5), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*drho_5) + (*rho_0) + (*rho_5))) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))*((*drho_5) + (*rho_0) + (*rho_5))/pow((*ell_5), 2))/(*drho_5)
+    )
+    : (((*drho_5) < 1.4901161193847656e-8) ? (
+       (*P_0)*(*gamma)*(*rho_5)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*pow((*rho_0) + (*rho_5), 2)) + (*drho_5)*(0.5*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + 1.5*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*pow((*rho_0) + (*rho_5), 3))) + ((*V_0_5) + (*V_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2)
+    )
+    : (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_5), 2)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))*pow((*drho_5) + (*rho_5), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*drho_5) + (*rho_0) + (*rho_5))) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))*((*drho_5) + (*rho_0) + (*rho_5))/pow((*ell_5), 2))/(*drho_5)
+    )))/((*V_0_5) + (*V_5)) - (((*drho_4) < -1.4901161193847656e-8) ? (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/(*drho_4)
+    )
+    : (((*drho_4) < 1.4901161193847656e-8) ? (
+       (*P_0)*(*gamma)*(*rho_4)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*rho_0) + (*rho_4), 2)) + (*drho_4)*(0.5*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + 1.5*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*rho_0) + (*rho_4), 3))) + ((*V_0_4) + (*V_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2)
+    )
+    : (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/(*drho_4)
     )))/((*V_0_4) + (*V_4));
-    _Gnl(5, 0) = (*F_S)*(*dPi_y1) + 2*(*L_1)*(*ell_1)*(((*dV_1) < -1.4901161193847656e-8) ? (
+    _Gnl(5, 0) = (*F_S)*(*dnu_56) - (*Pi_y5)*(((*dPi_y5) < -1.4901161193847656e-8) ? (
+       (-3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (3.0/2.0)*pow((*Pi_y5) + (*dPi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))))/(*dPi_y5)
+    )
+    : (((*dPi_y5) < 1.4901161193847656e-8) ? (
+       3*(*Pi_y5)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + 1.5*(*dPi_y5)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5)))
+    )
+    : (
+       (-3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (3.0/2.0)*pow((*Pi_y5) + (*dPi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))))/(*dPi_y5)
+    )))/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (*Pi_y6)*(((*dPi_y6) < -1.4901161193847656e-8) ? (
+       (-3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (3.0/2.0)*pow((*Pi_y6) + (*dPi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))))/(*dPi_y6)
+    )
+    : (((*dPi_y6) < 1.4901161193847656e-8) ? (
+       3*(*Pi_y6)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + 1.5*(*dPi_y6)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6)))
+    )
+    : (
+       (-3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (3.0/2.0)*pow((*Pi_y6) + (*dPi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))))/(*dPi_y6)
+    )))/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (((*drho_6) < -1.4901161193847656e-8) ? (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_6), 2)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))*pow((*drho_6) + (*rho_6), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*drho_6) + (*rho_0) + (*rho_6))) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))*((*drho_6) + (*rho_0) + (*rho_6))/pow((*ell_6), 2))/(*drho_6)
+    )
+    : (((*drho_6) < 1.4901161193847656e-8) ? (
+       (*P_0)*(*gamma)*(*rho_6)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*pow((*rho_0) + (*rho_6), 2)) + (*drho_6)*(0.5*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + 1.5*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*pow((*rho_0) + (*rho_6), 3))) + ((*V_0_6) + (*V_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2)
+    )
+    : (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_6), 2)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))*pow((*drho_6) + (*rho_6), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*drho_6) + (*rho_0) + (*rho_6))) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))*((*drho_6) + (*rho_0) + (*rho_6))/pow((*ell_6), 2))/(*drho_6)
+    )))/((*V_0_6) + (*V_6)) - (((*drho_5) < -1.4901161193847656e-8) ? (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_5), 2)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))*pow((*drho_5) + (*rho_5), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*drho_5) + (*rho_0) + (*rho_5))) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))*((*drho_5) + (*rho_0) + (*rho_5))/pow((*ell_5), 2))/(*drho_5)
+    )
+    : (((*drho_5) < 1.4901161193847656e-8) ? (
+       (*P_0)*(*gamma)*(*rho_5)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*pow((*rho_0) + (*rho_5), 2)) + (*drho_5)*(0.5*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + 1.5*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*pow((*rho_0) + (*rho_5), 3))) + ((*V_0_5) + (*V_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2)
+    )
+    : (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_5), 2)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))*pow((*drho_5) + (*rho_5), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*drho_5) + (*rho_0) + (*rho_5))) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))*((*drho_5) + (*rho_0) + (*rho_5))/pow((*ell_5), 2))/(*drho_5)
+    )))/((*V_0_5) + (*V_5));
+    _Gnl(6, 0) = (*F_S)*(*dnu_R6) - (*Pi_y6)*(((*dPi_y6) < -1.4901161193847656e-8) ? (
+       (-3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (3.0/2.0)*pow((*Pi_y6) + (*dPi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))))/(*dPi_y6)
+    )
+    : (((*dPi_y6) < 1.4901161193847656e-8) ? (
+       3*(*Pi_y6)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + 1.5*(*dPi_y6)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6)))
+    )
+    : (
+       (-3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (3.0/2.0)*pow((*Pi_y6) + (*dPi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))))/(*dPi_y6)
+    )))/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (*Z_ray)*(*q) - (((*drho_6) < -1.4901161193847656e-8) ? (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_6), 2)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))*pow((*drho_6) + (*rho_6), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*drho_6) + (*rho_0) + (*rho_6))) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))*((*drho_6) + (*rho_0) + (*rho_6))/pow((*ell_6), 2))/(*drho_6)
+    )
+    : (((*drho_6) < 1.4901161193847656e-8) ? (
+       (*P_0)*(*gamma)*(*rho_6)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*pow((*rho_0) + (*rho_6), 2)) + (*drho_6)*(0.5*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + 1.5*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*pow((*rho_0) + (*rho_6), 3))) + ((*V_0_6) + (*V_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2)
+    )
+    : (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_6), 2)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))*pow((*drho_6) + (*rho_6), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*drho_6) + (*rho_0) + (*rho_6))) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))*((*drho_6) + (*rho_0) + (*rho_6))/pow((*ell_6), 2))/(*drho_6)
+    )))/((*V_0_6) + (*V_6));
+    _Gnl(7, 0) = (*F_S)*(*dPi_y1) + 2*(*L_1)*(*ell_1)*(((*dV_1) < -1.4901161193847656e-8) ? (
        (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_1), 2)*((*V_0_1) + (*V_1))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_1), 2)*((*V_0_1) + (*V_1) + (*dV_1))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y1), 2)/(((*rho_0) + (*rho_1))*((*V_0_1) + (*V_1) + (*dV_1))) - 3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))*((*V_0_1) + (*V_1) + (*dV_1))/pow((*ell_1), 2))/(*dV_1)
     )
     : (((*dV_1) < 1.4901161193847656e-8) ? (
@@ -1375,7 +1867,7 @@
     : (
        (-1.0/2.0*(*k_1)*pow((*x_k1), 2) + (1.0/2.0)*(*k_1)*pow((*dx_k1) + (*x_k1), 2))/(*dx_k1)
     )));
-    _Gnl(6, 0) = (*F_S)*(*dPi_y2) + 2*(*L_2)*(*ell_2)*(((*dV_2) < -1.4901161193847656e-8) ? (
+    _Gnl(8, 0) = (*F_S)*(*dPi_y2) + 2*(*L_2)*(*ell_2)*(((*dV_2) < -1.4901161193847656e-8) ? (
        (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_2), 2)*((*V_0_2) + (*V_2))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_2), 2)*((*V_0_2) + (*V_2) + (*dV_2))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y2), 2)/(((*rho_0) + (*rho_2))*((*V_0_2) + (*V_2) + (*dV_2))) - 3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) - ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))*((*V_0_2) + (*V_2) + (*dV_2))/pow((*ell_2), 2))/(*dV_2)
     )
     : (((*dV_2) < 1.4901161193847656e-8) ? (
@@ -1416,7 +1908,7 @@
     : (
        (-1.0/2.0*(*k_2)*pow((*x_k2), 2) + (1.0/2.0)*(*k_2)*pow((*dx_k2) + (*x_k2), 2))/(*dx_k2)
     )));
-    _Gnl(7, 0) = (*F_S)*(*dPi_y3) + 2*(*L_3)*(*ell_3)*(((*dV_3) < -1.4901161193847656e-8) ? (
+    _Gnl(9, 0) = (*F_S)*(*dPi_y3) + 2*(*L_3)*(*ell_3)*(((*dV_3) < -1.4901161193847656e-8) ? (
        (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_3), 2)*((*V_0_3) + (*V_3))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_3), 2)*((*V_0_3) + (*V_3) + (*dV_3))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y3), 2)/(((*rho_0) + (*rho_3))*((*V_0_3) + (*V_3) + (*dV_3))) - 3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))*((*V_0_3) + (*V_3) + (*dV_3))/pow((*ell_3), 2))/(*dV_3)
     )
     : (((*dV_3) < 1.4901161193847656e-8) ? (
@@ -1441,13 +1933,13 @@
     : (
        (-((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*(((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*dnu_23) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)) + (-(*Delta_23) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)))/pow((*ell_3), 2) - ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) - 1.0/4.0*(*dnu_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) + (1.0/2.0)*(*dnu_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2))/(*dnu_23)
     )))/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) + (*Pi_y3)*(((*dnu_34) < -1.4901161193847656e-8) ? (
-       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*dnu_34)
+       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*dnu_34)
     )
     : (((*dnu_34) < 1.4901161193847656e-8) ? (
-       (*dnu_34)*(0.25*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2) + 0.25*((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))/pow((*ell_3), 2)) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4))/pow((*ell_4), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34))/pow((*ell_3), 2)
+       (*dnu_34)*(0.25*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2) + 0.25*((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))/pow((*ell_3), 2)) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45))/pow((*ell_4), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34))/pow((*ell_3), 2)
     )
     : (
-       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*dnu_34)
+       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*dnu_34)
     )))/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - (*r_3)*(*v_k3) - (((*dx_k3) < -1.4901161193847656e-8) ? (
        (-1.0/2.0*(*k_3)*pow((*x_k3), 2) + (1.0/2.0)*(*k_3)*pow((*dx_k3) + (*x_k3), 2))/(*dx_k3)
     )
@@ -1457,38 +1949,38 @@
     : (
        (-1.0/2.0*(*k_3)*pow((*x_k3), 2) + (1.0/2.0)*(*k_3)*pow((*dx_k3) + (*x_k3), 2))/(*dx_k3)
     )));
-    _Gnl(8, 0) = (*F_S)*(*dPi_y4) + 2*(*L_4)*(*ell_4)*(((*dV_4) < -1.4901161193847656e-8) ? (
-       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4) + (*dV_4))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*rho_0) + (*rho_4))*((*V_0_4) + (*V_4) + (*dV_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))*((*V_0_4) + (*V_4) + (*dV_4))/pow((*ell_4), 2))/(*dV_4)
+    _Gnl(10, 0) = (*F_S)*(*dPi_y4) + 2*(*L_4)*(*ell_4)*(((*dV_4) < -1.4901161193847656e-8) ? (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4) + (*dV_4))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*rho_0) + (*rho_4))*((*V_0_4) + (*V_4) + (*dV_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))*((*V_0_4) + (*V_4) + (*dV_4))/pow((*ell_4), 2))/(*dV_4)
     )
     : (((*dV_4) < 1.4901161193847656e-8) ? (
-       (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_4), 2)/pow((*rho_0), 2) + 1.5*pow((*Pi_y4), 2)*(*dV_4)/(pow((*V_0_4) + (*V_4), 3)*((*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(pow((*V_0_4) + (*V_4), 2)*((*rho_0) + (*rho_4))) + ((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2)
+       (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_4), 2)/pow((*rho_0), 2) + 1.5*pow((*Pi_y4), 2)*(*dV_4)/(pow((*V_0_4) + (*V_4), 3)*((*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(pow((*V_0_4) + (*V_4), 2)*((*rho_0) + (*rho_4))) + ((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2)
     )
     : (
-       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4) + (*dV_4))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*rho_0) + (*rho_4))*((*V_0_4) + (*V_4) + (*dV_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))*((*V_0_4) + (*V_4) + (*dV_4))/pow((*ell_4), 2))/(*dV_4)
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4) + (*dV_4))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*rho_0) + (*rho_4))*((*V_0_4) + (*V_4) + (*dV_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))*((*V_0_4) + (*V_4) + (*dV_4))/pow((*ell_4), 2))/(*dV_4)
     ))) - 2*(*L_4)*(*ell_4)*((*rho_0) + (*rho_4))*(((*drho_4) < -1.4901161193847656e-8) ? (
-       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/(*drho_4)
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/(*drho_4)
     )
     : (((*drho_4) < 1.4901161193847656e-8) ? (
-       (*P_0)*(*gamma)*(*rho_4)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*rho_0) + (*rho_4), 2)) + (*drho_4)*(0.5*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + 1.5*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*rho_0) + (*rho_4), 3))) + ((*V_0_4) + (*V_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2)
+       (*P_0)*(*gamma)*(*rho_4)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*rho_0) + (*rho_4), 2)) + (*drho_4)*(0.5*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + 1.5*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*rho_0) + (*rho_4), 3))) + ((*V_0_4) + (*V_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2)
     )
     : (
-       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/(*drho_4)
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/(*drho_4)
     )))/((*V_0_4) + (*V_4)) - (*Pi_y4)*(((*dnu_34) < -1.4901161193847656e-8) ? (
-       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*dnu_34)
+       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*dnu_34)
     )
     : (((*dnu_34) < 1.4901161193847656e-8) ? (
-       (*dnu_34)*(0.25*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2) + 0.25*((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))/pow((*ell_3), 2)) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4))/pow((*ell_4), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34))/pow((*ell_3), 2)
+       (*dnu_34)*(0.25*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2) + 0.25*((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))/pow((*ell_3), 2)) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45))/pow((*ell_4), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34))/pow((*ell_3), 2)
     )
     : (
-       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*dnu_34)
-    )))/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (*Pi_y4)*(((*dnu_R4) < -1.4901161193847656e-8) ? (
-       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*dnu_R4) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)) + ((*dnu_R4) + (*nu_R4))*((1.0/2.0)*(*Delta_34) + (*dnu_R4) - 1.0/4.0*(*nu_34) + (*nu_R4)))/pow((*ell_4), 2))/(*dnu_R4)
+       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*dnu_34)
+    )))/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (*Pi_y4)*(((*dnu_45) < -1.4901161193847656e-8) ? (
+       (-((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*dnu_45) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)) + (-(*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)))/pow((*ell_5), 2) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) - 1.0/4.0*(*dnu_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) + (1.0/2.0)*(*dnu_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2))/(*dnu_45)
     )
-    : (((*dnu_R4) < 1.4901161193847656e-8) ? (
-       1.0*(*dnu_R4)*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*Delta_34) - 1.0/2.0*(*nu_34) + 2*(*nu_R4))/pow((*ell_4), 2)
+    : (((*dnu_45) < 1.4901161193847656e-8) ? (
+       (*dnu_45)*(0.25*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))/pow((*ell_5), 2) + 0.25*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2)) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56))/pow((*ell_5), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45))/pow((*ell_4), 2)
     )
     : (
-       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*dnu_R4) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)) + ((*dnu_R4) + (*nu_R4))*((1.0/2.0)*(*Delta_34) + (*dnu_R4) - 1.0/4.0*(*nu_34) + (*nu_R4)))/pow((*ell_4), 2))/(*dnu_R4)
+       (-((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*dnu_45) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)) + (-(*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)))/pow((*ell_5), 2) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) - 1.0/4.0*(*dnu_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) + (1.0/2.0)*(*dnu_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2))/(*dnu_45)
     )))/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - (*r_4)*(*v_k4) - (((*dx_k4) < -1.4901161193847656e-8) ? (
        (-1.0/2.0*(*k_4)*pow((*x_k4), 2) + (1.0/2.0)*(*k_4)*pow((*dx_k4) + (*x_k4), 2))/(*dx_k4)
     )
@@ -1498,7 +1990,89 @@
     : (
        (-1.0/2.0*(*k_4)*pow((*x_k4), 2) + (1.0/2.0)*(*k_4)*pow((*dx_k4) + (*x_k4), 2))/(*dx_k4)
     )));
-    _Gnl(9, 0) = (*F_S)*(*dV_1) - 2*(*L_1)*(*ell_1)*(((*dPi_y1) < -1.4901161193847656e-8) ? (
+    _Gnl(11, 0) = (*F_S)*(*dPi_y5) + 2*(*L_5)*(*ell_5)*(((*dV_5) < -1.4901161193847656e-8) ? (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_5), 2)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_5), 2)*((*V_0_5) + (*V_5) + (*dV_5))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y5), 2)/(((*rho_0) + (*rho_5))*((*V_0_5) + (*V_5) + (*dV_5))) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))*((*V_0_5) + (*V_5) + (*dV_5))/pow((*ell_5), 2))/(*dV_5)
+    )
+    : (((*dV_5) < 1.4901161193847656e-8) ? (
+       (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_5), 2)/pow((*rho_0), 2) + 1.5*pow((*Pi_y5), 2)*(*dV_5)/(pow((*V_0_5) + (*V_5), 3)*((*rho_0) + (*rho_5))) - 3.0/2.0*pow((*Pi_y5), 2)/(pow((*V_0_5) + (*V_5), 2)*((*rho_0) + (*rho_5))) + ((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2)
+    )
+    : (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_5), 2)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_5), 2)*((*V_0_5) + (*V_5) + (*dV_5))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y5), 2)/(((*rho_0) + (*rho_5))*((*V_0_5) + (*V_5) + (*dV_5))) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))*((*V_0_5) + (*V_5) + (*dV_5))/pow((*ell_5), 2))/(*dV_5)
+    ))) - 2*(*L_5)*(*ell_5)*((*rho_0) + (*rho_5))*(((*drho_5) < -1.4901161193847656e-8) ? (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_5), 2)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))*pow((*drho_5) + (*rho_5), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*drho_5) + (*rho_0) + (*rho_5))) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))*((*drho_5) + (*rho_0) + (*rho_5))/pow((*ell_5), 2))/(*drho_5)
+    )
+    : (((*drho_5) < 1.4901161193847656e-8) ? (
+       (*P_0)*(*gamma)*(*rho_5)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*pow((*rho_0) + (*rho_5), 2)) + (*drho_5)*(0.5*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + 1.5*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*pow((*rho_0) + (*rho_5), 3))) + ((*V_0_5) + (*V_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2)
+    )
+    : (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_5), 2)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))*pow((*drho_5) + (*rho_5), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*drho_5) + (*rho_0) + (*rho_5))) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))*((*drho_5) + (*rho_0) + (*rho_5))/pow((*ell_5), 2))/(*drho_5)
+    )))/((*V_0_5) + (*V_5)) - (*Pi_y5)*(((*dnu_45) < -1.4901161193847656e-8) ? (
+       (-((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*dnu_45) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)) + (-(*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)))/pow((*ell_5), 2) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) - 1.0/4.0*(*dnu_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) + (1.0/2.0)*(*dnu_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2))/(*dnu_45)
+    )
+    : (((*dnu_45) < 1.4901161193847656e-8) ? (
+       (*dnu_45)*(0.25*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))/pow((*ell_5), 2) + 0.25*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2)) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56))/pow((*ell_5), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45))/pow((*ell_4), 2)
+    )
+    : (
+       (-((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*dnu_45) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)) + (-(*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)))/pow((*ell_5), 2) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) - 1.0/4.0*(*dnu_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) + (1.0/2.0)*(*dnu_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2))/(*dnu_45)
+    )))/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (*Pi_y5)*(((*dnu_56) < -1.4901161193847656e-8) ? (
+       (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*dnu_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) - 1.0/4.0*(*dnu_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) + (1.0/2.0)*(*dnu_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2))/(*dnu_56)
+    )
+    : (((*dnu_56) < 1.4901161193847656e-8) ? (
+       (*dnu_56)*(0.25*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))/pow((*ell_6), 2) + 0.25*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))/pow((*ell_5), 2)) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6))/pow((*ell_6), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56))/pow((*ell_5), 2)
+    )
+    : (
+       (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*dnu_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) - 1.0/4.0*(*dnu_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) + (1.0/2.0)*(*dnu_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2))/(*dnu_56)
+    )))/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - (*r_5)*(*v_k5) - (((*dx_k5) < -1.4901161193847656e-8) ? (
+       (-1.0/2.0*(*k_5)*pow((*x_k5), 2) + (1.0/2.0)*(*k_5)*pow((*dx_k5) + (*x_k5), 2))/(*dx_k5)
+    )
+    : (((*dx_k5) < 1.4901161193847656e-8) ? (
+       0.5*(*dx_k5)*(*k_5) + (*k_5)*(*x_k5)
+    )
+    : (
+       (-1.0/2.0*(*k_5)*pow((*x_k5), 2) + (1.0/2.0)*(*k_5)*pow((*dx_k5) + (*x_k5), 2))/(*dx_k5)
+    )));
+    _Gnl(12, 0) = (*F_S)*(*dPi_y6) + 2*(*L_6)*(*ell_6)*(((*dV_6) < -1.4901161193847656e-8) ? (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_6), 2)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_6), 2)*((*V_0_6) + (*V_6) + (*dV_6))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y6), 2)/(((*rho_0) + (*rho_6))*((*V_0_6) + (*V_6) + (*dV_6))) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))*((*V_0_6) + (*V_6) + (*dV_6))/pow((*ell_6), 2))/(*dV_6)
+    )
+    : (((*dV_6) < 1.4901161193847656e-8) ? (
+       (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_6), 2)/pow((*rho_0), 2) + 1.5*pow((*Pi_y6), 2)*(*dV_6)/(pow((*V_0_6) + (*V_6), 3)*((*rho_0) + (*rho_6))) - 3.0/2.0*pow((*Pi_y6), 2)/(pow((*V_0_6) + (*V_6), 2)*((*rho_0) + (*rho_6))) + ((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2)
+    )
+    : (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_6), 2)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_6), 2)*((*V_0_6) + (*V_6) + (*dV_6))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y6), 2)/(((*rho_0) + (*rho_6))*((*V_0_6) + (*V_6) + (*dV_6))) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))*((*V_0_6) + (*V_6) + (*dV_6))/pow((*ell_6), 2))/(*dV_6)
+    ))) - 2*(*L_6)*(*ell_6)*((*rho_0) + (*rho_6))*(((*drho_6) < -1.4901161193847656e-8) ? (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_6), 2)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))*pow((*drho_6) + (*rho_6), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*drho_6) + (*rho_0) + (*rho_6))) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))*((*drho_6) + (*rho_0) + (*rho_6))/pow((*ell_6), 2))/(*drho_6)
+    )
+    : (((*drho_6) < 1.4901161193847656e-8) ? (
+       (*P_0)*(*gamma)*(*rho_6)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*pow((*rho_0) + (*rho_6), 2)) + (*drho_6)*(0.5*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + 1.5*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*pow((*rho_0) + (*rho_6), 3))) + ((*V_0_6) + (*V_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2)
+    )
+    : (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_6), 2)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))*pow((*drho_6) + (*rho_6), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*drho_6) + (*rho_0) + (*rho_6))) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))*((*drho_6) + (*rho_0) + (*rho_6))/pow((*ell_6), 2))/(*drho_6)
+    )))/((*V_0_6) + (*V_6)) - (*Pi_y6)*(((*dnu_56) < -1.4901161193847656e-8) ? (
+       (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*dnu_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) - 1.0/4.0*(*dnu_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) + (1.0/2.0)*(*dnu_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2))/(*dnu_56)
+    )
+    : (((*dnu_56) < 1.4901161193847656e-8) ? (
+       (*dnu_56)*(0.25*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))/pow((*ell_6), 2) + 0.25*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))/pow((*ell_5), 2)) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6))/pow((*ell_6), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56))/pow((*ell_5), 2)
+    )
+    : (
+       (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*dnu_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) - 1.0/4.0*(*dnu_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) + (1.0/2.0)*(*dnu_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2))/(*dnu_56)
+    )))/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (*Pi_y6)*(((*dnu_R6) < -1.4901161193847656e-8) ? (
+       (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) - 1.0/2.0*(*dnu_R6) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)) + ((*dnu_R6) + (*nu_R6))*((1.0/2.0)*(*Delta_56) + (*dnu_R6) - 1.0/4.0*(*nu_56) + (*nu_R6)))/pow((*ell_6), 2))/(*dnu_R6)
+    )
+    : (((*dnu_R6) < 1.4901161193847656e-8) ? (
+       1.0*(*dnu_R6)*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*Delta_56) - 1.0/2.0*(*nu_56) + 2*(*nu_R6))/pow((*ell_6), 2)
+    )
+    : (
+       (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) - 1.0/2.0*(*dnu_R6) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)) + ((*dnu_R6) + (*nu_R6))*((1.0/2.0)*(*Delta_56) + (*dnu_R6) - 1.0/4.0*(*nu_56) + (*nu_R6)))/pow((*ell_6), 2))/(*dnu_R6)
+    )))/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - (*r_6)*(*v_k6) - (((*dx_k6) < -1.4901161193847656e-8) ? (
+       (-1.0/2.0*(*k_6)*pow((*x_k6), 2) + (1.0/2.0)*(*k_6)*pow((*dx_k6) + (*x_k6), 2))/(*dx_k6)
+    )
+    : (((*dx_k6) < 1.4901161193847656e-8) ? (
+       0.5*(*dx_k6)*(*k_6) + (*k_6)*(*x_k6)
+    )
+    : (
+       (-1.0/2.0*(*k_6)*pow((*x_k6), 2) + (1.0/2.0)*(*k_6)*pow((*dx_k6) + (*x_k6), 2))/(*dx_k6)
+    )));
+    _Gnl(13, 0) = (*F_S)*(*dV_1) - 2*(*L_1)*(*ell_1)*(((*dPi_y1) < -1.4901161193847656e-8) ? (
        (-3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) + (3.0/2.0)*pow((*Pi_y1) + (*dPi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))))/(*dPi_y1)
     )
     : (((*dPi_y1) < 1.4901161193847656e-8) ? (
@@ -1507,7 +2081,7 @@
     : (
        (-3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) + (3.0/2.0)*pow((*Pi_y1) + (*dPi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))))/(*dPi_y1)
     )));
-    _Gnl(10, 0) = (*F_S)*(*dV_2) - 2*(*L_2)*(*ell_2)*(((*dPi_y2) < -1.4901161193847656e-8) ? (
+    _Gnl(14, 0) = (*F_S)*(*dV_2) - 2*(*L_2)*(*ell_2)*(((*dPi_y2) < -1.4901161193847656e-8) ? (
        (-3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) + (3.0/2.0)*pow((*Pi_y2) + (*dPi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))))/(*dPi_y2)
     )
     : (((*dPi_y2) < 1.4901161193847656e-8) ? (
@@ -1516,7 +2090,7 @@
     : (
        (-3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) + (3.0/2.0)*pow((*Pi_y2) + (*dPi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))))/(*dPi_y2)
     )));
-    _Gnl(11, 0) = (*F_S)*(*dV_3) - 2*(*L_3)*(*ell_3)*(((*dPi_y3) < -1.4901161193847656e-8) ? (
+    _Gnl(15, 0) = (*F_S)*(*dV_3) - 2*(*L_3)*(*ell_3)*(((*dPi_y3) < -1.4901161193847656e-8) ? (
        (-3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) + (3.0/2.0)*pow((*Pi_y3) + (*dPi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))))/(*dPi_y3)
     )
     : (((*dPi_y3) < 1.4901161193847656e-8) ? (
@@ -1525,7 +2099,7 @@
     : (
        (-3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) + (3.0/2.0)*pow((*Pi_y3) + (*dPi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))))/(*dPi_y3)
     )));
-    _Gnl(12, 0) = (*F_S)*(*dV_4) - 2*(*L_4)*(*ell_4)*(((*dPi_y4) < -1.4901161193847656e-8) ? (
+    _Gnl(16, 0) = (*F_S)*(*dV_4) - 2*(*L_4)*(*ell_4)*(((*dPi_y4) < -1.4901161193847656e-8) ? (
        (-3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (3.0/2.0)*pow((*Pi_y4) + (*dPi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))))/(*dPi_y4)
     )
     : (((*dPi_y4) < 1.4901161193847656e-8) ? (
@@ -1534,7 +2108,25 @@
     : (
        (-3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (3.0/2.0)*pow((*Pi_y4) + (*dPi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))))/(*dPi_y4)
     )));
-    _Gnl(13, 0) = (*F_S)*(*drho_1) + 2*(*L_1)*(*ell_1)*((*rho_0) + (*rho_1))*(((*dPi_y1) < -1.4901161193847656e-8) ? (
+    _Gnl(17, 0) = (*F_S)*(*dV_5) - 2*(*L_5)*(*ell_5)*(((*dPi_y5) < -1.4901161193847656e-8) ? (
+       (-3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (3.0/2.0)*pow((*Pi_y5) + (*dPi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))))/(*dPi_y5)
+    )
+    : (((*dPi_y5) < 1.4901161193847656e-8) ? (
+       3*(*Pi_y5)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + 1.5*(*dPi_y5)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5)))
+    )
+    : (
+       (-3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (3.0/2.0)*pow((*Pi_y5) + (*dPi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))))/(*dPi_y5)
+    )));
+    _Gnl(18, 0) = (*F_S)*(*dV_6) - 2*(*L_6)*(*ell_6)*(((*dPi_y6) < -1.4901161193847656e-8) ? (
+       (-3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (3.0/2.0)*pow((*Pi_y6) + (*dPi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))))/(*dPi_y6)
+    )
+    : (((*dPi_y6) < 1.4901161193847656e-8) ? (
+       3*(*Pi_y6)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + 1.5*(*dPi_y6)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6)))
+    )
+    : (
+       (-3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (3.0/2.0)*pow((*Pi_y6) + (*dPi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))))/(*dPi_y6)
+    )));
+    _Gnl(19, 0) = (*F_S)*(*drho_1) + 2*(*L_1)*(*ell_1)*((*rho_0) + (*rho_1))*(((*dPi_y1) < -1.4901161193847656e-8) ? (
        (-3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) + (3.0/2.0)*pow((*Pi_y1) + (*dPi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))))/(*dPi_y1)
     )
     : (((*dPi_y1) < 1.4901161193847656e-8) ? (
@@ -1559,7 +2151,7 @@
     : (
        (-((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*(((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) - 1.0/2.0*(*dnu_L1) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)) + ((*dnu_L1) + (*nu_L1))*(-1.0/2.0*(*Delta_12) + (*dnu_L1) - 1.0/4.0*(*nu_12) + (*nu_L1)))/pow((*ell_1), 2))/(*dnu_L1)
     )))/((*V_0_1) + (*V_1));
-    _Gnl(14, 0) = (*F_S)*(*drho_2) + 2*(*L_2)*(*ell_2)*((*rho_0) + (*rho_2))*(((*dPi_y2) < -1.4901161193847656e-8) ? (
+    _Gnl(20, 0) = (*F_S)*(*drho_2) + 2*(*L_2)*(*ell_2)*((*rho_0) + (*rho_2))*(((*dPi_y2) < -1.4901161193847656e-8) ? (
        (-3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) + (3.0/2.0)*pow((*Pi_y2) + (*dPi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))))/(*dPi_y2)
     )
     : (((*dPi_y2) < 1.4901161193847656e-8) ? (
@@ -1584,7 +2176,7 @@
     : (
        (-((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*(((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*dnu_23) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)) + (-(*Delta_23) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)))/pow((*ell_3), 2) - ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) - 1.0/4.0*(*dnu_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) + (1.0/2.0)*(*dnu_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2))/(*dnu_23)
     )))/((*V_0_2) + (*V_2));
-    _Gnl(15, 0) = (*F_S)*(*drho_3) + 2*(*L_3)*(*ell_3)*((*rho_0) + (*rho_3))*(((*dPi_y3) < -1.4901161193847656e-8) ? (
+    _Gnl(21, 0) = (*F_S)*(*drho_3) + 2*(*L_3)*(*ell_3)*((*rho_0) + (*rho_3))*(((*dPi_y3) < -1.4901161193847656e-8) ? (
        (-3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) + (3.0/2.0)*pow((*Pi_y3) + (*dPi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))))/(*dPi_y3)
     )
     : (((*dPi_y3) < 1.4901161193847656e-8) ? (
@@ -1601,15 +2193,15 @@
     : (
        (-((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*(((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*dnu_23) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)) + (-(*Delta_23) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)))/pow((*ell_3), 2) - ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) - 1.0/4.0*(*dnu_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) + (1.0/2.0)*(*dnu_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2))/(*dnu_23)
     )))/((*V_0_3) + (*V_3)) + (((*dnu_34) < -1.4901161193847656e-8) ? (
-       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*dnu_34)
+       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*dnu_34)
     )
     : (((*dnu_34) < 1.4901161193847656e-8) ? (
-       (*dnu_34)*(0.25*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2) + 0.25*((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))/pow((*ell_3), 2)) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4))/pow((*ell_4), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34))/pow((*ell_3), 2)
+       (*dnu_34)*(0.25*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2) + 0.25*((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))/pow((*ell_3), 2)) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45))/pow((*ell_4), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34))/pow((*ell_3), 2)
     )
     : (
-       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*dnu_34)
+       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*dnu_34)
     )))/((*V_0_3) + (*V_3));
-    _Gnl(16, 0) = (*F_S)*(*drho_4) + 2*(*L_4)*(*ell_4)*((*rho_0) + (*rho_4))*(((*dPi_y4) < -1.4901161193847656e-8) ? (
+    _Gnl(22, 0) = (*F_S)*(*drho_4) + 2*(*L_4)*(*ell_4)*((*rho_0) + (*rho_4))*(((*dPi_y4) < -1.4901161193847656e-8) ? (
        (-3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (3.0/2.0)*pow((*Pi_y4) + (*dPi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))))/(*dPi_y4)
     )
     : (((*dPi_y4) < 1.4901161193847656e-8) ? (
@@ -1618,23 +2210,73 @@
     : (
        (-3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (3.0/2.0)*pow((*Pi_y4) + (*dPi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))))/(*dPi_y4)
     )))/((*V_0_4) + (*V_4)) - (((*dnu_34) < -1.4901161193847656e-8) ? (
-       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*dnu_34)
+       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*dnu_34)
     )
     : (((*dnu_34) < 1.4901161193847656e-8) ? (
-       (*dnu_34)*(0.25*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2) + 0.25*((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))/pow((*ell_3), 2)) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4))/pow((*ell_4), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34))/pow((*ell_3), 2)
+       (*dnu_34)*(0.25*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2) + 0.25*((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))/pow((*ell_3), 2)) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45))/pow((*ell_4), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34))/pow((*ell_3), 2)
     )
     : (
-       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*dnu_34)
-    )))/((*V_0_4) + (*V_4)) + (((*dnu_R4) < -1.4901161193847656e-8) ? (
-       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*dnu_R4) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)) + ((*dnu_R4) + (*nu_R4))*((1.0/2.0)*(*Delta_34) + (*dnu_R4) - 1.0/4.0*(*nu_34) + (*nu_R4)))/pow((*ell_4), 2))/(*dnu_R4)
+       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*dnu_34)
+    )))/((*V_0_4) + (*V_4)) + (((*dnu_45) < -1.4901161193847656e-8) ? (
+       (-((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*dnu_45) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)) + (-(*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)))/pow((*ell_5), 2) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) - 1.0/4.0*(*dnu_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) + (1.0/2.0)*(*dnu_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2))/(*dnu_45)
     )
-    : (((*dnu_R4) < 1.4901161193847656e-8) ? (
-       1.0*(*dnu_R4)*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*Delta_34) - 1.0/2.0*(*nu_34) + 2*(*nu_R4))/pow((*ell_4), 2)
+    : (((*dnu_45) < 1.4901161193847656e-8) ? (
+       (*dnu_45)*(0.25*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))/pow((*ell_5), 2) + 0.25*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2)) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56))/pow((*ell_5), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45))/pow((*ell_4), 2)
     )
     : (
-       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*dnu_R4) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)) + ((*dnu_R4) + (*nu_R4))*((1.0/2.0)*(*Delta_34) + (*dnu_R4) - 1.0/4.0*(*nu_34) + (*nu_R4)))/pow((*ell_4), 2))/(*dnu_R4)
+       (-((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*dnu_45) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)) + (-(*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)))/pow((*ell_5), 2) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) - 1.0/4.0*(*dnu_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) + (1.0/2.0)*(*dnu_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2))/(*dnu_45)
     )))/((*V_0_4) + (*V_4));
-    _Gnl(17, 0) = (*F_S)*(*dx_k1) - (*v_m1) + (((*dPi_y1) < -1.4901161193847656e-8) ? (
+    _Gnl(23, 0) = (*F_S)*(*drho_5) + 2*(*L_5)*(*ell_5)*((*rho_0) + (*rho_5))*(((*dPi_y5) < -1.4901161193847656e-8) ? (
+       (-3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (3.0/2.0)*pow((*Pi_y5) + (*dPi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))))/(*dPi_y5)
+    )
+    : (((*dPi_y5) < 1.4901161193847656e-8) ? (
+       3*(*Pi_y5)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + 1.5*(*dPi_y5)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5)))
+    )
+    : (
+       (-3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (3.0/2.0)*pow((*Pi_y5) + (*dPi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))))/(*dPi_y5)
+    )))/((*V_0_5) + (*V_5)) - (((*dnu_45) < -1.4901161193847656e-8) ? (
+       (-((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*dnu_45) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)) + (-(*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)))/pow((*ell_5), 2) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) - 1.0/4.0*(*dnu_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) + (1.0/2.0)*(*dnu_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2))/(*dnu_45)
+    )
+    : (((*dnu_45) < 1.4901161193847656e-8) ? (
+       (*dnu_45)*(0.25*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))/pow((*ell_5), 2) + 0.25*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2)) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56))/pow((*ell_5), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45))/pow((*ell_4), 2)
+    )
+    : (
+       (-((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*dnu_45) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)) + (-(*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)))/pow((*ell_5), 2) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) - 1.0/4.0*(*dnu_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) + (1.0/2.0)*(*dnu_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2))/(*dnu_45)
+    )))/((*V_0_5) + (*V_5)) + (((*dnu_56) < -1.4901161193847656e-8) ? (
+       (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*dnu_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) - 1.0/4.0*(*dnu_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) + (1.0/2.0)*(*dnu_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2))/(*dnu_56)
+    )
+    : (((*dnu_56) < 1.4901161193847656e-8) ? (
+       (*dnu_56)*(0.25*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))/pow((*ell_6), 2) + 0.25*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))/pow((*ell_5), 2)) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6))/pow((*ell_6), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56))/pow((*ell_5), 2)
+    )
+    : (
+       (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*dnu_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) - 1.0/4.0*(*dnu_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) + (1.0/2.0)*(*dnu_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2))/(*dnu_56)
+    )))/((*V_0_5) + (*V_5));
+    _Gnl(24, 0) = (*F_S)*(*drho_6) + 2*(*L_6)*(*ell_6)*((*rho_0) + (*rho_6))*(((*dPi_y6) < -1.4901161193847656e-8) ? (
+       (-3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (3.0/2.0)*pow((*Pi_y6) + (*dPi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))))/(*dPi_y6)
+    )
+    : (((*dPi_y6) < 1.4901161193847656e-8) ? (
+       3*(*Pi_y6)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + 1.5*(*dPi_y6)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6)))
+    )
+    : (
+       (-3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (3.0/2.0)*pow((*Pi_y6) + (*dPi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))))/(*dPi_y6)
+    )))/((*V_0_6) + (*V_6)) - (((*dnu_56) < -1.4901161193847656e-8) ? (
+       (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*dnu_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) - 1.0/4.0*(*dnu_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) + (1.0/2.0)*(*dnu_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2))/(*dnu_56)
+    )
+    : (((*dnu_56) < 1.4901161193847656e-8) ? (
+       (*dnu_56)*(0.25*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))/pow((*ell_6), 2) + 0.25*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))/pow((*ell_5), 2)) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6))/pow((*ell_6), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56))/pow((*ell_5), 2)
+    )
+    : (
+       (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*dnu_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) - 1.0/4.0*(*dnu_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) + (1.0/2.0)*(*dnu_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2))/(*dnu_56)
+    )))/((*V_0_6) + (*V_6)) + (((*dnu_R6) < -1.4901161193847656e-8) ? (
+       (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) - 1.0/2.0*(*dnu_R6) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)) + ((*dnu_R6) + (*nu_R6))*((1.0/2.0)*(*Delta_56) + (*dnu_R6) - 1.0/4.0*(*nu_56) + (*nu_R6)))/pow((*ell_6), 2))/(*dnu_R6)
+    )
+    : (((*dnu_R6) < 1.4901161193847656e-8) ? (
+       1.0*(*dnu_R6)*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*Delta_56) - 1.0/2.0*(*nu_56) + 2*(*nu_R6))/pow((*ell_6), 2)
+    )
+    : (
+       (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) - 1.0/2.0*(*dnu_R6) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)) + ((*dnu_R6) + (*nu_R6))*((1.0/2.0)*(*Delta_56) + (*dnu_R6) - 1.0/4.0*(*nu_56) + (*nu_R6)))/pow((*ell_6), 2))/(*dnu_R6)
+    )))/((*V_0_6) + (*V_6));
+    _Gnl(25, 0) = (*F_S)*(*dx_k1) - (*v_m1) + (((*dPi_y1) < -1.4901161193847656e-8) ? (
        (-3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) + (3.0/2.0)*pow((*Pi_y1) + (*dPi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))))/(*dPi_y1)
     )
     : (((*dPi_y1) < 1.4901161193847656e-8) ? (
@@ -1643,7 +2285,7 @@
     : (
        (-3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) + (3.0/2.0)*pow((*Pi_y1) + (*dPi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))))/(*dPi_y1)
     )));
-    _Gnl(18, 0) = (*F_S)*(*dx_k2) - (*v_m2) + (((*dPi_y2) < -1.4901161193847656e-8) ? (
+    _Gnl(26, 0) = (*F_S)*(*dx_k2) - (*v_m2) + (((*dPi_y2) < -1.4901161193847656e-8) ? (
        (-3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) + (3.0/2.0)*pow((*Pi_y2) + (*dPi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))))/(*dPi_y2)
     )
     : (((*dPi_y2) < 1.4901161193847656e-8) ? (
@@ -1652,7 +2294,7 @@
     : (
        (-3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) + (3.0/2.0)*pow((*Pi_y2) + (*dPi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))))/(*dPi_y2)
     )));
-    _Gnl(19, 0) = (*F_S)*(*dx_k3) - (*v_m3) + (((*dPi_y3) < -1.4901161193847656e-8) ? (
+    _Gnl(27, 0) = (*F_S)*(*dx_k3) - (*v_m3) + (((*dPi_y3) < -1.4901161193847656e-8) ? (
        (-3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) + (3.0/2.0)*pow((*Pi_y3) + (*dPi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))))/(*dPi_y3)
     )
     : (((*dPi_y3) < 1.4901161193847656e-8) ? (
@@ -1661,7 +2303,7 @@
     : (
        (-3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) + (3.0/2.0)*pow((*Pi_y3) + (*dPi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))))/(*dPi_y3)
     )));
-    _Gnl(20, 0) = (*F_S)*(*dx_k4) - (*v_m4) + (((*dPi_y4) < -1.4901161193847656e-8) ? (
+    _Gnl(28, 0) = (*F_S)*(*dx_k4) - (*v_m4) + (((*dPi_y4) < -1.4901161193847656e-8) ? (
        (-3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (3.0/2.0)*pow((*Pi_y4) + (*dPi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))))/(*dPi_y4)
     )
     : (((*dPi_y4) < 1.4901161193847656e-8) ? (
@@ -1670,7 +2312,25 @@
     : (
        (-3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (3.0/2.0)*pow((*Pi_y4) + (*dPi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))))/(*dPi_y4)
     )));
-    _Gnl(21, 0) = (*v_k1) - (*v_m1) + (((*dPi_y1) < -1.4901161193847656e-8) ? (
+    _Gnl(29, 0) = (*F_S)*(*dx_k5) - (*v_m5) + (((*dPi_y5) < -1.4901161193847656e-8) ? (
+       (-3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (3.0/2.0)*pow((*Pi_y5) + (*dPi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))))/(*dPi_y5)
+    )
+    : (((*dPi_y5) < 1.4901161193847656e-8) ? (
+       3*(*Pi_y5)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + 1.5*(*dPi_y5)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5)))
+    )
+    : (
+       (-3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (3.0/2.0)*pow((*Pi_y5) + (*dPi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))))/(*dPi_y5)
+    )));
+    _Gnl(30, 0) = (*F_S)*(*dx_k6) - (*v_m6) + (((*dPi_y6) < -1.4901161193847656e-8) ? (
+       (-3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (3.0/2.0)*pow((*Pi_y6) + (*dPi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))))/(*dPi_y6)
+    )
+    : (((*dPi_y6) < 1.4901161193847656e-8) ? (
+       3*(*Pi_y6)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + 1.5*(*dPi_y6)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6)))
+    )
+    : (
+       (-3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (3.0/2.0)*pow((*Pi_y6) + (*dPi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))))/(*dPi_y6)
+    )));
+    _Gnl(31, 0) = (*v_k1) - (*v_m1) + (((*dPi_y1) < -1.4901161193847656e-8) ? (
        (-3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) + (3.0/2.0)*pow((*Pi_y1) + (*dPi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))))/(*dPi_y1)
     )
     : (((*dPi_y1) < 1.4901161193847656e-8) ? (
@@ -1679,7 +2339,7 @@
     : (
        (-3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) + (3.0/2.0)*pow((*Pi_y1) + (*dPi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))))/(*dPi_y1)
     )));
-    _Gnl(22, 0) = (*v_k2) - (*v_m2) + (((*dPi_y2) < -1.4901161193847656e-8) ? (
+    _Gnl(32, 0) = (*v_k2) - (*v_m2) + (((*dPi_y2) < -1.4901161193847656e-8) ? (
        (-3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) + (3.0/2.0)*pow((*Pi_y2) + (*dPi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))))/(*dPi_y2)
     )
     : (((*dPi_y2) < 1.4901161193847656e-8) ? (
@@ -1688,7 +2348,7 @@
     : (
        (-3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) + (3.0/2.0)*pow((*Pi_y2) + (*dPi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))))/(*dPi_y2)
     )));
-    _Gnl(23, 0) = (*v_k3) - (*v_m3) + (((*dPi_y3) < -1.4901161193847656e-8) ? (
+    _Gnl(33, 0) = (*v_k3) - (*v_m3) + (((*dPi_y3) < -1.4901161193847656e-8) ? (
        (-3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) + (3.0/2.0)*pow((*Pi_y3) + (*dPi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))))/(*dPi_y3)
     )
     : (((*dPi_y3) < 1.4901161193847656e-8) ? (
@@ -1697,7 +2357,7 @@
     : (
        (-3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) + (3.0/2.0)*pow((*Pi_y3) + (*dPi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))))/(*dPi_y3)
     )));
-    _Gnl(24, 0) = (*v_k4) - (*v_m4) + (((*dPi_y4) < -1.4901161193847656e-8) ? (
+    _Gnl(34, 0) = (*v_k4) - (*v_m4) + (((*dPi_y4) < -1.4901161193847656e-8) ? (
        (-3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (3.0/2.0)*pow((*Pi_y4) + (*dPi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))))/(*dPi_y4)
     )
     : (((*dPi_y4) < 1.4901161193847656e-8) ? (
@@ -1706,18 +2366,36 @@
     : (
        (-3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (3.0/2.0)*pow((*Pi_y4) + (*dPi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))))/(*dPi_y4)
     )));
-    _Gnl(25, 0) = (*q) - (((*dnu_R4) < -1.4901161193847656e-8) ? (
-       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*dnu_R4) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)) + ((*dnu_R4) + (*nu_R4))*((1.0/2.0)*(*Delta_34) + (*dnu_R4) - 1.0/4.0*(*nu_34) + (*nu_R4)))/pow((*ell_4), 2))/(*dnu_R4)
+    _Gnl(35, 0) = (*v_k5) - (*v_m5) + (((*dPi_y5) < -1.4901161193847656e-8) ? (
+       (-3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (3.0/2.0)*pow((*Pi_y5) + (*dPi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))))/(*dPi_y5)
     )
-    : (((*dnu_R4) < 1.4901161193847656e-8) ? (
-       1.0*(*dnu_R4)*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*Delta_34) - 1.0/2.0*(*nu_34) + 2*(*nu_R4))/pow((*ell_4), 2)
+    : (((*dPi_y5) < 1.4901161193847656e-8) ? (
+       3*(*Pi_y5)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + 1.5*(*dPi_y5)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5)))
     )
     : (
-       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*dnu_R4) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)) + ((*dnu_R4) + (*nu_R4))*((1.0/2.0)*(*Delta_34) + (*dnu_R4) - 1.0/4.0*(*nu_34) + (*nu_R4)))/pow((*ell_4), 2))/(*dnu_R4)
+       (-3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (3.0/2.0)*pow((*Pi_y5) + (*dPi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))))/(*dPi_y5)
+    )));
+    _Gnl(36, 0) = (*v_k6) - (*v_m6) + (((*dPi_y6) < -1.4901161193847656e-8) ? (
+       (-3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (3.0/2.0)*pow((*Pi_y6) + (*dPi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))))/(*dPi_y6)
+    )
+    : (((*dPi_y6) < 1.4901161193847656e-8) ? (
+       3*(*Pi_y6)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + 1.5*(*dPi_y6)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6)))
+    )
+    : (
+       (-3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (3.0/2.0)*pow((*Pi_y6) + (*dPi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))))/(*dPi_y6)
+    )));
+    _Gnl(37, 0) = (*q) - (((*dnu_R6) < -1.4901161193847656e-8) ? (
+       (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) - 1.0/2.0*(*dnu_R6) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)) + ((*dnu_R6) + (*nu_R6))*((1.0/2.0)*(*Delta_56) + (*dnu_R6) - 1.0/4.0*(*nu_56) + (*nu_R6)))/pow((*ell_6), 2))/(*dnu_R6)
+    )
+    : (((*dnu_R6) < 1.4901161193847656e-8) ? (
+       1.0*(*dnu_R6)*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*Delta_56) - 1.0/2.0*(*nu_56) + 2*(*nu_R6))/pow((*ell_6), 2)
+    )
+    : (
+       (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) - 1.0/2.0*(*dnu_R6) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)) + ((*dnu_R6) + (*nu_R6))*((1.0/2.0)*(*Delta_56) + (*dnu_R6) - 1.0/4.0*(*nu_56) + (*nu_R6)))/pow((*ell_6), 2))/(*dnu_R6)
     )));
     };
     void VOCAL_TRACT::jacGnlnl_update(){
-    _jacGnlnl(0, 5) = (*Pi_y1)*(((*dPi_y1) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(0, 7) = (*Pi_y1)*(((*dPi_y1) < -1.4901161193847656e-8) ? (
        (3*(*Pi_y1) + 3*(*dPi_y1))/((*dPi_y1)*((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - (-3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) + (3.0/2.0)*pow((*Pi_y1) + (*dPi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))))/pow((*dPi_y1), 2)
     )
     : (((*dPi_y1) < 1.4901161193847656e-8) ? (
@@ -1726,7 +2404,7 @@
     : (
        (3*(*Pi_y1) + 3*(*dPi_y1))/((*dPi_y1)*((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - (-3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) + (3.0/2.0)*pow((*Pi_y1) + (*dPi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))))/pow((*dPi_y1), 2)
     )))/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1)));
-    _jacGnlnl(0, 13) = (((*drho_1) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(0, 19) = (((*drho_1) < -1.4901161193847656e-8) ? (
        ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_1) + (*V_1))*(2*(*drho_1) + 2*(*rho_1))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*pow((*drho_1) + (*rho_0) + (*rho_1), 2)) + ((*V_0_1) + (*V_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2))/(*drho_1) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_1), 2)*((*V_0_1) + (*V_1))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_1) + (*V_1))*pow((*drho_1) + (*rho_1), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*drho_1) + (*rho_0) + (*rho_1))) - 3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*V_0_1) + (*V_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))*((*drho_1) + (*rho_0) + (*rho_1))/pow((*ell_1), 2))/pow((*drho_1), 2)
     )
     : (((*drho_1) < 1.4901161193847656e-8) ? (
@@ -1735,7 +2413,7 @@
     : (
        ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_1) + (*V_1))*(2*(*drho_1) + 2*(*rho_1))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*pow((*drho_1) + (*rho_0) + (*rho_1), 2)) + ((*V_0_1) + (*V_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2))/(*drho_1) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_1), 2)*((*V_0_1) + (*V_1))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_1) + (*V_1))*pow((*drho_1) + (*rho_1), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*drho_1) + (*rho_0) + (*rho_1))) - 3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*V_0_1) + (*V_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))*((*drho_1) + (*rho_0) + (*rho_1))/pow((*ell_1), 2))/pow((*drho_1), 2)
     )))/((*V_0_1) + (*V_1));
-    _jacGnlnl(1, 5) = -(*Pi_y1)*(((*dPi_y1) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(1, 7) = -(*Pi_y1)*(((*dPi_y1) < -1.4901161193847656e-8) ? (
        (3*(*Pi_y1) + 3*(*dPi_y1))/((*dPi_y1)*((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - (-3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) + (3.0/2.0)*pow((*Pi_y1) + (*dPi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))))/pow((*dPi_y1), 2)
     )
     : (((*dPi_y1) < 1.4901161193847656e-8) ? (
@@ -1744,7 +2422,7 @@
     : (
        (3*(*Pi_y1) + 3*(*dPi_y1))/((*dPi_y1)*((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - (-3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) + (3.0/2.0)*pow((*Pi_y1) + (*dPi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))))/pow((*dPi_y1), 2)
     )))/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1)));
-    _jacGnlnl(1, 6) = (*Pi_y2)*(((*dPi_y2) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(1, 8) = (*Pi_y2)*(((*dPi_y2) < -1.4901161193847656e-8) ? (
        (3*(*Pi_y2) + 3*(*dPi_y2))/((*dPi_y2)*((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) - (-3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) + (3.0/2.0)*pow((*Pi_y2) + (*dPi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))))/pow((*dPi_y2), 2)
     )
     : (((*dPi_y2) < 1.4901161193847656e-8) ? (
@@ -1753,7 +2431,7 @@
     : (
        (3*(*Pi_y2) + 3*(*dPi_y2))/((*dPi_y2)*((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) - (-3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) + (3.0/2.0)*pow((*Pi_y2) + (*dPi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))))/pow((*dPi_y2), 2)
     )))/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2)));
-    _jacGnlnl(1, 13) = -(((*drho_1) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(1, 19) = -(((*drho_1) < -1.4901161193847656e-8) ? (
        ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_1) + (*V_1))*(2*(*drho_1) + 2*(*rho_1))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*pow((*drho_1) + (*rho_0) + (*rho_1), 2)) + ((*V_0_1) + (*V_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2))/(*drho_1) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_1), 2)*((*V_0_1) + (*V_1))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_1) + (*V_1))*pow((*drho_1) + (*rho_1), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*drho_1) + (*rho_0) + (*rho_1))) - 3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*V_0_1) + (*V_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))*((*drho_1) + (*rho_0) + (*rho_1))/pow((*ell_1), 2))/pow((*drho_1), 2)
     )
     : (((*drho_1) < 1.4901161193847656e-8) ? (
@@ -1762,7 +2440,7 @@
     : (
        ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_1) + (*V_1))*(2*(*drho_1) + 2*(*rho_1))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*pow((*drho_1) + (*rho_0) + (*rho_1), 2)) + ((*V_0_1) + (*V_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2))/(*drho_1) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_1), 2)*((*V_0_1) + (*V_1))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_1) + (*V_1))*pow((*drho_1) + (*rho_1), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*drho_1) + (*rho_0) + (*rho_1))) - 3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*V_0_1) + (*V_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))*((*drho_1) + (*rho_0) + (*rho_1))/pow((*ell_1), 2))/pow((*drho_1), 2)
     )))/((*V_0_1) + (*V_1));
-    _jacGnlnl(1, 14) = (((*drho_2) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(1, 20) = (((*drho_2) < -1.4901161193847656e-8) ? (
        ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_2) + (*V_2))*(2*(*drho_2) + 2*(*rho_2))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*pow((*drho_2) + (*rho_0) + (*rho_2), 2)) + ((*V_0_2) + (*V_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2))/(*drho_2) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_2), 2)*((*V_0_2) + (*V_2))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_2) + (*V_2))*pow((*drho_2) + (*rho_2), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*drho_2) + (*rho_0) + (*rho_2))) - 3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) - ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))*((*drho_2) + (*rho_0) + (*rho_2))/pow((*ell_2), 2))/pow((*drho_2), 2)
     )
     : (((*drho_2) < 1.4901161193847656e-8) ? (
@@ -1771,7 +2449,7 @@
     : (
        ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_2) + (*V_2))*(2*(*drho_2) + 2*(*rho_2))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*pow((*drho_2) + (*rho_0) + (*rho_2), 2)) + ((*V_0_2) + (*V_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2))/(*drho_2) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_2), 2)*((*V_0_2) + (*V_2))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_2) + (*V_2))*pow((*drho_2) + (*rho_2), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*drho_2) + (*rho_0) + (*rho_2))) - 3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) - ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))*((*drho_2) + (*rho_0) + (*rho_2))/pow((*ell_2), 2))/pow((*drho_2), 2)
     )))/((*V_0_2) + (*V_2));
-    _jacGnlnl(2, 6) = -(*Pi_y2)*(((*dPi_y2) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(2, 8) = -(*Pi_y2)*(((*dPi_y2) < -1.4901161193847656e-8) ? (
        (3*(*Pi_y2) + 3*(*dPi_y2))/((*dPi_y2)*((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) - (-3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) + (3.0/2.0)*pow((*Pi_y2) + (*dPi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))))/pow((*dPi_y2), 2)
     )
     : (((*dPi_y2) < 1.4901161193847656e-8) ? (
@@ -1780,7 +2458,7 @@
     : (
        (3*(*Pi_y2) + 3*(*dPi_y2))/((*dPi_y2)*((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) - (-3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) + (3.0/2.0)*pow((*Pi_y2) + (*dPi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))))/pow((*dPi_y2), 2)
     )))/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2)));
-    _jacGnlnl(2, 7) = (*Pi_y3)*(((*dPi_y3) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(2, 9) = (*Pi_y3)*(((*dPi_y3) < -1.4901161193847656e-8) ? (
        (3*(*Pi_y3) + 3*(*dPi_y3))/((*dPi_y3)*((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - (-3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) + (3.0/2.0)*pow((*Pi_y3) + (*dPi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))))/pow((*dPi_y3), 2)
     )
     : (((*dPi_y3) < 1.4901161193847656e-8) ? (
@@ -1789,7 +2467,7 @@
     : (
        (3*(*Pi_y3) + 3*(*dPi_y3))/((*dPi_y3)*((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - (-3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) + (3.0/2.0)*pow((*Pi_y3) + (*dPi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))))/pow((*dPi_y3), 2)
     )))/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3)));
-    _jacGnlnl(2, 14) = -(((*drho_2) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(2, 20) = -(((*drho_2) < -1.4901161193847656e-8) ? (
        ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_2) + (*V_2))*(2*(*drho_2) + 2*(*rho_2))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*pow((*drho_2) + (*rho_0) + (*rho_2), 2)) + ((*V_0_2) + (*V_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2))/(*drho_2) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_2), 2)*((*V_0_2) + (*V_2))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_2) + (*V_2))*pow((*drho_2) + (*rho_2), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*drho_2) + (*rho_0) + (*rho_2))) - 3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) - ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))*((*drho_2) + (*rho_0) + (*rho_2))/pow((*ell_2), 2))/pow((*drho_2), 2)
     )
     : (((*drho_2) < 1.4901161193847656e-8) ? (
@@ -1798,7 +2476,7 @@
     : (
        ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_2) + (*V_2))*(2*(*drho_2) + 2*(*rho_2))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*pow((*drho_2) + (*rho_0) + (*rho_2), 2)) + ((*V_0_2) + (*V_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2))/(*drho_2) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_2), 2)*((*V_0_2) + (*V_2))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_2) + (*V_2))*pow((*drho_2) + (*rho_2), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*drho_2) + (*rho_0) + (*rho_2))) - 3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) - ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))*((*drho_2) + (*rho_0) + (*rho_2))/pow((*ell_2), 2))/pow((*drho_2), 2)
     )))/((*V_0_2) + (*V_2));
-    _jacGnlnl(2, 15) = (((*drho_3) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(2, 21) = (((*drho_3) < -1.4901161193847656e-8) ? (
        ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_3) + (*V_3))*(2*(*drho_3) + 2*(*rho_3))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*pow((*drho_3) + (*rho_0) + (*rho_3), 2)) + ((*V_0_3) + (*V_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*drho_3) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_3), 2)*((*V_0_3) + (*V_3))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_3) + (*V_3))*pow((*drho_3) + (*rho_3), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*drho_3) + (*rho_0) + (*rho_3))) - 3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))*((*drho_3) + (*rho_0) + (*rho_3))/pow((*ell_3), 2))/pow((*drho_3), 2)
     )
     : (((*drho_3) < 1.4901161193847656e-8) ? (
@@ -1807,7 +2485,7 @@
     : (
        ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_3) + (*V_3))*(2*(*drho_3) + 2*(*rho_3))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*pow((*drho_3) + (*rho_0) + (*rho_3), 2)) + ((*V_0_3) + (*V_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*drho_3) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_3), 2)*((*V_0_3) + (*V_3))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_3) + (*V_3))*pow((*drho_3) + (*rho_3), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*drho_3) + (*rho_0) + (*rho_3))) - 3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))*((*drho_3) + (*rho_0) + (*rho_3))/pow((*ell_3), 2))/pow((*drho_3), 2)
     )))/((*V_0_3) + (*V_3));
-    _jacGnlnl(3, 7) = -(*Pi_y3)*(((*dPi_y3) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(3, 9) = -(*Pi_y3)*(((*dPi_y3) < -1.4901161193847656e-8) ? (
        (3*(*Pi_y3) + 3*(*dPi_y3))/((*dPi_y3)*((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - (-3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) + (3.0/2.0)*pow((*Pi_y3) + (*dPi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))))/pow((*dPi_y3), 2)
     )
     : (((*dPi_y3) < 1.4901161193847656e-8) ? (
@@ -1816,7 +2494,7 @@
     : (
        (3*(*Pi_y3) + 3*(*dPi_y3))/((*dPi_y3)*((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - (-3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) + (3.0/2.0)*pow((*Pi_y3) + (*dPi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))))/pow((*dPi_y3), 2)
     )))/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3)));
-    _jacGnlnl(3, 8) = (*Pi_y4)*(((*dPi_y4) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(3, 10) = (*Pi_y4)*(((*dPi_y4) < -1.4901161193847656e-8) ? (
        (3*(*Pi_y4) + 3*(*dPi_y4))/((*dPi_y4)*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - (-3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (3.0/2.0)*pow((*Pi_y4) + (*dPi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))))/pow((*dPi_y4), 2)
     )
     : (((*dPi_y4) < 1.4901161193847656e-8) ? (
@@ -1825,7 +2503,7 @@
     : (
        (3*(*Pi_y4) + 3*(*dPi_y4))/((*dPi_y4)*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - (-3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (3.0/2.0)*pow((*Pi_y4) + (*dPi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))))/pow((*dPi_y4), 2)
     )))/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4)));
-    _jacGnlnl(3, 15) = -(((*drho_3) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(3, 21) = -(((*drho_3) < -1.4901161193847656e-8) ? (
        ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_3) + (*V_3))*(2*(*drho_3) + 2*(*rho_3))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*pow((*drho_3) + (*rho_0) + (*rho_3), 2)) + ((*V_0_3) + (*V_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*drho_3) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_3), 2)*((*V_0_3) + (*V_3))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_3) + (*V_3))*pow((*drho_3) + (*rho_3), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*drho_3) + (*rho_0) + (*rho_3))) - 3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))*((*drho_3) + (*rho_0) + (*rho_3))/pow((*ell_3), 2))/pow((*drho_3), 2)
     )
     : (((*drho_3) < 1.4901161193847656e-8) ? (
@@ -1834,16 +2512,16 @@
     : (
        ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_3) + (*V_3))*(2*(*drho_3) + 2*(*rho_3))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*pow((*drho_3) + (*rho_0) + (*rho_3), 2)) + ((*V_0_3) + (*V_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*drho_3) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_3), 2)*((*V_0_3) + (*V_3))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_3) + (*V_3))*pow((*drho_3) + (*rho_3), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*drho_3) + (*rho_0) + (*rho_3))) - 3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))*((*drho_3) + (*rho_0) + (*rho_3))/pow((*ell_3), 2))/pow((*drho_3), 2)
     )))/((*V_0_3) + (*V_3));
-    _jacGnlnl(3, 16) = (((*drho_4) < -1.4901161193847656e-8) ? (
-       ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*(2*(*drho_4) + 2*(*rho_4))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_0) + (*rho_4), 2)) + ((*V_0_4) + (*V_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2))/(*drho_4) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/pow((*drho_4), 2)
+    _jacGnlnl(3, 22) = (((*drho_4) < -1.4901161193847656e-8) ? (
+       ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*(2*(*drho_4) + 2*(*rho_4))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_0) + (*rho_4), 2)) + ((*V_0_4) + (*V_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2))/(*drho_4) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/pow((*drho_4), 2)
     )
     : (((*drho_4) < 1.4901161193847656e-8) ? (
        0.5*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + 1.5*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*rho_0) + (*rho_4), 3))
     )
     : (
-       ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*(2*(*drho_4) + 2*(*rho_4))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_0) + (*rho_4), 2)) + ((*V_0_4) + (*V_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2))/(*drho_4) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/pow((*drho_4), 2)
+       ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*(2*(*drho_4) + 2*(*rho_4))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_0) + (*rho_4), 2)) + ((*V_0_4) + (*V_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2))/(*drho_4) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/pow((*drho_4), 2)
     )))/((*V_0_4) + (*V_4));
-    _jacGnlnl(4, 8) = -(*Pi_y4)*(((*dPi_y4) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(4, 10) = -(*Pi_y4)*(((*dPi_y4) < -1.4901161193847656e-8) ? (
        (3*(*Pi_y4) + 3*(*dPi_y4))/((*dPi_y4)*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - (-3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (3.0/2.0)*pow((*Pi_y4) + (*dPi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))))/pow((*dPi_y4), 2)
     )
     : (((*dPi_y4) < 1.4901161193847656e-8) ? (
@@ -1852,16 +2530,88 @@
     : (
        (3*(*Pi_y4) + 3*(*dPi_y4))/((*dPi_y4)*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - (-3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (3.0/2.0)*pow((*Pi_y4) + (*dPi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))))/pow((*dPi_y4), 2)
     )))/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4)));
-    _jacGnlnl(4, 16) = -(((*drho_4) < -1.4901161193847656e-8) ? (
-       ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*(2*(*drho_4) + 2*(*rho_4))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_0) + (*rho_4), 2)) + ((*V_0_4) + (*V_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2))/(*drho_4) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/pow((*drho_4), 2)
+    _jacGnlnl(4, 11) = (*Pi_y5)*(((*dPi_y5) < -1.4901161193847656e-8) ? (
+       (3*(*Pi_y5) + 3*(*dPi_y5))/((*dPi_y5)*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - (-3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (3.0/2.0)*pow((*Pi_y5) + (*dPi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))))/pow((*dPi_y5), 2)
+    )
+    : (((*dPi_y5) < 1.4901161193847656e-8) ? (
+       1.5/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5)))
+    )
+    : (
+       (3*(*Pi_y5) + 3*(*dPi_y5))/((*dPi_y5)*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - (-3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (3.0/2.0)*pow((*Pi_y5) + (*dPi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))))/pow((*dPi_y5), 2)
+    )))/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5)));
+    _jacGnlnl(4, 22) = -(((*drho_4) < -1.4901161193847656e-8) ? (
+       ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*(2*(*drho_4) + 2*(*rho_4))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_0) + (*rho_4), 2)) + ((*V_0_4) + (*V_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2))/(*drho_4) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/pow((*drho_4), 2)
     )
     : (((*drho_4) < 1.4901161193847656e-8) ? (
        0.5*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + 1.5*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*rho_0) + (*rho_4), 3))
     )
     : (
-       ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*(2*(*drho_4) + 2*(*rho_4))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_0) + (*rho_4), 2)) + ((*V_0_4) + (*V_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2))/(*drho_4) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/pow((*drho_4), 2)
+       ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*(2*(*drho_4) + 2*(*rho_4))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_0) + (*rho_4), 2)) + ((*V_0_4) + (*V_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2))/(*drho_4) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/pow((*drho_4), 2)
     )))/((*V_0_4) + (*V_4));
-    _jacGnlnl(5, 0) = -(*Pi_y1)*(((*dnu_L1) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(4, 23) = (((*drho_5) < -1.4901161193847656e-8) ? (
+       ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))*(2*(*drho_5) + 2*(*rho_5))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*pow((*drho_5) + (*rho_0) + (*rho_5), 2)) + ((*V_0_5) + (*V_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2))/(*drho_5) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_5), 2)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))*pow((*drho_5) + (*rho_5), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*drho_5) + (*rho_0) + (*rho_5))) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))*((*drho_5) + (*rho_0) + (*rho_5))/pow((*ell_5), 2))/pow((*drho_5), 2)
+    )
+    : (((*drho_5) < 1.4901161193847656e-8) ? (
+       0.5*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + 1.5*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*pow((*rho_0) + (*rho_5), 3))
+    )
+    : (
+       ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))*(2*(*drho_5) + 2*(*rho_5))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*pow((*drho_5) + (*rho_0) + (*rho_5), 2)) + ((*V_0_5) + (*V_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2))/(*drho_5) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_5), 2)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))*pow((*drho_5) + (*rho_5), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*drho_5) + (*rho_0) + (*rho_5))) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))*((*drho_5) + (*rho_0) + (*rho_5))/pow((*ell_5), 2))/pow((*drho_5), 2)
+    )))/((*V_0_5) + (*V_5));
+    _jacGnlnl(5, 11) = -(*Pi_y5)*(((*dPi_y5) < -1.4901161193847656e-8) ? (
+       (3*(*Pi_y5) + 3*(*dPi_y5))/((*dPi_y5)*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - (-3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (3.0/2.0)*pow((*Pi_y5) + (*dPi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))))/pow((*dPi_y5), 2)
+    )
+    : (((*dPi_y5) < 1.4901161193847656e-8) ? (
+       1.5/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5)))
+    )
+    : (
+       (3*(*Pi_y5) + 3*(*dPi_y5))/((*dPi_y5)*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - (-3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (3.0/2.0)*pow((*Pi_y5) + (*dPi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))))/pow((*dPi_y5), 2)
+    )))/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5)));
+    _jacGnlnl(5, 12) = (*Pi_y6)*(((*dPi_y6) < -1.4901161193847656e-8) ? (
+       (3*(*Pi_y6) + 3*(*dPi_y6))/((*dPi_y6)*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - (-3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (3.0/2.0)*pow((*Pi_y6) + (*dPi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))))/pow((*dPi_y6), 2)
+    )
+    : (((*dPi_y6) < 1.4901161193847656e-8) ? (
+       1.5/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6)))
+    )
+    : (
+       (3*(*Pi_y6) + 3*(*dPi_y6))/((*dPi_y6)*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - (-3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (3.0/2.0)*pow((*Pi_y6) + (*dPi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))))/pow((*dPi_y6), 2)
+    )))/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6)));
+    _jacGnlnl(5, 23) = -(((*drho_5) < -1.4901161193847656e-8) ? (
+       ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))*(2*(*drho_5) + 2*(*rho_5))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*pow((*drho_5) + (*rho_0) + (*rho_5), 2)) + ((*V_0_5) + (*V_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2))/(*drho_5) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_5), 2)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))*pow((*drho_5) + (*rho_5), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*drho_5) + (*rho_0) + (*rho_5))) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))*((*drho_5) + (*rho_0) + (*rho_5))/pow((*ell_5), 2))/pow((*drho_5), 2)
+    )
+    : (((*drho_5) < 1.4901161193847656e-8) ? (
+       0.5*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + 1.5*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*pow((*rho_0) + (*rho_5), 3))
+    )
+    : (
+       ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))*(2*(*drho_5) + 2*(*rho_5))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*pow((*drho_5) + (*rho_0) + (*rho_5), 2)) + ((*V_0_5) + (*V_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2))/(*drho_5) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_5), 2)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))*pow((*drho_5) + (*rho_5), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*drho_5) + (*rho_0) + (*rho_5))) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))*((*drho_5) + (*rho_0) + (*rho_5))/pow((*ell_5), 2))/pow((*drho_5), 2)
+    )))/((*V_0_5) + (*V_5));
+    _jacGnlnl(5, 24) = (((*drho_6) < -1.4901161193847656e-8) ? (
+       ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))*(2*(*drho_6) + 2*(*rho_6))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*pow((*drho_6) + (*rho_0) + (*rho_6), 2)) + ((*V_0_6) + (*V_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2))/(*drho_6) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_6), 2)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))*pow((*drho_6) + (*rho_6), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*drho_6) + (*rho_0) + (*rho_6))) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))*((*drho_6) + (*rho_0) + (*rho_6))/pow((*ell_6), 2))/pow((*drho_6), 2)
+    )
+    : (((*drho_6) < 1.4901161193847656e-8) ? (
+       0.5*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + 1.5*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*pow((*rho_0) + (*rho_6), 3))
+    )
+    : (
+       ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))*(2*(*drho_6) + 2*(*rho_6))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*pow((*drho_6) + (*rho_0) + (*rho_6), 2)) + ((*V_0_6) + (*V_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2))/(*drho_6) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_6), 2)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))*pow((*drho_6) + (*rho_6), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*drho_6) + (*rho_0) + (*rho_6))) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))*((*drho_6) + (*rho_0) + (*rho_6))/pow((*ell_6), 2))/pow((*drho_6), 2)
+    )))/((*V_0_6) + (*V_6));
+    _jacGnlnl(6, 12) = -(*Pi_y6)*(((*dPi_y6) < -1.4901161193847656e-8) ? (
+       (3*(*Pi_y6) + 3*(*dPi_y6))/((*dPi_y6)*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - (-3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (3.0/2.0)*pow((*Pi_y6) + (*dPi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))))/pow((*dPi_y6), 2)
+    )
+    : (((*dPi_y6) < 1.4901161193847656e-8) ? (
+       1.5/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6)))
+    )
+    : (
+       (3*(*Pi_y6) + 3*(*dPi_y6))/((*dPi_y6)*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - (-3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (3.0/2.0)*pow((*Pi_y6) + (*dPi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))))/pow((*dPi_y6), 2)
+    )))/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6)));
+    _jacGnlnl(6, 24) = -(((*drho_6) < -1.4901161193847656e-8) ? (
+       ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))*(2*(*drho_6) + 2*(*rho_6))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*pow((*drho_6) + (*rho_0) + (*rho_6), 2)) + ((*V_0_6) + (*V_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2))/(*drho_6) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_6), 2)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))*pow((*drho_6) + (*rho_6), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*drho_6) + (*rho_0) + (*rho_6))) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))*((*drho_6) + (*rho_0) + (*rho_6))/pow((*ell_6), 2))/pow((*drho_6), 2)
+    )
+    : (((*drho_6) < 1.4901161193847656e-8) ? (
+       0.5*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + 1.5*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*pow((*rho_0) + (*rho_6), 3))
+    )
+    : (
+       ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))*(2*(*drho_6) + 2*(*rho_6))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*pow((*drho_6) + (*rho_0) + (*rho_6), 2)) + ((*V_0_6) + (*V_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2))/(*drho_6) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_6), 2)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))*pow((*drho_6) + (*rho_6), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*drho_6) + (*rho_0) + (*rho_6))) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))*((*drho_6) + (*rho_0) + (*rho_6))/pow((*ell_6), 2))/pow((*drho_6), 2)
+    )))/((*V_0_6) + (*V_6));
+    _jacGnlnl(7, 0) = -(*Pi_y1)*(((*dnu_L1) < -1.4901161193847656e-8) ? (
        ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*(-(*Delta_12) + 2*(*dnu_L1) - 1.0/2.0*(*nu_12) + 2*(*nu_L1))/((*dnu_L1)*pow((*ell_1), 2)) - (-((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*(((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) - 1.0/2.0*(*dnu_L1) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)) + ((*dnu_L1) + (*nu_L1))*(-1.0/2.0*(*Delta_12) + (*dnu_L1) - 1.0/4.0*(*nu_12) + (*nu_L1)))/pow((*ell_1), 2))/pow((*dnu_L1), 2)
     )
     : (((*dnu_L1) < 1.4901161193847656e-8) ? (
@@ -1870,7 +2620,7 @@
     : (
        ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*(-(*Delta_12) + 2*(*dnu_L1) - 1.0/2.0*(*nu_12) + 2*(*nu_L1))/((*dnu_L1)*pow((*ell_1), 2)) - (-((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*(((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) - 1.0/2.0*(*dnu_L1) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)) + ((*dnu_L1) + (*nu_L1))*(-1.0/2.0*(*Delta_12) + (*dnu_L1) - 1.0/4.0*(*nu_12) + (*nu_L1)))/pow((*ell_1), 2))/pow((*dnu_L1), 2)
     )))/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1)));
-    _jacGnlnl(5, 1) = (*Pi_y1)*(((*dnu_12) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(7, 1) = (*Pi_y1)*(((*dnu_12) < -1.4901161193847656e-8) ? (
        (((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23))/pow((*ell_2), 2) + ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1))/pow((*ell_1), 2))/(*dnu_12) - (-((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*(((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*dnu_12) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)) + (-(*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)))/pow((*ell_2), 2) - ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*dnu_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2))/pow((*dnu_12), 2)
     )
     : (((*dnu_12) < 1.4901161193847656e-8) ? (
@@ -1879,7 +2629,7 @@
     : (
        (((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23))/pow((*ell_2), 2) + ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1))/pow((*ell_1), 2))/(*dnu_12) - (-((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*(((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*dnu_12) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)) + (-(*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)))/pow((*ell_2), 2) - ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*dnu_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2))/pow((*dnu_12), 2)
     )))/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1)));
-    _jacGnlnl(5, 9) = 2*(*L_1)*(*ell_1)*(((*dV_1) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(7, 13) = 2*(*L_1)*(*ell_1)*(((*dV_1) < -1.4901161193847656e-8) ? (
        ((1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_1), 2)/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y1), 2)/(((*rho_0) + (*rho_1))*pow((*V_0_1) + (*V_1) + (*dV_1), 2)) + ((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2))/(*dV_1) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_1), 2)*((*V_0_1) + (*V_1))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_1), 2)*((*V_0_1) + (*V_1) + (*dV_1))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y1), 2)/(((*rho_0) + (*rho_1))*((*V_0_1) + (*V_1) + (*dV_1))) - 3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))*((*V_0_1) + (*V_1) + (*dV_1))/pow((*ell_1), 2))/pow((*dV_1), 2)
     )
     : (((*dV_1) < 1.4901161193847656e-8) ? (
@@ -1888,7 +2638,7 @@
     : (
        ((1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_1), 2)/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y1), 2)/(((*rho_0) + (*rho_1))*pow((*V_0_1) + (*V_1) + (*dV_1), 2)) + ((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2))/(*dV_1) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_1), 2)*((*V_0_1) + (*V_1))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_1), 2)*((*V_0_1) + (*V_1) + (*dV_1))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y1), 2)/(((*rho_0) + (*rho_1))*((*V_0_1) + (*V_1) + (*dV_1))) - 3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))*((*V_0_1) + (*V_1) + (*dV_1))/pow((*ell_1), 2))/pow((*dV_1), 2)
     )));
-    _jacGnlnl(5, 13) = -2*(*L_1)*(*ell_1)*((*rho_0) + (*rho_1))*(((*drho_1) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(7, 19) = -2*(*L_1)*(*ell_1)*((*rho_0) + (*rho_1))*(((*drho_1) < -1.4901161193847656e-8) ? (
        ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_1) + (*V_1))*(2*(*drho_1) + 2*(*rho_1))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*pow((*drho_1) + (*rho_0) + (*rho_1), 2)) + ((*V_0_1) + (*V_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2))/(*drho_1) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_1), 2)*((*V_0_1) + (*V_1))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_1) + (*V_1))*pow((*drho_1) + (*rho_1), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*drho_1) + (*rho_0) + (*rho_1))) - 3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*V_0_1) + (*V_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))*((*drho_1) + (*rho_0) + (*rho_1))/pow((*ell_1), 2))/pow((*drho_1), 2)
     )
     : (((*drho_1) < 1.4901161193847656e-8) ? (
@@ -1897,7 +2647,7 @@
     : (
        ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_1) + (*V_1))*(2*(*drho_1) + 2*(*rho_1))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*pow((*drho_1) + (*rho_0) + (*rho_1), 2)) + ((*V_0_1) + (*V_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2))/(*drho_1) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_1), 2)*((*V_0_1) + (*V_1))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_1) + (*V_1))*pow((*drho_1) + (*rho_1), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*drho_1) + (*rho_0) + (*rho_1))) - 3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*V_0_1) + (*V_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))*((*drho_1) + (*rho_0) + (*rho_1))/pow((*ell_1), 2))/pow((*drho_1), 2)
     )))/((*V_0_1) + (*V_1));
-    _jacGnlnl(5, 17) = -(((*dx_k1) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(7, 25) = -(((*dx_k1) < -1.4901161193847656e-8) ? (
        (1.0/2.0)*(*k_1)*(2*(*dx_k1) + 2*(*x_k1))/(*dx_k1) - (-1.0/2.0*(*k_1)*pow((*x_k1), 2) + (1.0/2.0)*(*k_1)*pow((*dx_k1) + (*x_k1), 2))/pow((*dx_k1), 2)
     )
     : (((*dx_k1) < 1.4901161193847656e-8) ? (
@@ -1906,7 +2656,7 @@
     : (
        (1.0/2.0)*(*k_1)*(2*(*dx_k1) + 2*(*x_k1))/(*dx_k1) - (-1.0/2.0*(*k_1)*pow((*x_k1), 2) + (1.0/2.0)*(*k_1)*pow((*dx_k1) + (*x_k1), 2))/pow((*dx_k1), 2)
     )));
-    _jacGnlnl(6, 1) = -(*Pi_y2)*(((*dnu_12) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(8, 1) = -(*Pi_y2)*(((*dnu_12) < -1.4901161193847656e-8) ? (
        (((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23))/pow((*ell_2), 2) + ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1))/pow((*ell_1), 2))/(*dnu_12) - (-((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*(((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*dnu_12) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)) + (-(*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)))/pow((*ell_2), 2) - ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*dnu_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2))/pow((*dnu_12), 2)
     )
     : (((*dnu_12) < 1.4901161193847656e-8) ? (
@@ -1915,7 +2665,7 @@
     : (
        (((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23))/pow((*ell_2), 2) + ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1))/pow((*ell_1), 2))/(*dnu_12) - (-((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*(((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*dnu_12) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)) + (-(*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)))/pow((*ell_2), 2) - ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*dnu_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2))/pow((*dnu_12), 2)
     )))/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2)));
-    _jacGnlnl(6, 2) = (*Pi_y2)*(((*dnu_23) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(8, 2) = (*Pi_y2)*(((*dnu_23) < -1.4901161193847656e-8) ? (
        (((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34))/pow((*ell_3), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((1.0/2.0)*(*Delta_12) + (*Delta_23) + (1.0/2.0)*(*dnu_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23))/pow((*ell_2), 2))/(*dnu_23) - (-((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*(((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*dnu_23) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)) + (-(*Delta_23) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)))/pow((*ell_3), 2) - ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) - 1.0/4.0*(*dnu_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) + (1.0/2.0)*(*dnu_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2))/pow((*dnu_23), 2)
     )
     : (((*dnu_23) < 1.4901161193847656e-8) ? (
@@ -1924,7 +2674,7 @@
     : (
        (((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34))/pow((*ell_3), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((1.0/2.0)*(*Delta_12) + (*Delta_23) + (1.0/2.0)*(*dnu_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23))/pow((*ell_2), 2))/(*dnu_23) - (-((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*(((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*dnu_23) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)) + (-(*Delta_23) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)))/pow((*ell_3), 2) - ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) - 1.0/4.0*(*dnu_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) + (1.0/2.0)*(*dnu_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2))/pow((*dnu_23), 2)
     )))/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2)));
-    _jacGnlnl(6, 10) = 2*(*L_2)*(*ell_2)*(((*dV_2) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(8, 14) = 2*(*L_2)*(*ell_2)*(((*dV_2) < -1.4901161193847656e-8) ? (
        ((1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_2), 2)/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y2), 2)/(((*rho_0) + (*rho_2))*pow((*V_0_2) + (*V_2) + (*dV_2), 2)) + ((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2))/(*dV_2) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_2), 2)*((*V_0_2) + (*V_2))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_2), 2)*((*V_0_2) + (*V_2) + (*dV_2))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y2), 2)/(((*rho_0) + (*rho_2))*((*V_0_2) + (*V_2) + (*dV_2))) - 3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) - ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))*((*V_0_2) + (*V_2) + (*dV_2))/pow((*ell_2), 2))/pow((*dV_2), 2)
     )
     : (((*dV_2) < 1.4901161193847656e-8) ? (
@@ -1933,7 +2683,7 @@
     : (
        ((1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_2), 2)/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y2), 2)/(((*rho_0) + (*rho_2))*pow((*V_0_2) + (*V_2) + (*dV_2), 2)) + ((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2))/(*dV_2) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_2), 2)*((*V_0_2) + (*V_2))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_2), 2)*((*V_0_2) + (*V_2) + (*dV_2))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y2), 2)/(((*rho_0) + (*rho_2))*((*V_0_2) + (*V_2) + (*dV_2))) - 3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) - ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))*((*V_0_2) + (*V_2) + (*dV_2))/pow((*ell_2), 2))/pow((*dV_2), 2)
     )));
-    _jacGnlnl(6, 14) = -2*(*L_2)*(*ell_2)*((*rho_0) + (*rho_2))*(((*drho_2) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(8, 20) = -2*(*L_2)*(*ell_2)*((*rho_0) + (*rho_2))*(((*drho_2) < -1.4901161193847656e-8) ? (
        ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_2) + (*V_2))*(2*(*drho_2) + 2*(*rho_2))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*pow((*drho_2) + (*rho_0) + (*rho_2), 2)) + ((*V_0_2) + (*V_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2))/(*drho_2) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_2), 2)*((*V_0_2) + (*V_2))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_2) + (*V_2))*pow((*drho_2) + (*rho_2), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*drho_2) + (*rho_0) + (*rho_2))) - 3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) - ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))*((*drho_2) + (*rho_0) + (*rho_2))/pow((*ell_2), 2))/pow((*drho_2), 2)
     )
     : (((*drho_2) < 1.4901161193847656e-8) ? (
@@ -1942,7 +2692,7 @@
     : (
        ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_2) + (*V_2))*(2*(*drho_2) + 2*(*rho_2))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*pow((*drho_2) + (*rho_0) + (*rho_2), 2)) + ((*V_0_2) + (*V_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2))/(*drho_2) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_2), 2)*((*V_0_2) + (*V_2))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_2) + (*V_2))*pow((*drho_2) + (*rho_2), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*drho_2) + (*rho_0) + (*rho_2))) - 3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) - ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))*((*drho_2) + (*rho_0) + (*rho_2))/pow((*ell_2), 2))/pow((*drho_2), 2)
     )))/((*V_0_2) + (*V_2));
-    _jacGnlnl(6, 18) = -(((*dx_k2) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(8, 26) = -(((*dx_k2) < -1.4901161193847656e-8) ? (
        (1.0/2.0)*(*k_2)*(2*(*dx_k2) + 2*(*x_k2))/(*dx_k2) - (-1.0/2.0*(*k_2)*pow((*x_k2), 2) + (1.0/2.0)*(*k_2)*pow((*dx_k2) + (*x_k2), 2))/pow((*dx_k2), 2)
     )
     : (((*dx_k2) < 1.4901161193847656e-8) ? (
@@ -1951,7 +2701,7 @@
     : (
        (1.0/2.0)*(*k_2)*(2*(*dx_k2) + 2*(*x_k2))/(*dx_k2) - (-1.0/2.0*(*k_2)*pow((*x_k2), 2) + (1.0/2.0)*(*k_2)*pow((*dx_k2) + (*x_k2), 2))/pow((*dx_k2), 2)
     )));
-    _jacGnlnl(7, 2) = -(*Pi_y3)*(((*dnu_23) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(9, 2) = -(*Pi_y3)*(((*dnu_23) < -1.4901161193847656e-8) ? (
        (((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34))/pow((*ell_3), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((1.0/2.0)*(*Delta_12) + (*Delta_23) + (1.0/2.0)*(*dnu_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23))/pow((*ell_2), 2))/(*dnu_23) - (-((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*(((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*dnu_23) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)) + (-(*Delta_23) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)))/pow((*ell_3), 2) - ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) - 1.0/4.0*(*dnu_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) + (1.0/2.0)*(*dnu_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2))/pow((*dnu_23), 2)
     )
     : (((*dnu_23) < 1.4901161193847656e-8) ? (
@@ -1960,16 +2710,16 @@
     : (
        (((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34))/pow((*ell_3), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((1.0/2.0)*(*Delta_12) + (*Delta_23) + (1.0/2.0)*(*dnu_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23))/pow((*ell_2), 2))/(*dnu_23) - (-((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*(((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*dnu_23) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)) + (-(*Delta_23) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)))/pow((*ell_3), 2) - ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) - 1.0/4.0*(*dnu_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) + (1.0/2.0)*(*dnu_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2))/pow((*dnu_23), 2)
     )))/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3)));
-    _jacGnlnl(7, 3) = (*Pi_y3)*(((*dnu_34) < -1.4901161193847656e-8) ? (
-       (((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4))/pow((*ell_4), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34))/pow((*ell_3), 2))/(*dnu_34) - (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/pow((*dnu_34), 2)
+    _jacGnlnl(9, 3) = (*Pi_y3)*(((*dnu_34) < -1.4901161193847656e-8) ? (
+       (((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45))/pow((*ell_4), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34))/pow((*ell_3), 2))/(*dnu_34) - (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/pow((*dnu_34), 2)
     )
     : (((*dnu_34) < 1.4901161193847656e-8) ? (
        0.25*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2) + 0.25*((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))/pow((*ell_3), 2)
     )
     : (
-       (((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4))/pow((*ell_4), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34))/pow((*ell_3), 2))/(*dnu_34) - (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/pow((*dnu_34), 2)
+       (((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45))/pow((*ell_4), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34))/pow((*ell_3), 2))/(*dnu_34) - (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/pow((*dnu_34), 2)
     )))/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3)));
-    _jacGnlnl(7, 11) = 2*(*L_3)*(*ell_3)*(((*dV_3) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(9, 15) = 2*(*L_3)*(*ell_3)*(((*dV_3) < -1.4901161193847656e-8) ? (
        ((1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_3), 2)/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y3), 2)/(((*rho_0) + (*rho_3))*pow((*V_0_3) + (*V_3) + (*dV_3), 2)) + ((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*dV_3) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_3), 2)*((*V_0_3) + (*V_3))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_3), 2)*((*V_0_3) + (*V_3) + (*dV_3))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y3), 2)/(((*rho_0) + (*rho_3))*((*V_0_3) + (*V_3) + (*dV_3))) - 3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))*((*V_0_3) + (*V_3) + (*dV_3))/pow((*ell_3), 2))/pow((*dV_3), 2)
     )
     : (((*dV_3) < 1.4901161193847656e-8) ? (
@@ -1978,7 +2728,7 @@
     : (
        ((1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_3), 2)/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y3), 2)/(((*rho_0) + (*rho_3))*pow((*V_0_3) + (*V_3) + (*dV_3), 2)) + ((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*dV_3) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_3), 2)*((*V_0_3) + (*V_3))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_3), 2)*((*V_0_3) + (*V_3) + (*dV_3))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y3), 2)/(((*rho_0) + (*rho_3))*((*V_0_3) + (*V_3) + (*dV_3))) - 3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))*((*V_0_3) + (*V_3) + (*dV_3))/pow((*ell_3), 2))/pow((*dV_3), 2)
     )));
-    _jacGnlnl(7, 15) = -2*(*L_3)*(*ell_3)*((*rho_0) + (*rho_3))*(((*drho_3) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(9, 21) = -2*(*L_3)*(*ell_3)*((*rho_0) + (*rho_3))*(((*drho_3) < -1.4901161193847656e-8) ? (
        ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_3) + (*V_3))*(2*(*drho_3) + 2*(*rho_3))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*pow((*drho_3) + (*rho_0) + (*rho_3), 2)) + ((*V_0_3) + (*V_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*drho_3) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_3), 2)*((*V_0_3) + (*V_3))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_3) + (*V_3))*pow((*drho_3) + (*rho_3), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*drho_3) + (*rho_0) + (*rho_3))) - 3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))*((*drho_3) + (*rho_0) + (*rho_3))/pow((*ell_3), 2))/pow((*drho_3), 2)
     )
     : (((*drho_3) < 1.4901161193847656e-8) ? (
@@ -1987,7 +2737,7 @@
     : (
        ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_3) + (*V_3))*(2*(*drho_3) + 2*(*rho_3))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*pow((*drho_3) + (*rho_0) + (*rho_3), 2)) + ((*V_0_3) + (*V_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*drho_3) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_3), 2)*((*V_0_3) + (*V_3))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_3) + (*V_3))*pow((*drho_3) + (*rho_3), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*drho_3) + (*rho_0) + (*rho_3))) - 3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))*((*drho_3) + (*rho_0) + (*rho_3))/pow((*ell_3), 2))/pow((*drho_3), 2)
     )))/((*V_0_3) + (*V_3));
-    _jacGnlnl(7, 19) = -(((*dx_k3) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(9, 27) = -(((*dx_k3) < -1.4901161193847656e-8) ? (
        (1.0/2.0)*(*k_3)*(2*(*dx_k3) + 2*(*x_k3))/(*dx_k3) - (-1.0/2.0*(*k_3)*pow((*x_k3), 2) + (1.0/2.0)*(*k_3)*pow((*dx_k3) + (*x_k3), 2))/pow((*dx_k3), 2)
     )
     : (((*dx_k3) < 1.4901161193847656e-8) ? (
@@ -1996,43 +2746,43 @@
     : (
        (1.0/2.0)*(*k_3)*(2*(*dx_k3) + 2*(*x_k3))/(*dx_k3) - (-1.0/2.0*(*k_3)*pow((*x_k3), 2) + (1.0/2.0)*(*k_3)*pow((*dx_k3) + (*x_k3), 2))/pow((*dx_k3), 2)
     )));
-    _jacGnlnl(8, 3) = -(*Pi_y4)*(((*dnu_34) < -1.4901161193847656e-8) ? (
-       (((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4))/pow((*ell_4), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34))/pow((*ell_3), 2))/(*dnu_34) - (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/pow((*dnu_34), 2)
+    _jacGnlnl(10, 3) = -(*Pi_y4)*(((*dnu_34) < -1.4901161193847656e-8) ? (
+       (((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45))/pow((*ell_4), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34))/pow((*ell_3), 2))/(*dnu_34) - (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/pow((*dnu_34), 2)
     )
     : (((*dnu_34) < 1.4901161193847656e-8) ? (
        0.25*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2) + 0.25*((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))/pow((*ell_3), 2)
     )
     : (
-       (((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4))/pow((*ell_4), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34))/pow((*ell_3), 2))/(*dnu_34) - (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/pow((*dnu_34), 2)
+       (((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45))/pow((*ell_4), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34))/pow((*ell_3), 2))/(*dnu_34) - (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/pow((*dnu_34), 2)
     )))/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4)));
-    _jacGnlnl(8, 4) = (*Pi_y4)*(((*dnu_R4) < -1.4901161193847656e-8) ? (
-       ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*Delta_34) + 2*(*dnu_R4) - 1.0/2.0*(*nu_34) + 2*(*nu_R4))/((*dnu_R4)*pow((*ell_4), 2)) - (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*dnu_R4) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)) + ((*dnu_R4) + (*nu_R4))*((1.0/2.0)*(*Delta_34) + (*dnu_R4) - 1.0/4.0*(*nu_34) + (*nu_R4)))/pow((*ell_4), 2))/pow((*dnu_R4), 2)
+    _jacGnlnl(10, 4) = (*Pi_y4)*(((*dnu_45) < -1.4901161193847656e-8) ? (
+       (((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56))/pow((*ell_5), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((1.0/2.0)*(*Delta_34) + (*Delta_45) + (1.0/2.0)*(*dnu_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45))/pow((*ell_4), 2))/(*dnu_45) - (-((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*dnu_45) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)) + (-(*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)))/pow((*ell_5), 2) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) - 1.0/4.0*(*dnu_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) + (1.0/2.0)*(*dnu_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2))/pow((*dnu_45), 2)
     )
-    : (((*dnu_R4) < 1.4901161193847656e-8) ? (
-       1.0*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2)
+    : (((*dnu_45) < 1.4901161193847656e-8) ? (
+       0.25*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))/pow((*ell_5), 2) + 0.25*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2)
     )
     : (
-       ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*Delta_34) + 2*(*dnu_R4) - 1.0/2.0*(*nu_34) + 2*(*nu_R4))/((*dnu_R4)*pow((*ell_4), 2)) - (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*dnu_R4) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)) + ((*dnu_R4) + (*nu_R4))*((1.0/2.0)*(*Delta_34) + (*dnu_R4) - 1.0/4.0*(*nu_34) + (*nu_R4)))/pow((*ell_4), 2))/pow((*dnu_R4), 2)
+       (((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56))/pow((*ell_5), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((1.0/2.0)*(*Delta_34) + (*Delta_45) + (1.0/2.0)*(*dnu_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45))/pow((*ell_4), 2))/(*dnu_45) - (-((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*dnu_45) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)) + (-(*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)))/pow((*ell_5), 2) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) - 1.0/4.0*(*dnu_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) + (1.0/2.0)*(*dnu_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2))/pow((*dnu_45), 2)
     )))/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4)));
-    _jacGnlnl(8, 12) = 2*(*L_4)*(*ell_4)*(((*dV_4) < -1.4901161193847656e-8) ? (
-       ((1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_4), 2)/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y4), 2)/(((*rho_0) + (*rho_4))*pow((*V_0_4) + (*V_4) + (*dV_4), 2)) + ((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2))/(*dV_4) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4) + (*dV_4))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*rho_0) + (*rho_4))*((*V_0_4) + (*V_4) + (*dV_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))*((*V_0_4) + (*V_4) + (*dV_4))/pow((*ell_4), 2))/pow((*dV_4), 2)
+    _jacGnlnl(10, 16) = 2*(*L_4)*(*ell_4)*(((*dV_4) < -1.4901161193847656e-8) ? (
+       ((1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_4), 2)/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y4), 2)/(((*rho_0) + (*rho_4))*pow((*V_0_4) + (*V_4) + (*dV_4), 2)) + ((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2))/(*dV_4) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4) + (*dV_4))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*rho_0) + (*rho_4))*((*V_0_4) + (*V_4) + (*dV_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))*((*V_0_4) + (*V_4) + (*dV_4))/pow((*ell_4), 2))/pow((*dV_4), 2)
     )
     : (((*dV_4) < 1.4901161193847656e-8) ? (
        1.5*pow((*Pi_y4), 2)/(pow((*V_0_4) + (*V_4), 3)*((*rho_0) + (*rho_4)))
     )
     : (
-       ((1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_4), 2)/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y4), 2)/(((*rho_0) + (*rho_4))*pow((*V_0_4) + (*V_4) + (*dV_4), 2)) + ((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2))/(*dV_4) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4) + (*dV_4))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*rho_0) + (*rho_4))*((*V_0_4) + (*V_4) + (*dV_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))*((*V_0_4) + (*V_4) + (*dV_4))/pow((*ell_4), 2))/pow((*dV_4), 2)
+       ((1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_4), 2)/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y4), 2)/(((*rho_0) + (*rho_4))*pow((*V_0_4) + (*V_4) + (*dV_4), 2)) + ((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2))/(*dV_4) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4) + (*dV_4))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*rho_0) + (*rho_4))*((*V_0_4) + (*V_4) + (*dV_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))*((*V_0_4) + (*V_4) + (*dV_4))/pow((*ell_4), 2))/pow((*dV_4), 2)
     )));
-    _jacGnlnl(8, 16) = -2*(*L_4)*(*ell_4)*((*rho_0) + (*rho_4))*(((*drho_4) < -1.4901161193847656e-8) ? (
-       ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*(2*(*drho_4) + 2*(*rho_4))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_0) + (*rho_4), 2)) + ((*V_0_4) + (*V_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2))/(*drho_4) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/pow((*drho_4), 2)
+    _jacGnlnl(10, 22) = -2*(*L_4)*(*ell_4)*((*rho_0) + (*rho_4))*(((*drho_4) < -1.4901161193847656e-8) ? (
+       ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*(2*(*drho_4) + 2*(*rho_4))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_0) + (*rho_4), 2)) + ((*V_0_4) + (*V_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2))/(*drho_4) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/pow((*drho_4), 2)
     )
     : (((*drho_4) < 1.4901161193847656e-8) ? (
        0.5*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + 1.5*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*rho_0) + (*rho_4), 3))
     )
     : (
-       ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*(2*(*drho_4) + 2*(*rho_4))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_0) + (*rho_4), 2)) + ((*V_0_4) + (*V_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2))/(*drho_4) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/pow((*drho_4), 2)
+       ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*(2*(*drho_4) + 2*(*rho_4))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_0) + (*rho_4), 2)) + ((*V_0_4) + (*V_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2))/(*drho_4) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/pow((*drho_4), 2)
     )))/((*V_0_4) + (*V_4));
-    _jacGnlnl(8, 20) = -(((*dx_k4) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(10, 28) = -(((*dx_k4) < -1.4901161193847656e-8) ? (
        (1.0/2.0)*(*k_4)*(2*(*dx_k4) + 2*(*x_k4))/(*dx_k4) - (-1.0/2.0*(*k_4)*pow((*x_k4), 2) + (1.0/2.0)*(*k_4)*pow((*dx_k4) + (*x_k4), 2))/pow((*dx_k4), 2)
     )
     : (((*dx_k4) < 1.4901161193847656e-8) ? (
@@ -2041,7 +2791,97 @@
     : (
        (1.0/2.0)*(*k_4)*(2*(*dx_k4) + 2*(*x_k4))/(*dx_k4) - (-1.0/2.0*(*k_4)*pow((*x_k4), 2) + (1.0/2.0)*(*k_4)*pow((*dx_k4) + (*x_k4), 2))/pow((*dx_k4), 2)
     )));
-    _jacGnlnl(9, 5) = -2*(*L_1)*(*ell_1)*(((*dPi_y1) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(11, 4) = -(*Pi_y5)*(((*dnu_45) < -1.4901161193847656e-8) ? (
+       (((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56))/pow((*ell_5), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((1.0/2.0)*(*Delta_34) + (*Delta_45) + (1.0/2.0)*(*dnu_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45))/pow((*ell_4), 2))/(*dnu_45) - (-((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*dnu_45) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)) + (-(*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)))/pow((*ell_5), 2) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) - 1.0/4.0*(*dnu_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) + (1.0/2.0)*(*dnu_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2))/pow((*dnu_45), 2)
+    )
+    : (((*dnu_45) < 1.4901161193847656e-8) ? (
+       0.25*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))/pow((*ell_5), 2) + 0.25*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2)
+    )
+    : (
+       (((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56))/pow((*ell_5), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((1.0/2.0)*(*Delta_34) + (*Delta_45) + (1.0/2.0)*(*dnu_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45))/pow((*ell_4), 2))/(*dnu_45) - (-((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*dnu_45) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)) + (-(*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)))/pow((*ell_5), 2) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) - 1.0/4.0*(*dnu_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) + (1.0/2.0)*(*dnu_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2))/pow((*dnu_45), 2)
+    )))/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5)));
+    _jacGnlnl(11, 5) = (*Pi_y5)*(((*dnu_56) < -1.4901161193847656e-8) ? (
+       (((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*(-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6))/pow((*ell_6), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((1.0/2.0)*(*Delta_45) + (*Delta_56) + (1.0/2.0)*(*dnu_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56))/pow((*ell_5), 2))/(*dnu_56) - (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*dnu_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) - 1.0/4.0*(*dnu_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) + (1.0/2.0)*(*dnu_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2))/pow((*dnu_56), 2)
+    )
+    : (((*dnu_56) < 1.4901161193847656e-8) ? (
+       0.25*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))/pow((*ell_6), 2) + 0.25*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))/pow((*ell_5), 2)
+    )
+    : (
+       (((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*(-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6))/pow((*ell_6), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((1.0/2.0)*(*Delta_45) + (*Delta_56) + (1.0/2.0)*(*dnu_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56))/pow((*ell_5), 2))/(*dnu_56) - (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*dnu_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) - 1.0/4.0*(*dnu_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) + (1.0/2.0)*(*dnu_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2))/pow((*dnu_56), 2)
+    )))/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5)));
+    _jacGnlnl(11, 17) = 2*(*L_5)*(*ell_5)*(((*dV_5) < -1.4901161193847656e-8) ? (
+       ((1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_5), 2)/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y5), 2)/(((*rho_0) + (*rho_5))*pow((*V_0_5) + (*V_5) + (*dV_5), 2)) + ((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2))/(*dV_5) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_5), 2)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_5), 2)*((*V_0_5) + (*V_5) + (*dV_5))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y5), 2)/(((*rho_0) + (*rho_5))*((*V_0_5) + (*V_5) + (*dV_5))) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))*((*V_0_5) + (*V_5) + (*dV_5))/pow((*ell_5), 2))/pow((*dV_5), 2)
+    )
+    : (((*dV_5) < 1.4901161193847656e-8) ? (
+       1.5*pow((*Pi_y5), 2)/(pow((*V_0_5) + (*V_5), 3)*((*rho_0) + (*rho_5)))
+    )
+    : (
+       ((1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_5), 2)/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y5), 2)/(((*rho_0) + (*rho_5))*pow((*V_0_5) + (*V_5) + (*dV_5), 2)) + ((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2))/(*dV_5) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_5), 2)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_5), 2)*((*V_0_5) + (*V_5) + (*dV_5))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y5), 2)/(((*rho_0) + (*rho_5))*((*V_0_5) + (*V_5) + (*dV_5))) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))*((*V_0_5) + (*V_5) + (*dV_5))/pow((*ell_5), 2))/pow((*dV_5), 2)
+    )));
+    _jacGnlnl(11, 23) = -2*(*L_5)*(*ell_5)*((*rho_0) + (*rho_5))*(((*drho_5) < -1.4901161193847656e-8) ? (
+       ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))*(2*(*drho_5) + 2*(*rho_5))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*pow((*drho_5) + (*rho_0) + (*rho_5), 2)) + ((*V_0_5) + (*V_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2))/(*drho_5) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_5), 2)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))*pow((*drho_5) + (*rho_5), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*drho_5) + (*rho_0) + (*rho_5))) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))*((*drho_5) + (*rho_0) + (*rho_5))/pow((*ell_5), 2))/pow((*drho_5), 2)
+    )
+    : (((*drho_5) < 1.4901161193847656e-8) ? (
+       0.5*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + 1.5*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*pow((*rho_0) + (*rho_5), 3))
+    )
+    : (
+       ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))*(2*(*drho_5) + 2*(*rho_5))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*pow((*drho_5) + (*rho_0) + (*rho_5), 2)) + ((*V_0_5) + (*V_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2))/(*drho_5) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_5), 2)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))*pow((*drho_5) + (*rho_5), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*drho_5) + (*rho_0) + (*rho_5))) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))*((*drho_5) + (*rho_0) + (*rho_5))/pow((*ell_5), 2))/pow((*drho_5), 2)
+    )))/((*V_0_5) + (*V_5));
+    _jacGnlnl(11, 29) = -(((*dx_k5) < -1.4901161193847656e-8) ? (
+       (1.0/2.0)*(*k_5)*(2*(*dx_k5) + 2*(*x_k5))/(*dx_k5) - (-1.0/2.0*(*k_5)*pow((*x_k5), 2) + (1.0/2.0)*(*k_5)*pow((*dx_k5) + (*x_k5), 2))/pow((*dx_k5), 2)
+    )
+    : (((*dx_k5) < 1.4901161193847656e-8) ? (
+       0.5*(*k_5)
+    )
+    : (
+       (1.0/2.0)*(*k_5)*(2*(*dx_k5) + 2*(*x_k5))/(*dx_k5) - (-1.0/2.0*(*k_5)*pow((*x_k5), 2) + (1.0/2.0)*(*k_5)*pow((*dx_k5) + (*x_k5), 2))/pow((*dx_k5), 2)
+    )));
+    _jacGnlnl(12, 5) = -(*Pi_y6)*(((*dnu_56) < -1.4901161193847656e-8) ? (
+       (((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*(-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6))/pow((*ell_6), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((1.0/2.0)*(*Delta_45) + (*Delta_56) + (1.0/2.0)*(*dnu_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56))/pow((*ell_5), 2))/(*dnu_56) - (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*dnu_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) - 1.0/4.0*(*dnu_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) + (1.0/2.0)*(*dnu_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2))/pow((*dnu_56), 2)
+    )
+    : (((*dnu_56) < 1.4901161193847656e-8) ? (
+       0.25*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))/pow((*ell_6), 2) + 0.25*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))/pow((*ell_5), 2)
+    )
+    : (
+       (((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*(-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6))/pow((*ell_6), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((1.0/2.0)*(*Delta_45) + (*Delta_56) + (1.0/2.0)*(*dnu_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56))/pow((*ell_5), 2))/(*dnu_56) - (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*dnu_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) - 1.0/4.0*(*dnu_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) + (1.0/2.0)*(*dnu_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2))/pow((*dnu_56), 2)
+    )))/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6)));
+    _jacGnlnl(12, 6) = (*Pi_y6)*(((*dnu_R6) < -1.4901161193847656e-8) ? (
+       ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*Delta_56) + 2*(*dnu_R6) - 1.0/2.0*(*nu_56) + 2*(*nu_R6))/((*dnu_R6)*pow((*ell_6), 2)) - (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) - 1.0/2.0*(*dnu_R6) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)) + ((*dnu_R6) + (*nu_R6))*((1.0/2.0)*(*Delta_56) + (*dnu_R6) - 1.0/4.0*(*nu_56) + (*nu_R6)))/pow((*ell_6), 2))/pow((*dnu_R6), 2)
+    )
+    : (((*dnu_R6) < 1.4901161193847656e-8) ? (
+       1.0*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))/pow((*ell_6), 2)
+    )
+    : (
+       ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*Delta_56) + 2*(*dnu_R6) - 1.0/2.0*(*nu_56) + 2*(*nu_R6))/((*dnu_R6)*pow((*ell_6), 2)) - (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) - 1.0/2.0*(*dnu_R6) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)) + ((*dnu_R6) + (*nu_R6))*((1.0/2.0)*(*Delta_56) + (*dnu_R6) - 1.0/4.0*(*nu_56) + (*nu_R6)))/pow((*ell_6), 2))/pow((*dnu_R6), 2)
+    )))/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6)));
+    _jacGnlnl(12, 18) = 2*(*L_6)*(*ell_6)*(((*dV_6) < -1.4901161193847656e-8) ? (
+       ((1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_6), 2)/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y6), 2)/(((*rho_0) + (*rho_6))*pow((*V_0_6) + (*V_6) + (*dV_6), 2)) + ((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2))/(*dV_6) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_6), 2)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_6), 2)*((*V_0_6) + (*V_6) + (*dV_6))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y6), 2)/(((*rho_0) + (*rho_6))*((*V_0_6) + (*V_6) + (*dV_6))) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))*((*V_0_6) + (*V_6) + (*dV_6))/pow((*ell_6), 2))/pow((*dV_6), 2)
+    )
+    : (((*dV_6) < 1.4901161193847656e-8) ? (
+       1.5*pow((*Pi_y6), 2)/(pow((*V_0_6) + (*V_6), 3)*((*rho_0) + (*rho_6)))
+    )
+    : (
+       ((1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_6), 2)/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y6), 2)/(((*rho_0) + (*rho_6))*pow((*V_0_6) + (*V_6) + (*dV_6), 2)) + ((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2))/(*dV_6) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_6), 2)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_6), 2)*((*V_0_6) + (*V_6) + (*dV_6))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y6), 2)/(((*rho_0) + (*rho_6))*((*V_0_6) + (*V_6) + (*dV_6))) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))*((*V_0_6) + (*V_6) + (*dV_6))/pow((*ell_6), 2))/pow((*dV_6), 2)
+    )));
+    _jacGnlnl(12, 24) = -2*(*L_6)*(*ell_6)*((*rho_0) + (*rho_6))*(((*drho_6) < -1.4901161193847656e-8) ? (
+       ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))*(2*(*drho_6) + 2*(*rho_6))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*pow((*drho_6) + (*rho_0) + (*rho_6), 2)) + ((*V_0_6) + (*V_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2))/(*drho_6) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_6), 2)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))*pow((*drho_6) + (*rho_6), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*drho_6) + (*rho_0) + (*rho_6))) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))*((*drho_6) + (*rho_0) + (*rho_6))/pow((*ell_6), 2))/pow((*drho_6), 2)
+    )
+    : (((*drho_6) < 1.4901161193847656e-8) ? (
+       0.5*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + 1.5*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*pow((*rho_0) + (*rho_6), 3))
+    )
+    : (
+       ((1.0/2.0)*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))*(2*(*drho_6) + 2*(*rho_6))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*pow((*drho_6) + (*rho_0) + (*rho_6), 2)) + ((*V_0_6) + (*V_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2))/(*drho_6) - (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_6), 2)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))*pow((*drho_6) + (*rho_6), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*drho_6) + (*rho_0) + (*rho_6))) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))*((*drho_6) + (*rho_0) + (*rho_6))/pow((*ell_6), 2))/pow((*drho_6), 2)
+    )))/((*V_0_6) + (*V_6));
+    _jacGnlnl(12, 30) = -(((*dx_k6) < -1.4901161193847656e-8) ? (
+       (1.0/2.0)*(*k_6)*(2*(*dx_k6) + 2*(*x_k6))/(*dx_k6) - (-1.0/2.0*(*k_6)*pow((*x_k6), 2) + (1.0/2.0)*(*k_6)*pow((*dx_k6) + (*x_k6), 2))/pow((*dx_k6), 2)
+    )
+    : (((*dx_k6) < 1.4901161193847656e-8) ? (
+       0.5*(*k_6)
+    )
+    : (
+       (1.0/2.0)*(*k_6)*(2*(*dx_k6) + 2*(*x_k6))/(*dx_k6) - (-1.0/2.0*(*k_6)*pow((*x_k6), 2) + (1.0/2.0)*(*k_6)*pow((*dx_k6) + (*x_k6), 2))/pow((*dx_k6), 2)
+    )));
+    _jacGnlnl(13, 7) = -2*(*L_1)*(*ell_1)*(((*dPi_y1) < -1.4901161193847656e-8) ? (
        (3*(*Pi_y1) + 3*(*dPi_y1))/((*dPi_y1)*((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - (-3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) + (3.0/2.0)*pow((*Pi_y1) + (*dPi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))))/pow((*dPi_y1), 2)
     )
     : (((*dPi_y1) < 1.4901161193847656e-8) ? (
@@ -2050,7 +2890,7 @@
     : (
        (3*(*Pi_y1) + 3*(*dPi_y1))/((*dPi_y1)*((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - (-3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) + (3.0/2.0)*pow((*Pi_y1) + (*dPi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))))/pow((*dPi_y1), 2)
     )));
-    _jacGnlnl(10, 6) = -2*(*L_2)*(*ell_2)*(((*dPi_y2) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(14, 8) = -2*(*L_2)*(*ell_2)*(((*dPi_y2) < -1.4901161193847656e-8) ? (
        (3*(*Pi_y2) + 3*(*dPi_y2))/((*dPi_y2)*((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) - (-3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) + (3.0/2.0)*pow((*Pi_y2) + (*dPi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))))/pow((*dPi_y2), 2)
     )
     : (((*dPi_y2) < 1.4901161193847656e-8) ? (
@@ -2059,7 +2899,7 @@
     : (
        (3*(*Pi_y2) + 3*(*dPi_y2))/((*dPi_y2)*((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) - (-3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) + (3.0/2.0)*pow((*Pi_y2) + (*dPi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))))/pow((*dPi_y2), 2)
     )));
-    _jacGnlnl(11, 7) = -2*(*L_3)*(*ell_3)*(((*dPi_y3) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(15, 9) = -2*(*L_3)*(*ell_3)*(((*dPi_y3) < -1.4901161193847656e-8) ? (
        (3*(*Pi_y3) + 3*(*dPi_y3))/((*dPi_y3)*((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - (-3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) + (3.0/2.0)*pow((*Pi_y3) + (*dPi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))))/pow((*dPi_y3), 2)
     )
     : (((*dPi_y3) < 1.4901161193847656e-8) ? (
@@ -2068,7 +2908,7 @@
     : (
        (3*(*Pi_y3) + 3*(*dPi_y3))/((*dPi_y3)*((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - (-3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) + (3.0/2.0)*pow((*Pi_y3) + (*dPi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))))/pow((*dPi_y3), 2)
     )));
-    _jacGnlnl(12, 8) = -2*(*L_4)*(*ell_4)*(((*dPi_y4) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(16, 10) = -2*(*L_4)*(*ell_4)*(((*dPi_y4) < -1.4901161193847656e-8) ? (
        (3*(*Pi_y4) + 3*(*dPi_y4))/((*dPi_y4)*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - (-3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (3.0/2.0)*pow((*Pi_y4) + (*dPi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))))/pow((*dPi_y4), 2)
     )
     : (((*dPi_y4) < 1.4901161193847656e-8) ? (
@@ -2077,7 +2917,25 @@
     : (
        (3*(*Pi_y4) + 3*(*dPi_y4))/((*dPi_y4)*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - (-3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (3.0/2.0)*pow((*Pi_y4) + (*dPi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))))/pow((*dPi_y4), 2)
     )));
-    _jacGnlnl(13, 0) = -(((*dnu_L1) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(17, 11) = -2*(*L_5)*(*ell_5)*(((*dPi_y5) < -1.4901161193847656e-8) ? (
+       (3*(*Pi_y5) + 3*(*dPi_y5))/((*dPi_y5)*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - (-3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (3.0/2.0)*pow((*Pi_y5) + (*dPi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))))/pow((*dPi_y5), 2)
+    )
+    : (((*dPi_y5) < 1.4901161193847656e-8) ? (
+       1.5/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5)))
+    )
+    : (
+       (3*(*Pi_y5) + 3*(*dPi_y5))/((*dPi_y5)*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - (-3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (3.0/2.0)*pow((*Pi_y5) + (*dPi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))))/pow((*dPi_y5), 2)
+    )));
+    _jacGnlnl(18, 12) = -2*(*L_6)*(*ell_6)*(((*dPi_y6) < -1.4901161193847656e-8) ? (
+       (3*(*Pi_y6) + 3*(*dPi_y6))/((*dPi_y6)*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - (-3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (3.0/2.0)*pow((*Pi_y6) + (*dPi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))))/pow((*dPi_y6), 2)
+    )
+    : (((*dPi_y6) < 1.4901161193847656e-8) ? (
+       1.5/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6)))
+    )
+    : (
+       (3*(*Pi_y6) + 3*(*dPi_y6))/((*dPi_y6)*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - (-3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (3.0/2.0)*pow((*Pi_y6) + (*dPi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))))/pow((*dPi_y6), 2)
+    )));
+    _jacGnlnl(19, 0) = -(((*dnu_L1) < -1.4901161193847656e-8) ? (
        ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*(-(*Delta_12) + 2*(*dnu_L1) - 1.0/2.0*(*nu_12) + 2*(*nu_L1))/((*dnu_L1)*pow((*ell_1), 2)) - (-((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*(((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) - 1.0/2.0*(*dnu_L1) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)) + ((*dnu_L1) + (*nu_L1))*(-1.0/2.0*(*Delta_12) + (*dnu_L1) - 1.0/4.0*(*nu_12) + (*nu_L1)))/pow((*ell_1), 2))/pow((*dnu_L1), 2)
     )
     : (((*dnu_L1) < 1.4901161193847656e-8) ? (
@@ -2086,7 +2944,7 @@
     : (
        ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*(-(*Delta_12) + 2*(*dnu_L1) - 1.0/2.0*(*nu_12) + 2*(*nu_L1))/((*dnu_L1)*pow((*ell_1), 2)) - (-((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*(((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) - 1.0/2.0*(*dnu_L1) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)) + ((*dnu_L1) + (*nu_L1))*(-1.0/2.0*(*Delta_12) + (*dnu_L1) - 1.0/4.0*(*nu_12) + (*nu_L1)))/pow((*ell_1), 2))/pow((*dnu_L1), 2)
     )))/((*V_0_1) + (*V_1));
-    _jacGnlnl(13, 1) = (((*dnu_12) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(19, 1) = (((*dnu_12) < -1.4901161193847656e-8) ? (
        (((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23))/pow((*ell_2), 2) + ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1))/pow((*ell_1), 2))/(*dnu_12) - (-((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*(((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*dnu_12) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)) + (-(*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)))/pow((*ell_2), 2) - ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*dnu_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2))/pow((*dnu_12), 2)
     )
     : (((*dnu_12) < 1.4901161193847656e-8) ? (
@@ -2095,7 +2953,7 @@
     : (
        (((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23))/pow((*ell_2), 2) + ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1))/pow((*ell_1), 2))/(*dnu_12) - (-((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*(((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*dnu_12) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)) + (-(*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)))/pow((*ell_2), 2) - ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*dnu_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2))/pow((*dnu_12), 2)
     )))/((*V_0_1) + (*V_1));
-    _jacGnlnl(13, 5) = 2*(*L_1)*(*ell_1)*((*rho_0) + (*rho_1))*(((*dPi_y1) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(19, 7) = 2*(*L_1)*(*ell_1)*((*rho_0) + (*rho_1))*(((*dPi_y1) < -1.4901161193847656e-8) ? (
        (3*(*Pi_y1) + 3*(*dPi_y1))/((*dPi_y1)*((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - (-3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) + (3.0/2.0)*pow((*Pi_y1) + (*dPi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))))/pow((*dPi_y1), 2)
     )
     : (((*dPi_y1) < 1.4901161193847656e-8) ? (
@@ -2104,7 +2962,7 @@
     : (
        (3*(*Pi_y1) + 3*(*dPi_y1))/((*dPi_y1)*((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - (-3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) + (3.0/2.0)*pow((*Pi_y1) + (*dPi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))))/pow((*dPi_y1), 2)
     )))/((*V_0_1) + (*V_1));
-    _jacGnlnl(14, 1) = -(((*dnu_12) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(20, 1) = -(((*dnu_12) < -1.4901161193847656e-8) ? (
        (((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23))/pow((*ell_2), 2) + ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1))/pow((*ell_1), 2))/(*dnu_12) - (-((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*(((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*dnu_12) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)) + (-(*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)))/pow((*ell_2), 2) - ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*dnu_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2))/pow((*dnu_12), 2)
     )
     : (((*dnu_12) < 1.4901161193847656e-8) ? (
@@ -2113,7 +2971,7 @@
     : (
        (((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23))/pow((*ell_2), 2) + ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1))/pow((*ell_1), 2))/(*dnu_12) - (-((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*(((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*dnu_12) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)) + (-(*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)))/pow((*ell_2), 2) - ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*dnu_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*dnu_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2))/pow((*dnu_12), 2)
     )))/((*V_0_2) + (*V_2));
-    _jacGnlnl(14, 2) = (((*dnu_23) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(20, 2) = (((*dnu_23) < -1.4901161193847656e-8) ? (
        (((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34))/pow((*ell_3), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((1.0/2.0)*(*Delta_12) + (*Delta_23) + (1.0/2.0)*(*dnu_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23))/pow((*ell_2), 2))/(*dnu_23) - (-((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*(((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*dnu_23) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)) + (-(*Delta_23) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)))/pow((*ell_3), 2) - ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) - 1.0/4.0*(*dnu_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) + (1.0/2.0)*(*dnu_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2))/pow((*dnu_23), 2)
     )
     : (((*dnu_23) < 1.4901161193847656e-8) ? (
@@ -2122,7 +2980,7 @@
     : (
        (((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34))/pow((*ell_3), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((1.0/2.0)*(*Delta_12) + (*Delta_23) + (1.0/2.0)*(*dnu_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23))/pow((*ell_2), 2))/(*dnu_23) - (-((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*(((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*dnu_23) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)) + (-(*Delta_23) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)))/pow((*ell_3), 2) - ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) - 1.0/4.0*(*dnu_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) + (1.0/2.0)*(*dnu_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2))/pow((*dnu_23), 2)
     )))/((*V_0_2) + (*V_2));
-    _jacGnlnl(14, 6) = 2*(*L_2)*(*ell_2)*((*rho_0) + (*rho_2))*(((*dPi_y2) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(20, 8) = 2*(*L_2)*(*ell_2)*((*rho_0) + (*rho_2))*(((*dPi_y2) < -1.4901161193847656e-8) ? (
        (3*(*Pi_y2) + 3*(*dPi_y2))/((*dPi_y2)*((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) - (-3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) + (3.0/2.0)*pow((*Pi_y2) + (*dPi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))))/pow((*dPi_y2), 2)
     )
     : (((*dPi_y2) < 1.4901161193847656e-8) ? (
@@ -2131,7 +2989,7 @@
     : (
        (3*(*Pi_y2) + 3*(*dPi_y2))/((*dPi_y2)*((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) - (-3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) + (3.0/2.0)*pow((*Pi_y2) + (*dPi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))))/pow((*dPi_y2), 2)
     )))/((*V_0_2) + (*V_2));
-    _jacGnlnl(15, 2) = -(((*dnu_23) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(21, 2) = -(((*dnu_23) < -1.4901161193847656e-8) ? (
        (((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34))/pow((*ell_3), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((1.0/2.0)*(*Delta_12) + (*Delta_23) + (1.0/2.0)*(*dnu_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23))/pow((*ell_2), 2))/(*dnu_23) - (-((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*(((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*dnu_23) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)) + (-(*Delta_23) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)))/pow((*ell_3), 2) - ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) - 1.0/4.0*(*dnu_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) + (1.0/2.0)*(*dnu_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2))/pow((*dnu_23), 2)
     )
     : (((*dnu_23) < 1.4901161193847656e-8) ? (
@@ -2140,16 +2998,16 @@
     : (
        (((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34))/pow((*ell_3), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((1.0/2.0)*(*Delta_12) + (*Delta_23) + (1.0/2.0)*(*dnu_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23))/pow((*ell_2), 2))/(*dnu_23) - (-((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*(((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*dnu_23) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)) + (-(*Delta_23) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)))/pow((*ell_3), 2) - ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) - 1.0/4.0*(*dnu_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) + (1.0/2.0)*(*dnu_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2))/pow((*dnu_23), 2)
     )))/((*V_0_3) + (*V_3));
-    _jacGnlnl(15, 3) = (((*dnu_34) < -1.4901161193847656e-8) ? (
-       (((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4))/pow((*ell_4), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34))/pow((*ell_3), 2))/(*dnu_34) - (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/pow((*dnu_34), 2)
+    _jacGnlnl(21, 3) = (((*dnu_34) < -1.4901161193847656e-8) ? (
+       (((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45))/pow((*ell_4), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34))/pow((*ell_3), 2))/(*dnu_34) - (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/pow((*dnu_34), 2)
     )
     : (((*dnu_34) < 1.4901161193847656e-8) ? (
        0.25*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2) + 0.25*((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))/pow((*ell_3), 2)
     )
     : (
-       (((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4))/pow((*ell_4), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34))/pow((*ell_3), 2))/(*dnu_34) - (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/pow((*dnu_34), 2)
+       (((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45))/pow((*ell_4), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34))/pow((*ell_3), 2))/(*dnu_34) - (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/pow((*dnu_34), 2)
     )))/((*V_0_3) + (*V_3));
-    _jacGnlnl(15, 7) = 2*(*L_3)*(*ell_3)*((*rho_0) + (*rho_3))*(((*dPi_y3) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(21, 9) = 2*(*L_3)*(*ell_3)*((*rho_0) + (*rho_3))*(((*dPi_y3) < -1.4901161193847656e-8) ? (
        (3*(*Pi_y3) + 3*(*dPi_y3))/((*dPi_y3)*((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - (-3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) + (3.0/2.0)*pow((*Pi_y3) + (*dPi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))))/pow((*dPi_y3), 2)
     )
     : (((*dPi_y3) < 1.4901161193847656e-8) ? (
@@ -2158,25 +3016,25 @@
     : (
        (3*(*Pi_y3) + 3*(*dPi_y3))/((*dPi_y3)*((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - (-3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) + (3.0/2.0)*pow((*Pi_y3) + (*dPi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))))/pow((*dPi_y3), 2)
     )))/((*V_0_3) + (*V_3));
-    _jacGnlnl(16, 3) = -(((*dnu_34) < -1.4901161193847656e-8) ? (
-       (((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4))/pow((*ell_4), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34))/pow((*ell_3), 2))/(*dnu_34) - (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/pow((*dnu_34), 2)
+    _jacGnlnl(22, 3) = -(((*dnu_34) < -1.4901161193847656e-8) ? (
+       (((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45))/pow((*ell_4), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34))/pow((*ell_3), 2))/(*dnu_34) - (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/pow((*dnu_34), 2)
     )
     : (((*dnu_34) < 1.4901161193847656e-8) ? (
        0.25*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2) + 0.25*((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))/pow((*ell_3), 2)
     )
     : (
-       (((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4))/pow((*ell_4), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34))/pow((*ell_3), 2))/(*dnu_34) - (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/pow((*dnu_34), 2)
+       (((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45))/pow((*ell_4), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34))/pow((*ell_3), 2))/(*dnu_34) - (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/pow((*dnu_34), 2)
     )))/((*V_0_4) + (*V_4));
-    _jacGnlnl(16, 4) = (((*dnu_R4) < -1.4901161193847656e-8) ? (
-       ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*Delta_34) + 2*(*dnu_R4) - 1.0/2.0*(*nu_34) + 2*(*nu_R4))/((*dnu_R4)*pow((*ell_4), 2)) - (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*dnu_R4) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)) + ((*dnu_R4) + (*nu_R4))*((1.0/2.0)*(*Delta_34) + (*dnu_R4) - 1.0/4.0*(*nu_34) + (*nu_R4)))/pow((*ell_4), 2))/pow((*dnu_R4), 2)
+    _jacGnlnl(22, 4) = (((*dnu_45) < -1.4901161193847656e-8) ? (
+       (((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56))/pow((*ell_5), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((1.0/2.0)*(*Delta_34) + (*Delta_45) + (1.0/2.0)*(*dnu_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45))/pow((*ell_4), 2))/(*dnu_45) - (-((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*dnu_45) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)) + (-(*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)))/pow((*ell_5), 2) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) - 1.0/4.0*(*dnu_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) + (1.0/2.0)*(*dnu_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2))/pow((*dnu_45), 2)
     )
-    : (((*dnu_R4) < 1.4901161193847656e-8) ? (
-       1.0*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2)
+    : (((*dnu_45) < 1.4901161193847656e-8) ? (
+       0.25*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))/pow((*ell_5), 2) + 0.25*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2)
     )
     : (
-       ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*Delta_34) + 2*(*dnu_R4) - 1.0/2.0*(*nu_34) + 2*(*nu_R4))/((*dnu_R4)*pow((*ell_4), 2)) - (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*dnu_R4) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)) + ((*dnu_R4) + (*nu_R4))*((1.0/2.0)*(*Delta_34) + (*dnu_R4) - 1.0/4.0*(*nu_34) + (*nu_R4)))/pow((*ell_4), 2))/pow((*dnu_R4), 2)
+       (((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56))/pow((*ell_5), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((1.0/2.0)*(*Delta_34) + (*Delta_45) + (1.0/2.0)*(*dnu_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45))/pow((*ell_4), 2))/(*dnu_45) - (-((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*dnu_45) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)) + (-(*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)))/pow((*ell_5), 2) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) - 1.0/4.0*(*dnu_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) + (1.0/2.0)*(*dnu_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2))/pow((*dnu_45), 2)
     )))/((*V_0_4) + (*V_4));
-    _jacGnlnl(16, 8) = 2*(*L_4)*(*ell_4)*((*rho_0) + (*rho_4))*(((*dPi_y4) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(22, 10) = 2*(*L_4)*(*ell_4)*((*rho_0) + (*rho_4))*(((*dPi_y4) < -1.4901161193847656e-8) ? (
        (3*(*Pi_y4) + 3*(*dPi_y4))/((*dPi_y4)*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - (-3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (3.0/2.0)*pow((*Pi_y4) + (*dPi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))))/pow((*dPi_y4), 2)
     )
     : (((*dPi_y4) < 1.4901161193847656e-8) ? (
@@ -2185,7 +3043,61 @@
     : (
        (3*(*Pi_y4) + 3*(*dPi_y4))/((*dPi_y4)*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - (-3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (3.0/2.0)*pow((*Pi_y4) + (*dPi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))))/pow((*dPi_y4), 2)
     )))/((*V_0_4) + (*V_4));
-    _jacGnlnl(17, 5) = (((*dPi_y1) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(23, 4) = -(((*dnu_45) < -1.4901161193847656e-8) ? (
+       (((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56))/pow((*ell_5), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((1.0/2.0)*(*Delta_34) + (*Delta_45) + (1.0/2.0)*(*dnu_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45))/pow((*ell_4), 2))/(*dnu_45) - (-((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*dnu_45) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)) + (-(*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)))/pow((*ell_5), 2) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) - 1.0/4.0*(*dnu_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) + (1.0/2.0)*(*dnu_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2))/pow((*dnu_45), 2)
+    )
+    : (((*dnu_45) < 1.4901161193847656e-8) ? (
+       0.25*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))/pow((*ell_5), 2) + 0.25*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2)
+    )
+    : (
+       (((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56))/pow((*ell_5), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((1.0/2.0)*(*Delta_34) + (*Delta_45) + (1.0/2.0)*(*dnu_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45))/pow((*ell_4), 2))/(*dnu_45) - (-((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*dnu_45) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)) + (-(*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)))/pow((*ell_5), 2) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) - 1.0/4.0*(*dnu_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) + (1.0/2.0)*(*dnu_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2))/pow((*dnu_45), 2)
+    )))/((*V_0_5) + (*V_5));
+    _jacGnlnl(23, 5) = (((*dnu_56) < -1.4901161193847656e-8) ? (
+       (((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*(-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6))/pow((*ell_6), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((1.0/2.0)*(*Delta_45) + (*Delta_56) + (1.0/2.0)*(*dnu_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56))/pow((*ell_5), 2))/(*dnu_56) - (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*dnu_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) - 1.0/4.0*(*dnu_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) + (1.0/2.0)*(*dnu_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2))/pow((*dnu_56), 2)
+    )
+    : (((*dnu_56) < 1.4901161193847656e-8) ? (
+       0.25*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))/pow((*ell_6), 2) + 0.25*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))/pow((*ell_5), 2)
+    )
+    : (
+       (((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*(-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6))/pow((*ell_6), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((1.0/2.0)*(*Delta_45) + (*Delta_56) + (1.0/2.0)*(*dnu_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56))/pow((*ell_5), 2))/(*dnu_56) - (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*dnu_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) - 1.0/4.0*(*dnu_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) + (1.0/2.0)*(*dnu_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2))/pow((*dnu_56), 2)
+    )))/((*V_0_5) + (*V_5));
+    _jacGnlnl(23, 11) = 2*(*L_5)*(*ell_5)*((*rho_0) + (*rho_5))*(((*dPi_y5) < -1.4901161193847656e-8) ? (
+       (3*(*Pi_y5) + 3*(*dPi_y5))/((*dPi_y5)*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - (-3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (3.0/2.0)*pow((*Pi_y5) + (*dPi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))))/pow((*dPi_y5), 2)
+    )
+    : (((*dPi_y5) < 1.4901161193847656e-8) ? (
+       1.5/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5)))
+    )
+    : (
+       (3*(*Pi_y5) + 3*(*dPi_y5))/((*dPi_y5)*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - (-3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (3.0/2.0)*pow((*Pi_y5) + (*dPi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))))/pow((*dPi_y5), 2)
+    )))/((*V_0_5) + (*V_5));
+    _jacGnlnl(24, 5) = -(((*dnu_56) < -1.4901161193847656e-8) ? (
+       (((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*(-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6))/pow((*ell_6), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((1.0/2.0)*(*Delta_45) + (*Delta_56) + (1.0/2.0)*(*dnu_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56))/pow((*ell_5), 2))/(*dnu_56) - (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*dnu_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) - 1.0/4.0*(*dnu_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) + (1.0/2.0)*(*dnu_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2))/pow((*dnu_56), 2)
+    )
+    : (((*dnu_56) < 1.4901161193847656e-8) ? (
+       0.25*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))/pow((*ell_6), 2) + 0.25*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))/pow((*ell_5), 2)
+    )
+    : (
+       (((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*(-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6))/pow((*ell_6), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((1.0/2.0)*(*Delta_45) + (*Delta_56) + (1.0/2.0)*(*dnu_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56))/pow((*ell_5), 2))/(*dnu_56) - (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*dnu_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) - 1.0/4.0*(*dnu_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) + (1.0/2.0)*(*dnu_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2))/pow((*dnu_56), 2)
+    )))/((*V_0_6) + (*V_6));
+    _jacGnlnl(24, 6) = (((*dnu_R6) < -1.4901161193847656e-8) ? (
+       ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*Delta_56) + 2*(*dnu_R6) - 1.0/2.0*(*nu_56) + 2*(*nu_R6))/((*dnu_R6)*pow((*ell_6), 2)) - (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) - 1.0/2.0*(*dnu_R6) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)) + ((*dnu_R6) + (*nu_R6))*((1.0/2.0)*(*Delta_56) + (*dnu_R6) - 1.0/4.0*(*nu_56) + (*nu_R6)))/pow((*ell_6), 2))/pow((*dnu_R6), 2)
+    )
+    : (((*dnu_R6) < 1.4901161193847656e-8) ? (
+       1.0*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))/pow((*ell_6), 2)
+    )
+    : (
+       ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*Delta_56) + 2*(*dnu_R6) - 1.0/2.0*(*nu_56) + 2*(*nu_R6))/((*dnu_R6)*pow((*ell_6), 2)) - (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) - 1.0/2.0*(*dnu_R6) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)) + ((*dnu_R6) + (*nu_R6))*((1.0/2.0)*(*Delta_56) + (*dnu_R6) - 1.0/4.0*(*nu_56) + (*nu_R6)))/pow((*ell_6), 2))/pow((*dnu_R6), 2)
+    )))/((*V_0_6) + (*V_6));
+    _jacGnlnl(24, 12) = 2*(*L_6)*(*ell_6)*((*rho_0) + (*rho_6))*(((*dPi_y6) < -1.4901161193847656e-8) ? (
+       (3*(*Pi_y6) + 3*(*dPi_y6))/((*dPi_y6)*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - (-3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (3.0/2.0)*pow((*Pi_y6) + (*dPi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))))/pow((*dPi_y6), 2)
+    )
+    : (((*dPi_y6) < 1.4901161193847656e-8) ? (
+       1.5/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6)))
+    )
+    : (
+       (3*(*Pi_y6) + 3*(*dPi_y6))/((*dPi_y6)*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - (-3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (3.0/2.0)*pow((*Pi_y6) + (*dPi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))))/pow((*dPi_y6), 2)
+    )))/((*V_0_6) + (*V_6));
+    _jacGnlnl(25, 7) = (((*dPi_y1) < -1.4901161193847656e-8) ? (
        (3*(*Pi_y1) + 3*(*dPi_y1))/((*dPi_y1)*((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - (-3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) + (3.0/2.0)*pow((*Pi_y1) + (*dPi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))))/pow((*dPi_y1), 2)
     )
     : (((*dPi_y1) < 1.4901161193847656e-8) ? (
@@ -2194,7 +3106,7 @@
     : (
        (3*(*Pi_y1) + 3*(*dPi_y1))/((*dPi_y1)*((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - (-3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) + (3.0/2.0)*pow((*Pi_y1) + (*dPi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))))/pow((*dPi_y1), 2)
     )));
-    _jacGnlnl(18, 6) = (((*dPi_y2) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(26, 8) = (((*dPi_y2) < -1.4901161193847656e-8) ? (
        (3*(*Pi_y2) + 3*(*dPi_y2))/((*dPi_y2)*((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) - (-3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) + (3.0/2.0)*pow((*Pi_y2) + (*dPi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))))/pow((*dPi_y2), 2)
     )
     : (((*dPi_y2) < 1.4901161193847656e-8) ? (
@@ -2203,7 +3115,7 @@
     : (
        (3*(*Pi_y2) + 3*(*dPi_y2))/((*dPi_y2)*((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) - (-3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) + (3.0/2.0)*pow((*Pi_y2) + (*dPi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))))/pow((*dPi_y2), 2)
     )));
-    _jacGnlnl(19, 7) = (((*dPi_y3) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(27, 9) = (((*dPi_y3) < -1.4901161193847656e-8) ? (
        (3*(*Pi_y3) + 3*(*dPi_y3))/((*dPi_y3)*((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - (-3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) + (3.0/2.0)*pow((*Pi_y3) + (*dPi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))))/pow((*dPi_y3), 2)
     )
     : (((*dPi_y3) < 1.4901161193847656e-8) ? (
@@ -2212,7 +3124,7 @@
     : (
        (3*(*Pi_y3) + 3*(*dPi_y3))/((*dPi_y3)*((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - (-3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) + (3.0/2.0)*pow((*Pi_y3) + (*dPi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))))/pow((*dPi_y3), 2)
     )));
-    _jacGnlnl(20, 8) = (((*dPi_y4) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(28, 10) = (((*dPi_y4) < -1.4901161193847656e-8) ? (
        (3*(*Pi_y4) + 3*(*dPi_y4))/((*dPi_y4)*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - (-3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (3.0/2.0)*pow((*Pi_y4) + (*dPi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))))/pow((*dPi_y4), 2)
     )
     : (((*dPi_y4) < 1.4901161193847656e-8) ? (
@@ -2221,7 +3133,25 @@
     : (
        (3*(*Pi_y4) + 3*(*dPi_y4))/((*dPi_y4)*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - (-3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (3.0/2.0)*pow((*Pi_y4) + (*dPi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))))/pow((*dPi_y4), 2)
     )));
-    _jacGnlnl(21, 5) = (((*dPi_y1) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(29, 11) = (((*dPi_y5) < -1.4901161193847656e-8) ? (
+       (3*(*Pi_y5) + 3*(*dPi_y5))/((*dPi_y5)*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - (-3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (3.0/2.0)*pow((*Pi_y5) + (*dPi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))))/pow((*dPi_y5), 2)
+    )
+    : (((*dPi_y5) < 1.4901161193847656e-8) ? (
+       1.5/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5)))
+    )
+    : (
+       (3*(*Pi_y5) + 3*(*dPi_y5))/((*dPi_y5)*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - (-3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (3.0/2.0)*pow((*Pi_y5) + (*dPi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))))/pow((*dPi_y5), 2)
+    )));
+    _jacGnlnl(30, 12) = (((*dPi_y6) < -1.4901161193847656e-8) ? (
+       (3*(*Pi_y6) + 3*(*dPi_y6))/((*dPi_y6)*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - (-3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (3.0/2.0)*pow((*Pi_y6) + (*dPi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))))/pow((*dPi_y6), 2)
+    )
+    : (((*dPi_y6) < 1.4901161193847656e-8) ? (
+       1.5/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6)))
+    )
+    : (
+       (3*(*Pi_y6) + 3*(*dPi_y6))/((*dPi_y6)*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - (-3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (3.0/2.0)*pow((*Pi_y6) + (*dPi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))))/pow((*dPi_y6), 2)
+    )));
+    _jacGnlnl(31, 7) = (((*dPi_y1) < -1.4901161193847656e-8) ? (
        (3*(*Pi_y1) + 3*(*dPi_y1))/((*dPi_y1)*((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - (-3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) + (3.0/2.0)*pow((*Pi_y1) + (*dPi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))))/pow((*dPi_y1), 2)
     )
     : (((*dPi_y1) < 1.4901161193847656e-8) ? (
@@ -2230,7 +3160,7 @@
     : (
        (3*(*Pi_y1) + 3*(*dPi_y1))/((*dPi_y1)*((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - (-3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) + (3.0/2.0)*pow((*Pi_y1) + (*dPi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))))/pow((*dPi_y1), 2)
     )));
-    _jacGnlnl(22, 6) = (((*dPi_y2) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(32, 8) = (((*dPi_y2) < -1.4901161193847656e-8) ? (
        (3*(*Pi_y2) + 3*(*dPi_y2))/((*dPi_y2)*((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) - (-3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) + (3.0/2.0)*pow((*Pi_y2) + (*dPi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))))/pow((*dPi_y2), 2)
     )
     : (((*dPi_y2) < 1.4901161193847656e-8) ? (
@@ -2239,7 +3169,7 @@
     : (
        (3*(*Pi_y2) + 3*(*dPi_y2))/((*dPi_y2)*((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) - (-3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) + (3.0/2.0)*pow((*Pi_y2) + (*dPi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))))/pow((*dPi_y2), 2)
     )));
-    _jacGnlnl(23, 7) = (((*dPi_y3) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(33, 9) = (((*dPi_y3) < -1.4901161193847656e-8) ? (
        (3*(*Pi_y3) + 3*(*dPi_y3))/((*dPi_y3)*((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - (-3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) + (3.0/2.0)*pow((*Pi_y3) + (*dPi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))))/pow((*dPi_y3), 2)
     )
     : (((*dPi_y3) < 1.4901161193847656e-8) ? (
@@ -2248,7 +3178,7 @@
     : (
        (3*(*Pi_y3) + 3*(*dPi_y3))/((*dPi_y3)*((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - (-3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) + (3.0/2.0)*pow((*Pi_y3) + (*dPi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))))/pow((*dPi_y3), 2)
     )));
-    _jacGnlnl(24, 8) = (((*dPi_y4) < -1.4901161193847656e-8) ? (
+    _jacGnlnl(34, 10) = (((*dPi_y4) < -1.4901161193847656e-8) ? (
        (3*(*Pi_y4) + 3*(*dPi_y4))/((*dPi_y4)*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - (-3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (3.0/2.0)*pow((*Pi_y4) + (*dPi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))))/pow((*dPi_y4), 2)
     )
     : (((*dPi_y4) < 1.4901161193847656e-8) ? (
@@ -2257,14 +3187,32 @@
     : (
        (3*(*Pi_y4) + 3*(*dPi_y4))/((*dPi_y4)*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - (-3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (3.0/2.0)*pow((*Pi_y4) + (*dPi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))))/pow((*dPi_y4), 2)
     )));
-    _jacGnlnl(25, 4) = -(((*dnu_R4) < -1.4901161193847656e-8) ? (
-       ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*Delta_34) + 2*(*dnu_R4) - 1.0/2.0*(*nu_34) + 2*(*nu_R4))/((*dnu_R4)*pow((*ell_4), 2)) - (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*dnu_R4) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)) + ((*dnu_R4) + (*nu_R4))*((1.0/2.0)*(*Delta_34) + (*dnu_R4) - 1.0/4.0*(*nu_34) + (*nu_R4)))/pow((*ell_4), 2))/pow((*dnu_R4), 2)
+    _jacGnlnl(35, 11) = (((*dPi_y5) < -1.4901161193847656e-8) ? (
+       (3*(*Pi_y5) + 3*(*dPi_y5))/((*dPi_y5)*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - (-3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (3.0/2.0)*pow((*Pi_y5) + (*dPi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))))/pow((*dPi_y5), 2)
     )
-    : (((*dnu_R4) < 1.4901161193847656e-8) ? (
-       1.0*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2)
+    : (((*dPi_y5) < 1.4901161193847656e-8) ? (
+       1.5/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5)))
     )
     : (
-       ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*Delta_34) + 2*(*dnu_R4) - 1.0/2.0*(*nu_34) + 2*(*nu_R4))/((*dnu_R4)*pow((*ell_4), 2)) - (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*dnu_R4) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)) + ((*dnu_R4) + (*nu_R4))*((1.0/2.0)*(*Delta_34) + (*dnu_R4) - 1.0/4.0*(*nu_34) + (*nu_R4)))/pow((*ell_4), 2))/pow((*dnu_R4), 2)
+       (3*(*Pi_y5) + 3*(*dPi_y5))/((*dPi_y5)*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - (-3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (3.0/2.0)*pow((*Pi_y5) + (*dPi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))))/pow((*dPi_y5), 2)
+    )));
+    _jacGnlnl(36, 12) = (((*dPi_y6) < -1.4901161193847656e-8) ? (
+       (3*(*Pi_y6) + 3*(*dPi_y6))/((*dPi_y6)*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - (-3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (3.0/2.0)*pow((*Pi_y6) + (*dPi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))))/pow((*dPi_y6), 2)
+    )
+    : (((*dPi_y6) < 1.4901161193847656e-8) ? (
+       1.5/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6)))
+    )
+    : (
+       (3*(*Pi_y6) + 3*(*dPi_y6))/((*dPi_y6)*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - (-3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (3.0/2.0)*pow((*Pi_y6) + (*dPi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))))/pow((*dPi_y6), 2)
+    )));
+    _jacGnlnl(37, 6) = -(((*dnu_R6) < -1.4901161193847656e-8) ? (
+       ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*Delta_56) + 2*(*dnu_R6) - 1.0/2.0*(*nu_56) + 2*(*nu_R6))/((*dnu_R6)*pow((*ell_6), 2)) - (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) - 1.0/2.0*(*dnu_R6) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)) + ((*dnu_R6) + (*nu_R6))*((1.0/2.0)*(*Delta_56) + (*dnu_R6) - 1.0/4.0*(*nu_56) + (*nu_R6)))/pow((*ell_6), 2))/pow((*dnu_R6), 2)
+    )
+    : (((*dnu_R6) < 1.4901161193847656e-8) ? (
+       1.0*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))/pow((*ell_6), 2)
+    )
+    : (
+       ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*Delta_56) + 2*(*dnu_R6) - 1.0/2.0*(*nu_56) + 2*(*nu_R6))/((*dnu_R6)*pow((*ell_6), 2)) - (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) - 1.0/2.0*(*dnu_R6) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)) + ((*dnu_R6) + (*nu_R6))*((1.0/2.0)*(*Delta_56) + (*dnu_R6) - 1.0/4.0*(*nu_56) + (*nu_R6)))/pow((*ell_6), 2))/pow((*dnu_R6), 2)
     )));
     };
     void VOCAL_TRACT::dxH_update(){
@@ -2296,24 +3244,42 @@
        (-((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*(((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*dnu_23) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)) + (-(*Delta_23) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)))/pow((*ell_3), 2) - ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) - 1.0/4.0*(*dnu_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*dnu_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) + (1.0/2.0)*(*dnu_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2))/(*dnu_23)
     )));
     _dxH(3, 0) = (((*dnu_34) < -1.4901161193847656e-8) ? (
-       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*dnu_34)
+       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*dnu_34)
     )
     : (((*dnu_34) < 1.4901161193847656e-8) ? (
-       (*dnu_34)*(0.25*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2) + 0.25*((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))/pow((*ell_3), 2)) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4))/pow((*ell_4), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34))/pow((*ell_3), 2)
+       (*dnu_34)*(0.25*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2) + 0.25*((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))/pow((*ell_3), 2)) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45))/pow((*ell_4), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34))/pow((*ell_3), 2)
     )
     : (
-       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*dnu_34)
+       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*(((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*dnu_34) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)) + (-(*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)))/pow((*ell_4), 2) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) - 1.0/4.0*(*dnu_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*dnu_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) + (1.0/2.0)*(*dnu_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2))/(*dnu_34)
     )));
-    _dxH(4, 0) = (((*dnu_R4) < -1.4901161193847656e-8) ? (
-       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*dnu_R4) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)) + ((*dnu_R4) + (*nu_R4))*((1.0/2.0)*(*Delta_34) + (*dnu_R4) - 1.0/4.0*(*nu_34) + (*nu_R4)))/pow((*ell_4), 2))/(*dnu_R4)
+    _dxH(4, 0) = (((*dnu_45) < -1.4901161193847656e-8) ? (
+       (-((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*dnu_45) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)) + (-(*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)))/pow((*ell_5), 2) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) - 1.0/4.0*(*dnu_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) + (1.0/2.0)*(*dnu_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2))/(*dnu_45)
     )
-    : (((*dnu_R4) < 1.4901161193847656e-8) ? (
-       1.0*(*dnu_R4)*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*Delta_34) - 1.0/2.0*(*nu_34) + 2*(*nu_R4))/pow((*ell_4), 2)
+    : (((*dnu_45) < 1.4901161193847656e-8) ? (
+       (*dnu_45)*(0.25*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))/pow((*ell_5), 2) + 0.25*((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))/pow((*ell_4), 2)) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56))/pow((*ell_5), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45))/pow((*ell_4), 2)
     )
     : (
-       (-((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*dnu_R4) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)) + ((*dnu_R4) + (*nu_R4))*((1.0/2.0)*(*Delta_34) + (*dnu_R4) - 1.0/4.0*(*nu_34) + (*nu_R4)))/pow((*ell_4), 2))/(*dnu_R4)
+       (-((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*(((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*dnu_45) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)) + (-(*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)))/pow((*ell_5), 2) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) - 1.0/4.0*(*dnu_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*dnu_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) + (1.0/2.0)*(*dnu_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2))/(*dnu_45)
     )));
-    _dxH(5, 0) = (((*dPi_y1) < -1.4901161193847656e-8) ? (
+    _dxH(5, 0) = (((*dnu_56) < -1.4901161193847656e-8) ? (
+       (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*dnu_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) - 1.0/4.0*(*dnu_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) + (1.0/2.0)*(*dnu_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2))/(*dnu_56)
+    )
+    : (((*dnu_56) < 1.4901161193847656e-8) ? (
+       (*dnu_56)*(0.25*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))/pow((*ell_6), 2) + 0.25*((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))/pow((*ell_5), 2)) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6))/pow((*ell_6), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56))/pow((*ell_5), 2)
+    )
+    : (
+       (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*dnu_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) - 1.0/4.0*(*dnu_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*dnu_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) + (1.0/2.0)*(*dnu_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2))/(*dnu_56)
+    )));
+    _dxH(6, 0) = (((*dnu_R6) < -1.4901161193847656e-8) ? (
+       (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) - 1.0/2.0*(*dnu_R6) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)) + ((*dnu_R6) + (*nu_R6))*((1.0/2.0)*(*Delta_56) + (*dnu_R6) - 1.0/4.0*(*nu_56) + (*nu_R6)))/pow((*ell_6), 2))/(*dnu_R6)
+    )
+    : (((*dnu_R6) < 1.4901161193847656e-8) ? (
+       1.0*(*dnu_R6)*((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*Delta_56) - 1.0/2.0*(*nu_56) + 2*(*nu_R6))/pow((*ell_6), 2)
+    )
+    : (
+       (-((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) - 1.0/2.0*(*dnu_R6) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)) + ((*dnu_R6) + (*nu_R6))*((1.0/2.0)*(*Delta_56) + (*dnu_R6) - 1.0/4.0*(*nu_56) + (*nu_R6)))/pow((*ell_6), 2))/(*dnu_R6)
+    )));
+    _dxH(7, 0) = (((*dPi_y1) < -1.4901161193847656e-8) ? (
        (-3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) + (3.0/2.0)*pow((*Pi_y1) + (*dPi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))))/(*dPi_y1)
     )
     : (((*dPi_y1) < 1.4901161193847656e-8) ? (
@@ -2322,7 +3288,7 @@
     : (
        (-3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) + (3.0/2.0)*pow((*Pi_y1) + (*dPi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))))/(*dPi_y1)
     )));
-    _dxH(6, 0) = (((*dPi_y2) < -1.4901161193847656e-8) ? (
+    _dxH(8, 0) = (((*dPi_y2) < -1.4901161193847656e-8) ? (
        (-3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) + (3.0/2.0)*pow((*Pi_y2) + (*dPi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))))/(*dPi_y2)
     )
     : (((*dPi_y2) < 1.4901161193847656e-8) ? (
@@ -2331,7 +3297,7 @@
     : (
        (-3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) + (3.0/2.0)*pow((*Pi_y2) + (*dPi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))))/(*dPi_y2)
     )));
-    _dxH(7, 0) = (((*dPi_y3) < -1.4901161193847656e-8) ? (
+    _dxH(9, 0) = (((*dPi_y3) < -1.4901161193847656e-8) ? (
        (-3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) + (3.0/2.0)*pow((*Pi_y3) + (*dPi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))))/(*dPi_y3)
     )
     : (((*dPi_y3) < 1.4901161193847656e-8) ? (
@@ -2340,7 +3306,7 @@
     : (
        (-3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) + (3.0/2.0)*pow((*Pi_y3) + (*dPi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))))/(*dPi_y3)
     )));
-    _dxH(8, 0) = (((*dPi_y4) < -1.4901161193847656e-8) ? (
+    _dxH(10, 0) = (((*dPi_y4) < -1.4901161193847656e-8) ? (
        (-3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (3.0/2.0)*pow((*Pi_y4) + (*dPi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))))/(*dPi_y4)
     )
     : (((*dPi_y4) < 1.4901161193847656e-8) ? (
@@ -2349,7 +3315,25 @@
     : (
        (-3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) + (3.0/2.0)*pow((*Pi_y4) + (*dPi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))))/(*dPi_y4)
     )));
-    _dxH(9, 0) = (((*dV_1) < -1.4901161193847656e-8) ? (
+    _dxH(11, 0) = (((*dPi_y5) < -1.4901161193847656e-8) ? (
+       (-3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (3.0/2.0)*pow((*Pi_y5) + (*dPi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))))/(*dPi_y5)
+    )
+    : (((*dPi_y5) < 1.4901161193847656e-8) ? (
+       3*(*Pi_y5)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + 1.5*(*dPi_y5)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5)))
+    )
+    : (
+       (-3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) + (3.0/2.0)*pow((*Pi_y5) + (*dPi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))))/(*dPi_y5)
+    )));
+    _dxH(12, 0) = (((*dPi_y6) < -1.4901161193847656e-8) ? (
+       (-3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (3.0/2.0)*pow((*Pi_y6) + (*dPi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))))/(*dPi_y6)
+    )
+    : (((*dPi_y6) < 1.4901161193847656e-8) ? (
+       3*(*Pi_y6)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + 1.5*(*dPi_y6)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6)))
+    )
+    : (
+       (-3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) + (3.0/2.0)*pow((*Pi_y6) + (*dPi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))))/(*dPi_y6)
+    )));
+    _dxH(13, 0) = (((*dV_1) < -1.4901161193847656e-8) ? (
        (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_1), 2)*((*V_0_1) + (*V_1))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_1), 2)*((*V_0_1) + (*V_1) + (*dV_1))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y1), 2)/(((*rho_0) + (*rho_1))*((*V_0_1) + (*V_1) + (*dV_1))) - 3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))*((*V_0_1) + (*V_1) + (*dV_1))/pow((*ell_1), 2))/(*dV_1)
     )
     : (((*dV_1) < 1.4901161193847656e-8) ? (
@@ -2358,7 +3342,7 @@
     : (
        (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_1), 2)*((*V_0_1) + (*V_1))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_1), 2)*((*V_0_1) + (*V_1) + (*dV_1))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y1), 2)/(((*rho_0) + (*rho_1))*((*V_0_1) + (*V_1) + (*dV_1))) - 3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))*((*V_0_1) + (*V_1) + (*dV_1))/pow((*ell_1), 2))/(*dV_1)
     )));
-    _dxH(10, 0) = (((*dV_2) < -1.4901161193847656e-8) ? (
+    _dxH(14, 0) = (((*dV_2) < -1.4901161193847656e-8) ? (
        (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_2), 2)*((*V_0_2) + (*V_2))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_2), 2)*((*V_0_2) + (*V_2) + (*dV_2))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y2), 2)/(((*rho_0) + (*rho_2))*((*V_0_2) + (*V_2) + (*dV_2))) - 3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) - ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))*((*V_0_2) + (*V_2) + (*dV_2))/pow((*ell_2), 2))/(*dV_2)
     )
     : (((*dV_2) < 1.4901161193847656e-8) ? (
@@ -2367,7 +3351,7 @@
     : (
        (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_2), 2)*((*V_0_2) + (*V_2))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_2), 2)*((*V_0_2) + (*V_2) + (*dV_2))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y2), 2)/(((*rho_0) + (*rho_2))*((*V_0_2) + (*V_2) + (*dV_2))) - 3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) - ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))*((*V_0_2) + (*V_2) + (*dV_2))/pow((*ell_2), 2))/(*dV_2)
     )));
-    _dxH(11, 0) = (((*dV_3) < -1.4901161193847656e-8) ? (
+    _dxH(15, 0) = (((*dV_3) < -1.4901161193847656e-8) ? (
        (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_3), 2)*((*V_0_3) + (*V_3))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_3), 2)*((*V_0_3) + (*V_3) + (*dV_3))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y3), 2)/(((*rho_0) + (*rho_3))*((*V_0_3) + (*V_3) + (*dV_3))) - 3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))*((*V_0_3) + (*V_3) + (*dV_3))/pow((*ell_3), 2))/(*dV_3)
     )
     : (((*dV_3) < 1.4901161193847656e-8) ? (
@@ -2376,16 +3360,34 @@
     : (
        (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_3), 2)*((*V_0_3) + (*V_3))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_3), 2)*((*V_0_3) + (*V_3) + (*dV_3))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y3), 2)/(((*rho_0) + (*rho_3))*((*V_0_3) + (*V_3) + (*dV_3))) - 3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))*((*V_0_3) + (*V_3) + (*dV_3))/pow((*ell_3), 2))/(*dV_3)
     )));
-    _dxH(12, 0) = (((*dV_4) < -1.4901161193847656e-8) ? (
-       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4) + (*dV_4))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*rho_0) + (*rho_4))*((*V_0_4) + (*V_4) + (*dV_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))*((*V_0_4) + (*V_4) + (*dV_4))/pow((*ell_4), 2))/(*dV_4)
+    _dxH(16, 0) = (((*dV_4) < -1.4901161193847656e-8) ? (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4) + (*dV_4))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*rho_0) + (*rho_4))*((*V_0_4) + (*V_4) + (*dV_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))*((*V_0_4) + (*V_4) + (*dV_4))/pow((*ell_4), 2))/(*dV_4)
     )
     : (((*dV_4) < 1.4901161193847656e-8) ? (
-       (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_4), 2)/pow((*rho_0), 2) + 1.5*pow((*Pi_y4), 2)*(*dV_4)/(pow((*V_0_4) + (*V_4), 3)*((*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(pow((*V_0_4) + (*V_4), 2)*((*rho_0) + (*rho_4))) + ((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2)
+       (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_4), 2)/pow((*rho_0), 2) + 1.5*pow((*Pi_y4), 2)*(*dV_4)/(pow((*V_0_4) + (*V_4), 3)*((*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(pow((*V_0_4) + (*V_4), 2)*((*rho_0) + (*rho_4))) + ((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2)
     )
     : (
-       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4) + (*dV_4))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*rho_0) + (*rho_4))*((*V_0_4) + (*V_4) + (*dV_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))*((*V_0_4) + (*V_4) + (*dV_4))/pow((*ell_4), 2))/(*dV_4)
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4) + (*dV_4))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*rho_0) + (*rho_4))*((*V_0_4) + (*V_4) + (*dV_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))*((*V_0_4) + (*V_4) + (*dV_4))/pow((*ell_4), 2))/(*dV_4)
     )));
-    _dxH(13, 0) = (((*drho_1) < -1.4901161193847656e-8) ? (
+    _dxH(17, 0) = (((*dV_5) < -1.4901161193847656e-8) ? (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_5), 2)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_5), 2)*((*V_0_5) + (*V_5) + (*dV_5))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y5), 2)/(((*rho_0) + (*rho_5))*((*V_0_5) + (*V_5) + (*dV_5))) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))*((*V_0_5) + (*V_5) + (*dV_5))/pow((*ell_5), 2))/(*dV_5)
+    )
+    : (((*dV_5) < 1.4901161193847656e-8) ? (
+       (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_5), 2)/pow((*rho_0), 2) + 1.5*pow((*Pi_y5), 2)*(*dV_5)/(pow((*V_0_5) + (*V_5), 3)*((*rho_0) + (*rho_5))) - 3.0/2.0*pow((*Pi_y5), 2)/(pow((*V_0_5) + (*V_5), 2)*((*rho_0) + (*rho_5))) + ((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2)
+    )
+    : (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_5), 2)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_5), 2)*((*V_0_5) + (*V_5) + (*dV_5))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y5), 2)/(((*rho_0) + (*rho_5))*((*V_0_5) + (*V_5) + (*dV_5))) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))*((*V_0_5) + (*V_5) + (*dV_5))/pow((*ell_5), 2))/(*dV_5)
+    )));
+    _dxH(18, 0) = (((*dV_6) < -1.4901161193847656e-8) ? (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_6), 2)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_6), 2)*((*V_0_6) + (*V_6) + (*dV_6))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y6), 2)/(((*rho_0) + (*rho_6))*((*V_0_6) + (*V_6) + (*dV_6))) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))*((*V_0_6) + (*V_6) + (*dV_6))/pow((*ell_6), 2))/(*dV_6)
+    )
+    : (((*dV_6) < 1.4901161193847656e-8) ? (
+       (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_6), 2)/pow((*rho_0), 2) + 1.5*pow((*Pi_y6), 2)*(*dV_6)/(pow((*V_0_6) + (*V_6), 3)*((*rho_0) + (*rho_6))) - 3.0/2.0*pow((*Pi_y6), 2)/(pow((*V_0_6) + (*V_6), 2)*((*rho_0) + (*rho_6))) + ((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2)
+    )
+    : (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_6), 2)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*pow((*rho_6), 2)*((*V_0_6) + (*V_6) + (*dV_6))/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y6), 2)/(((*rho_0) + (*rho_6))*((*V_0_6) + (*V_6) + (*dV_6))) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))*((*V_0_6) + (*V_6) + (*dV_6))/pow((*ell_6), 2))/(*dV_6)
+    )));
+    _dxH(19, 0) = (((*drho_1) < -1.4901161193847656e-8) ? (
        (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_1), 2)*((*V_0_1) + (*V_1))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_1) + (*V_1))*pow((*drho_1) + (*rho_1), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*drho_1) + (*rho_0) + (*rho_1))) - 3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*V_0_1) + (*V_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))*((*drho_1) + (*rho_0) + (*rho_1))/pow((*ell_1), 2))/(*drho_1)
     )
     : (((*drho_1) < 1.4901161193847656e-8) ? (
@@ -2394,7 +3396,7 @@
     : (
        (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_1), 2)*((*V_0_1) + (*V_1))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_1) + (*V_1))*pow((*drho_1) + (*rho_1), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*drho_1) + (*rho_0) + (*rho_1))) - 3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*V_0_1) + (*V_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))*((*drho_1) + (*rho_0) + (*rho_1))/pow((*ell_1), 2))/(*drho_1)
     )));
-    _dxH(14, 0) = (((*drho_2) < -1.4901161193847656e-8) ? (
+    _dxH(20, 0) = (((*drho_2) < -1.4901161193847656e-8) ? (
        (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_2), 2)*((*V_0_2) + (*V_2))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_2) + (*V_2))*pow((*drho_2) + (*rho_2), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*drho_2) + (*rho_0) + (*rho_2))) - 3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) - ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))*((*drho_2) + (*rho_0) + (*rho_2))/pow((*ell_2), 2))/(*drho_2)
     )
     : (((*drho_2) < 1.4901161193847656e-8) ? (
@@ -2403,7 +3405,7 @@
     : (
        (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_2), 2)*((*V_0_2) + (*V_2))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_2) + (*V_2))*pow((*drho_2) + (*rho_2), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*drho_2) + (*rho_0) + (*rho_2))) - 3.0/2.0*pow((*Pi_y2), 2)/(((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))) - ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))/pow((*ell_2), 2) + ((*V_0_2) + (*V_2))*((-(*Delta_12) + (1.0/2.0)*(*nu_12))*(-(*Delta_12) - 1.0/2.0*(*Delta_23) + (1.0/2.0)*(*nu_12) - 1.0/4.0*(*nu_23)) + ((*Delta_23) + (1.0/2.0)*(*nu_23))*((1.0/2.0)*(*Delta_12) + (*Delta_23) - 1.0/4.0*(*nu_12) + (1.0/2.0)*(*nu_23)))*((*drho_2) + (*rho_0) + (*rho_2))/pow((*ell_2), 2))/(*drho_2)
     )));
-    _dxH(15, 0) = (((*drho_3) < -1.4901161193847656e-8) ? (
+    _dxH(21, 0) = (((*drho_3) < -1.4901161193847656e-8) ? (
        (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_3), 2)*((*V_0_3) + (*V_3))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_3) + (*V_3))*pow((*drho_3) + (*rho_3), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*drho_3) + (*rho_0) + (*rho_3))) - 3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))*((*drho_3) + (*rho_0) + (*rho_3))/pow((*ell_3), 2))/(*drho_3)
     )
     : (((*drho_3) < 1.4901161193847656e-8) ? (
@@ -2412,16 +3414,34 @@
     : (
        (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_3), 2)*((*V_0_3) + (*V_3))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_3) + (*V_3))*pow((*drho_3) + (*rho_3), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*drho_3) + (*rho_0) + (*rho_3))) - 3.0/2.0*pow((*Pi_y3), 2)/(((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))) - ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))/pow((*ell_3), 2) + ((*V_0_3) + (*V_3))*((-(*Delta_23) + (1.0/2.0)*(*nu_23))*(-(*Delta_23) - 1.0/2.0*(*Delta_34) + (1.0/2.0)*(*nu_23) - 1.0/4.0*(*nu_34)) + ((*Delta_34) + (1.0/2.0)*(*nu_34))*((1.0/2.0)*(*Delta_23) + (*Delta_34) - 1.0/4.0*(*nu_23) + (1.0/2.0)*(*nu_34)))*((*drho_3) + (*rho_0) + (*rho_3))/pow((*ell_3), 2))/(*drho_3)
     )));
-    _dxH(16, 0) = (((*drho_4) < -1.4901161193847656e-8) ? (
-       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/(*drho_4)
+    _dxH(22, 0) = (((*drho_4) < -1.4901161193847656e-8) ? (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/(*drho_4)
     )
     : (((*drho_4) < 1.4901161193847656e-8) ? (
-       (*P_0)*(*gamma)*(*rho_4)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*rho_0) + (*rho_4), 2)) + (*drho_4)*(0.5*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + 1.5*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*rho_0) + (*rho_4), 3))) + ((*V_0_4) + (*V_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2)
+       (*P_0)*(*gamma)*(*rho_4)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*rho_0) + (*rho_4), 2)) + (*drho_4)*(0.5*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + 1.5*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*pow((*rho_0) + (*rho_4), 3))) + ((*V_0_4) + (*V_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2)
     )
     : (
-       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((*nu_R4)*((1.0/2.0)*(*Delta_34) - 1.0/4.0*(*nu_34) + (*nu_R4)) + (-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) + (1.0/2.0)*(*nu_34) - 1.0/2.0*(*nu_R4)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/(*drho_4)
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_4), 2)*((*V_0_4) + (*V_4))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_4) + (*V_4))*pow((*drho_4) + (*rho_4), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*drho_4) + (*rho_0) + (*rho_4))) - 3.0/2.0*pow((*Pi_y4), 2)/(((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))) - ((*V_0_4) + (*V_4))*((*rho_0) + (*rho_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))/pow((*ell_4), 2) + ((*V_0_4) + (*V_4))*((-(*Delta_34) + (1.0/2.0)*(*nu_34))*(-(*Delta_34) - 1.0/2.0*(*Delta_45) + (1.0/2.0)*(*nu_34) - 1.0/4.0*(*nu_45)) + ((*Delta_45) + (1.0/2.0)*(*nu_45))*((1.0/2.0)*(*Delta_34) + (*Delta_45) - 1.0/4.0*(*nu_34) + (1.0/2.0)*(*nu_45)))*((*drho_4) + (*rho_0) + (*rho_4))/pow((*ell_4), 2))/(*drho_4)
     )));
-    _dxH(17, 0) = (((*dx_k1) < -1.4901161193847656e-8) ? (
+    _dxH(23, 0) = (((*drho_5) < -1.4901161193847656e-8) ? (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_5), 2)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))*pow((*drho_5) + (*rho_5), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*drho_5) + (*rho_0) + (*rho_5))) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))*((*drho_5) + (*rho_0) + (*rho_5))/pow((*ell_5), 2))/(*drho_5)
+    )
+    : (((*drho_5) < 1.4901161193847656e-8) ? (
+       (*P_0)*(*gamma)*(*rho_5)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*pow((*rho_0) + (*rho_5), 2)) + (*drho_5)*(0.5*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + 1.5*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*pow((*rho_0) + (*rho_5), 3))) + ((*V_0_5) + (*V_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2)
+    )
+    : (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_5), 2)*((*V_0_5) + (*V_5))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_5) + (*V_5))*pow((*drho_5) + (*rho_5), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*drho_5) + (*rho_0) + (*rho_5))) - 3.0/2.0*pow((*Pi_y5), 2)/(((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))) - ((*V_0_5) + (*V_5))*((*rho_0) + (*rho_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))/pow((*ell_5), 2) + ((*V_0_5) + (*V_5))*((-(*Delta_45) + (1.0/2.0)*(*nu_45))*(-(*Delta_45) - 1.0/2.0*(*Delta_56) + (1.0/2.0)*(*nu_45) - 1.0/4.0*(*nu_56)) + ((*Delta_56) + (1.0/2.0)*(*nu_56))*((1.0/2.0)*(*Delta_45) + (*Delta_56) - 1.0/4.0*(*nu_45) + (1.0/2.0)*(*nu_56)))*((*drho_5) + (*rho_0) + (*rho_5))/pow((*ell_5), 2))/(*drho_5)
+    )));
+    _dxH(24, 0) = (((*drho_6) < -1.4901161193847656e-8) ? (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_6), 2)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))*pow((*drho_6) + (*rho_6), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*drho_6) + (*rho_0) + (*rho_6))) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))*((*drho_6) + (*rho_0) + (*rho_6))/pow((*ell_6), 2))/(*drho_6)
+    )
+    : (((*drho_6) < 1.4901161193847656e-8) ? (
+       (*P_0)*(*gamma)*(*rho_6)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*pow((*rho_0) + (*rho_6), 2)) + (*drho_6)*(0.5*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + 1.5*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*pow((*rho_0) + (*rho_6), 3))) + ((*V_0_6) + (*V_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2)
+    )
+    : (
+       (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_6), 2)*((*V_0_6) + (*V_6))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_6) + (*V_6))*pow((*drho_6) + (*rho_6), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*drho_6) + (*rho_0) + (*rho_6))) - 3.0/2.0*pow((*Pi_y6), 2)/(((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))) - ((*V_0_6) + (*V_6))*((*rho_0) + (*rho_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))/pow((*ell_6), 2) + ((*V_0_6) + (*V_6))*((*nu_R6)*((1.0/2.0)*(*Delta_56) - 1.0/4.0*(*nu_56) + (*nu_R6)) + (-(*Delta_56) + (1.0/2.0)*(*nu_56))*(-(*Delta_56) + (1.0/2.0)*(*nu_56) - 1.0/2.0*(*nu_R6)))*((*drho_6) + (*rho_0) + (*rho_6))/pow((*ell_6), 2))/(*drho_6)
+    )));
+    _dxH(25, 0) = (((*dx_k1) < -1.4901161193847656e-8) ? (
        (-1.0/2.0*(*k_1)*pow((*x_k1), 2) + (1.0/2.0)*(*k_1)*pow((*dx_k1) + (*x_k1), 2))/(*dx_k1)
     )
     : (((*dx_k1) < 1.4901161193847656e-8) ? (
@@ -2430,7 +3450,7 @@
     : (
        (-1.0/2.0*(*k_1)*pow((*x_k1), 2) + (1.0/2.0)*(*k_1)*pow((*dx_k1) + (*x_k1), 2))/(*dx_k1)
     )));
-    _dxH(18, 0) = (((*dx_k2) < -1.4901161193847656e-8) ? (
+    _dxH(26, 0) = (((*dx_k2) < -1.4901161193847656e-8) ? (
        (-1.0/2.0*(*k_2)*pow((*x_k2), 2) + (1.0/2.0)*(*k_2)*pow((*dx_k2) + (*x_k2), 2))/(*dx_k2)
     )
     : (((*dx_k2) < 1.4901161193847656e-8) ? (
@@ -2439,7 +3459,7 @@
     : (
        (-1.0/2.0*(*k_2)*pow((*x_k2), 2) + (1.0/2.0)*(*k_2)*pow((*dx_k2) + (*x_k2), 2))/(*dx_k2)
     )));
-    _dxH(19, 0) = (((*dx_k3) < -1.4901161193847656e-8) ? (
+    _dxH(27, 0) = (((*dx_k3) < -1.4901161193847656e-8) ? (
        (-1.0/2.0*(*k_3)*pow((*x_k3), 2) + (1.0/2.0)*(*k_3)*pow((*dx_k3) + (*x_k3), 2))/(*dx_k3)
     )
     : (((*dx_k3) < 1.4901161193847656e-8) ? (
@@ -2448,7 +3468,7 @@
     : (
        (-1.0/2.0*(*k_3)*pow((*x_k3), 2) + (1.0/2.0)*(*k_3)*pow((*dx_k3) + (*x_k3), 2))/(*dx_k3)
     )));
-    _dxH(20, 0) = (((*dx_k4) < -1.4901161193847656e-8) ? (
+    _dxH(28, 0) = (((*dx_k4) < -1.4901161193847656e-8) ? (
        (-1.0/2.0*(*k_4)*pow((*x_k4), 2) + (1.0/2.0)*(*k_4)*pow((*dx_k4) + (*x_k4), 2))/(*dx_k4)
     )
     : (((*dx_k4) < 1.4901161193847656e-8) ? (
@@ -2457,13 +3477,33 @@
     : (
        (-1.0/2.0*(*k_4)*pow((*x_k4), 2) + (1.0/2.0)*(*k_4)*pow((*dx_k4) + (*x_k4), 2))/(*dx_k4)
     )));
+    _dxH(29, 0) = (((*dx_k5) < -1.4901161193847656e-8) ? (
+       (-1.0/2.0*(*k_5)*pow((*x_k5), 2) + (1.0/2.0)*(*k_5)*pow((*dx_k5) + (*x_k5), 2))/(*dx_k5)
+    )
+    : (((*dx_k5) < 1.4901161193847656e-8) ? (
+       0.5*(*dx_k5)*(*k_5) + (*k_5)*(*x_k5)
+    )
+    : (
+       (-1.0/2.0*(*k_5)*pow((*x_k5), 2) + (1.0/2.0)*(*k_5)*pow((*dx_k5) + (*x_k5), 2))/(*dx_k5)
+    )));
+    _dxH(30, 0) = (((*dx_k6) < -1.4901161193847656e-8) ? (
+       (-1.0/2.0*(*k_6)*pow((*x_k6), 2) + (1.0/2.0)*(*k_6)*pow((*dx_k6) + (*x_k6), 2))/(*dx_k6)
+    )
+    : (((*dx_k6) < 1.4901161193847656e-8) ? (
+       0.5*(*dx_k6)*(*k_6) + (*k_6)*(*x_k6)
+    )
+    : (
+       (-1.0/2.0*(*k_6)*pow((*x_k6), 2) + (1.0/2.0)*(*k_6)*pow((*dx_k6) + (*x_k6), 2))/(*dx_k6)
+    )));
     };
     void VOCAL_TRACT::z_update(){
     _z(0, 0) = (*r_1)*(*v_k1);
     _z(1, 0) = (*r_2)*(*v_k2);
     _z(2, 0) = (*r_3)*(*v_k3);
     _z(3, 0) = (*r_4)*(*v_k4);
-    _z(4, 0) = (*Z_ray)*(*q);
+    _z(4, 0) = (*r_5)*(*v_k5);
+    _z(5, 0) = (*r_6)*(*v_k6);
+    _z(6, 0) = (*Z_ray)*(*q);
     };
     void VOCAL_TRACT::y_update(){
     _y(0, 0) = -(((*dnu_L1) < -1.4901161193847656e-8) ? (
@@ -2511,6 +3551,24 @@
     : (
        (-1.0/2.0*(*k_4)*pow((*x_k4), 2) + (1.0/2.0)*(*k_4)*pow((*dx_k4) + (*x_k4), 2))/(*dx_k4)
     )));
+    _y(5, 0) = -(*r_5)*(*v_k5) - (((*dx_k5) < -1.4901161193847656e-8) ? (
+       (-1.0/2.0*(*k_5)*pow((*x_k5), 2) + (1.0/2.0)*(*k_5)*pow((*dx_k5) + (*x_k5), 2))/(*dx_k5)
+    )
+    : (((*dx_k5) < 1.4901161193847656e-8) ? (
+       0.5*(*dx_k5)*(*k_5) + (*k_5)*(*x_k5)
+    )
+    : (
+       (-1.0/2.0*(*k_5)*pow((*x_k5), 2) + (1.0/2.0)*(*k_5)*pow((*dx_k5) + (*x_k5), 2))/(*dx_k5)
+    )));
+    _y(6, 0) = -(*r_6)*(*v_k6) - (((*dx_k6) < -1.4901161193847656e-8) ? (
+       (-1.0/2.0*(*k_6)*pow((*x_k6), 2) + (1.0/2.0)*(*k_6)*pow((*dx_k6) + (*x_k6), 2))/(*dx_k6)
+    )
+    : (((*dx_k6) < 1.4901161193847656e-8) ? (
+       0.5*(*dx_k6)*(*k_6) + (*k_6)*(*x_k6)
+    )
+    : (
+       (-1.0/2.0*(*k_6)*pow((*x_k6), 2) + (1.0/2.0)*(*k_6)*pow((*dx_k6) + (*x_k6), 2))/(*dx_k6)
+    )));
     };
     //==========================================================================
     // Oprations Results Updates
@@ -2543,12 +3601,12 @@
     void VOCAL_TRACT::init(){    
         //==========================================================================
         // Arguments Initialisation Data
-        vector<double> x_data = {0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.};
-        vector<double> dx_data = {0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.};
-        vector<double> w_data = {0., 0., 0., 0., 0.};
-        vector<double> u_data = {0., 0., 0., 0., 0.};
+        vector<double> x_data = {0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.};
+        vector<double> dx_data = {0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.};
+        vector<double> w_data = {0., 0., 0., 0., 0., 0., 0.};
+        vector<double> u_data = {0., 0., 0., 0., 0., 0., 0.};
         vector<double> p_data = {};
-        vector<double> o_data = {0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.};
+        vector<double> o_data = {0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.};
         //==========================================================================
         // Arguments Initialisation
         set_x(x_data);

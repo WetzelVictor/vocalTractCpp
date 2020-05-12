@@ -1,3 +1,0 @@
-/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract/CMakeFiles/rebuild_cache.dir
-/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract/CMakeFiles/vocal_tract.dir
-/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract/CMakeFiles/edit_cache.dir

@@ -19,7 +19,7 @@
 // "https://pyphs.github.io/pyphs/".
 // 
 // Created on:
-//     2020/05/11 15:38:51
+//     2020/05/12 11:49:19
 // 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -96,13 +96,13 @@ int main() {
     // Initialize struct
 
     typedef struct argstruct{    
-        double u[5];
-        double x[21];
-        double dx[21];
-        double dxH[21];
-        double w[5];
-        double z[5];
-        double y[5];
+        double u[7];
+        double x[31];
+        double dx[31];
+        double dxH[31];
+        double w[7];
+        double z[7];
+        double y[7];
     } argstruct;
     argstruct mystruct;
 
@@ -112,12 +112,12 @@ int main() {
     H5File h5fid;
     try{
         {
-            h5fid = H5File("/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/02_python/03_data/data/results.h5", H5F_ACC_RDWR);
+            h5fid = H5File("/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/data/results.h5", H5F_ACC_RDWR);
         }
     }
     catch(FileIException error){
         {
-            cerr << "Failed opening /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/02_python/03_data/data/results.h5 file" << endl;
+            cerr << "Failed opening /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/data/results.h5 file" << endl;
             exit(1);
         }
     }
@@ -126,7 +126,7 @@ int main() {
     // Initialize HDF5 objects for read/write
 
     const unsigned int h5rank = 2;
-    hsize_t h5count[h5rank] = {1, 83};
+    hsize_t h5count[h5rank] = {1, 121};
     hsize_t h5offset[h5rank] = {0, 0};
 
 
@@ -174,7 +174,7 @@ int main() {
         //======================================================================
         // Update controls
                 
-        vocal_tract.set_u((Matrix<double, 5, 1> &)mystruct.u);
+        vocal_tract.set_u((Matrix<double, 7, 1> &)mystruct.u);
 
         //======================================================================
         // Process update
@@ -184,22 +184,22 @@ int main() {
         //======================================================================
         // Update Results
                 
-        for (unsigned int ind=0; ind<21; ind++){
+        for (unsigned int ind=0; ind<31; ind++){
             mystruct.x[ind] = vocal_tract.x_vector()[ind];
         }
-        for (unsigned int ind=0; ind<21; ind++){
+        for (unsigned int ind=0; ind<31; ind++){
             mystruct.dx[ind] = vocal_tract.dx_vector()[ind];
         }
-        for (unsigned int ind=0; ind<21; ind++){
+        for (unsigned int ind=0; ind<31; ind++){
             mystruct.dxH[ind] = vocal_tract.dxH_vector()[ind];
         }
-        for (unsigned int ind=0; ind<5; ind++){
+        for (unsigned int ind=0; ind<7; ind++){
             mystruct.w[ind] = vocal_tract.w_vector()[ind];
         }
-        for (unsigned int ind=0; ind<5; ind++){
+        for (unsigned int ind=0; ind<7; ind++){
             mystruct.z[ind] = vocal_tract.z_vector()[ind];
         }
-        for (unsigned int ind=0; ind<5; ind++){
+        for (unsigned int ind=0; ind<7; ind++){
             mystruct.y[ind] = vocal_tract.y_vector()[ind];
         }
 
@@ -247,7 +247,7 @@ int main() {
 
     cout << endl;
     cout << "Results written in" << endl;
-    cout << "/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/02_python/03_data/data/results.h5"<< endl;
+    cout << "/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/data/results.h5"<< endl;
     cout << endl;
 
     //==========================================================================

@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
+  "../bin/vocal_tract"
+  "../bin/vocal_tract.pdb"
   "CMakeFiles/vocal_tract.dir/src/core.cpp.o"
   "CMakeFiles/vocal_tract.dir/src/parameters.cpp.o"
   "CMakeFiles/vocal_tract.dir/src/simu.cpp.o"
-  "bin/vocal_tract"
-  "bin/vocal_tract.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

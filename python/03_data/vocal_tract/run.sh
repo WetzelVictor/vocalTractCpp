@@ -19,7 +19,7 @@
 # "https://pyphs.github.io/pyphs/".
 # 
 # Created on:
-#     2020/05/11 15:38:51
+#     2020/05/12 11:49:19
 # 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -39,7 +39,7 @@
 #!/bin/sh
 
 # chg dir to app dir
-cd /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/02_python/03_data/vocal_tract
+cd /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract
 
 # clean
 rm -rv ./build ./bin

@@ -1,4 +1,4 @@
-# Install script for directory: /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/03_cpp/vocal_tract
+# Install script for directory: /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/vocal_tract_solve
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/03_cpp/vocal_tract/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/vocal_tract_solve/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

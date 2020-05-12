@@ -499,7 +499,7 @@ class VocalTractEquations():
         Returns a symbols that looks like "mu_1 \oplus mu_2" 
         which will be calculated separetely. It is stored as an observer
         '''
-        str_symb = '(mu_' + str(ind1) + '_add_mu_' + str(ind2) + ')'
+        str_symb = 'mu_' + str(ind1) + '_add_mu_' + str(ind2)
         
         symb = sy.symbols(str_symb, **PPTY_STATE_VAR)
         
@@ -513,7 +513,7 @@ class VocalTractEquations():
         Returns a symbols that looks like "mu_1 - mu_2" 
         which will be calculated separetely. It is stored as an observer
         '''
-        str_symb = '(mu_' + str(ind1) + 'minus_mu_' + str(ind2) + ')'
+        str_symb = 'mu_' + str(ind1) + 'minus_mu_' + str(ind2)
         
         symb = sy.symbols(str_symb, **PPTY_STATE_VAR)
         

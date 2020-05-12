@@ -64,10 +64,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/02_python/03_data/vocal_tract
+CMAKE_SOURCE_DIR = /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/02_python/03_data/vocal_tract/build
+CMAKE_BINARY_DIR = /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -94,14 +94,14 @@ clean: CMakeFiles/vocal_tract.dir/clean
 CMakeFiles/vocal_tract.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vocal_tract.dir/build.make CMakeFiles/vocal_tract.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vocal_tract.dir/build.make CMakeFiles/vocal_tract.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/02_python/03_data/vocal_tract/build/CMakeFiles --progress-num=1,2,3,4 "Built target vocal_tract"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract/build/CMakeFiles --progress-num=1,2,3,4 "Built target vocal_tract"
 .PHONY : CMakeFiles/vocal_tract.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/vocal_tract.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/02_python/03_data/vocal_tract/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/vocal_tract.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/02_python/03_data/vocal_tract/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract/build/CMakeFiles 0
 .PHONY : CMakeFiles/vocal_tract.dir/rule
 
 # Convenience name for target.

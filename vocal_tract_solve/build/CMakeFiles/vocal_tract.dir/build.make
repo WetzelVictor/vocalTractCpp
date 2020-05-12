@@ -66,7 +66,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract
+CMAKE_BINARY_DIR = /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/vocal_tract.dir/depend.make
@@ -78,8 +78,8 @@ include CMakeFiles/vocal_tract.dir/progress.make
 include CMakeFiles/vocal_tract.dir/flags.make
 
 CMakeFiles/vocal_tract.dir/src/core.cpp.o: CMakeFiles/vocal_tract.dir/flags.make
-CMakeFiles/vocal_tract.dir/src/core.cpp.o: src/core.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/vocal_tract.dir/src/core.cpp.o"
+CMakeFiles/vocal_tract.dir/src/core.cpp.o: ../src/core.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/vocal_tract.dir/src/core.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vocal_tract.dir/src/core.cpp.o -c /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract/src/core.cpp
 
 CMakeFiles/vocal_tract.dir/src/core.cpp.i: cmake_force
@@ -91,8 +91,8 @@ CMakeFiles/vocal_tract.dir/src/core.cpp.s: cmake_force
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract/src/core.cpp -o CMakeFiles/vocal_tract.dir/src/core.cpp.s
 
 CMakeFiles/vocal_tract.dir/src/parameters.cpp.o: CMakeFiles/vocal_tract.dir/flags.make
-CMakeFiles/vocal_tract.dir/src/parameters.cpp.o: src/parameters.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/vocal_tract.dir/src/parameters.cpp.o"
+CMakeFiles/vocal_tract.dir/src/parameters.cpp.o: ../src/parameters.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/vocal_tract.dir/src/parameters.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vocal_tract.dir/src/parameters.cpp.o -c /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract/src/parameters.cpp
 
 CMakeFiles/vocal_tract.dir/src/parameters.cpp.i: cmake_force
@@ -104,8 +104,8 @@ CMakeFiles/vocal_tract.dir/src/parameters.cpp.s: cmake_force
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract/src/parameters.cpp -o CMakeFiles/vocal_tract.dir/src/parameters.cpp.s
 
 CMakeFiles/vocal_tract.dir/src/simu.cpp.o: CMakeFiles/vocal_tract.dir/flags.make
-CMakeFiles/vocal_tract.dir/src/simu.cpp.o: src/simu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/vocal_tract.dir/src/simu.cpp.o"
+CMakeFiles/vocal_tract.dir/src/simu.cpp.o: ../src/simu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/vocal_tract.dir/src/simu.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vocal_tract.dir/src/simu.cpp.o -c /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract/src/simu.cpp
 
 CMakeFiles/vocal_tract.dir/src/simu.cpp.i: cmake_force
@@ -125,22 +125,22 @@ vocal_tract_OBJECTS = \
 # External object files for target vocal_tract
 vocal_tract_EXTERNAL_OBJECTS =
 
-bin/vocal_tract: CMakeFiles/vocal_tract.dir/src/core.cpp.o
-bin/vocal_tract: CMakeFiles/vocal_tract.dir/src/parameters.cpp.o
-bin/vocal_tract: CMakeFiles/vocal_tract.dir/src/simu.cpp.o
-bin/vocal_tract: CMakeFiles/vocal_tract.dir/build.make
-bin/vocal_tract: /usr/lib/libhdf5_cpp.so
-bin/vocal_tract: /usr/lib/libhdf5.so
-bin/vocal_tract: /usr/lib/libsz.so
-bin/vocal_tract: /usr/lib/libz.so
-bin/vocal_tract: /usr/lib/libdl.so
-bin/vocal_tract: /usr/lib/libm.so
-bin/vocal_tract: CMakeFiles/vocal_tract.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable bin/vocal_tract"
+../bin/vocal_tract: CMakeFiles/vocal_tract.dir/src/core.cpp.o
+../bin/vocal_tract: CMakeFiles/vocal_tract.dir/src/parameters.cpp.o
+../bin/vocal_tract: CMakeFiles/vocal_tract.dir/src/simu.cpp.o
+../bin/vocal_tract: CMakeFiles/vocal_tract.dir/build.make
+../bin/vocal_tract: /usr/lib/libhdf5_cpp.so
+../bin/vocal_tract: /usr/lib/libhdf5.so
+../bin/vocal_tract: /usr/lib/libsz.so
+../bin/vocal_tract: /usr/lib/libz.so
+../bin/vocal_tract: /usr/lib/libdl.so
+../bin/vocal_tract: /usr/lib/libm.so
+../bin/vocal_tract: CMakeFiles/vocal_tract.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ../bin/vocal_tract"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/vocal_tract.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/vocal_tract.dir/build: bin/vocal_tract
+CMakeFiles/vocal_tract.dir/build: ../bin/vocal_tract
 
 .PHONY : CMakeFiles/vocal_tract.dir/build
 
@@ -149,6 +149,6 @@ CMakeFiles/vocal_tract.dir/clean:
 .PHONY : CMakeFiles/vocal_tract.dir/clean
 
 CMakeFiles/vocal_tract.dir/depend:
-	cd /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract/CMakeFiles/vocal_tract.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract/build /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract/build /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/vocal_tract/build/CMakeFiles/vocal_tract.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/vocal_tract.dir/depend
 
