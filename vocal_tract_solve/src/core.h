@@ -19,7 +19,7 @@
 // "https://pyphs.github.io/pyphs/".
 // 
 // Created on:
-//     2020/05/06 15:53:13
+//     2020/05/12 11:47:11
 // 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -47,7 +47,10 @@
 
 // new include ++++
 #include <Eigen/SparseCholesky>
+#include <Eigen/Sparse>
 typedef Eigen::SparseMatrix<double> SpMat; // declares a column-major sparse matrix type of double
+
+
 
 
 using namespace std;
@@ -81,7 +84,7 @@ class VOCAL_TRACT {
     const Matrix<double,7, 1> & u() const;
     const Matrix<double,0, 0> & p() const;
     const Matrix<double,38, 1> & vnl() const;
-    const Matrix<double,21, 1> & o() const;
+    const Matrix<double,26, 1> & o() const;
     //==========================================================================
     // Mutators for Arguments, type = vector<double>
     void set_x(const vector<double> &);
@@ -99,7 +102,7 @@ class VOCAL_TRACT {
     void set_u(const Matrix<double, 7, 1> &);
     void set_p(const Matrix<double, 0, 0> &);
     void set_vnl(const Matrix<double, 38, 1> &);
-    void set_o(const Matrix<double, 21, 1> &);
+    void set_o(const Matrix<double, 26, 1> &);
     //==========================================================================
     // Mutators for a single argument, types are double with int index
     void set_x(const double &, unsigned int &);
@@ -111,7 +114,7 @@ class VOCAL_TRACT {
     void set_o(const double &, unsigned int &);
     //==========================================================================
     // Functions Results Accessors (matrix)
-    const Matrix<double,21, 1> & ud_o() const;
+    const Matrix<double,26, 1> & ud_o() const;
     const Matrix<double,38, 1> & Gnl() const;
     const Matrix<double,38, 38> & jacGnlnl() const;
     const Matrix<double,31, 1> & dxH() const;
@@ -202,7 +205,7 @@ class VOCAL_TRACT {
     const double * r_6 = & subs[indexParameters][33];
     //==========================================================================
     // Arguments
-    Matrix<double,97, 1> args;
+    Matrix<double,102, 1> args;
     double * nu_L1 = & args(0, 0);
     double * nu_12 = & args(1, 0);
     double * nu_23 = & args(2, 0);
@@ -281,28 +284,33 @@ class VOCAL_TRACT {
     double * v_m6 = & args(75, 0);
     double * mu_1 = & args(76, 0);
     double * mu_2 = & args(77, 0);
-    double * (mu_1_add_mu_2) = & args(78, 0);
-    double * mu_3 = & args(79, 0);
-    double * (mu_2_add_mu_3) = & args(80, 0);
-    double * mu_4 = & args(81, 0);
-    double * (mu_3_add_mu_4) = & args(82, 0);
-    double * mu_5 = & args(83, 0);
-    double * (mu_4_add_mu_5) = & args(84, 0);
-    double * mu_6 = & args(85, 0);
+    double * mu_3 = & args(78, 0);
+    double * mu_4 = & args(79, 0);
+    double * mu_5 = & args(80, 0);
+    double * mu_6 = & args(81, 0);
+    double * (mu_1_add_mu_2) = & args(82, 0);
+    double * (mu_2_add_mu_3) = & args(83, 0);
+    double * (mu_3_add_mu_4) = & args(84, 0);
+    double * (mu_4_add_mu_5) = & args(85, 0);
     double * (mu_5_add_mu_6) = & args(86, 0);
     double * (mu_1minus_mu_2) = & args(87, 0);
     double * (mu_2minus_mu_3) = & args(88, 0);
     double * (mu_3minus_mu_4) = & args(89, 0);
     double * (mu_4minus_mu_5) = & args(90, 0);
     double * (mu_5minus_mu_6) = & args(91, 0);
-    double * Delta_12 = & args(92, 0);
-    double * Delta_23 = & args(93, 0);
-    double * Delta_34 = & args(94, 0);
-    double * Delta_45 = & args(95, 0);
-    double * Delta_56 = & args(96, 0);
+    double * RHS_1 = & args(92, 0);
+    double * RHS_2 = & args(93, 0);
+    double * RHS_3 = & args(94, 0);
+    double * RHS_4 = & args(95, 0);
+    double * RHS_5 = & args(96, 0);
+    double * Delta_12 = & args(97, 0);
+    double * Delta_23 = & args(98, 0);
+    double * Delta_34 = & args(99, 0);
+    double * Delta_45 = & args(100, 0);
+    double * Delta_56 = & args(101, 0);
     //==========================================================================
     // Functions Results Definitions
-    Matrix<double,21, 1> _ud_o;
+    Matrix<double,26, 1> _ud_o;
     Matrix<double,38, 1> _Gnl;
     Matrix<double,38, 38> _jacGnlnl;
     Matrix<double,31, 1> _dxH;
@@ -341,17 +349,15 @@ class VOCAL_TRACT {
     void init();
     //==========================================================================
     // Nouvelles fonctions pour le solve LDL.T
+    SpMat A;
+    void ud_o_init();
     void A_update();
-    void B_update();
+    void A_init();
+    void RHS_update();
+    Matrix<double, 5, 1> delta;
+    Matrix<double, 5, 1> RHS_vec;
 
-    unsigned int N_tube = 6;
-    unsigned int N_lambda = N_tube - 1;
-    unsigned int N_xi = 6 // nombre d'état par tube: 5 + un ressort
-    unsigned int Nx_tot = N_tube * N_xi;
-
-    VectorXd<double, N_lambda> delta;
-    VectorXd<double, 2*N_xi - N_lambda> rhs;
-    SpMat<N_lambda, N_lambda> A;
+    Eigen::SimplicialCholesky <SpMat> solver;
 };
 
 #endif /* VOCAL_TRACT_H */

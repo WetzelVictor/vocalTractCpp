@@ -19,7 +19,7 @@
 // "https://pyphs.github.io/pyphs/".
 // 
 // Created on:
-//     2020/05/06 15:55:52
+//     2020/05/12 11:49:19
 // 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -112,12 +112,12 @@ int main() {
     H5File h5fid;
     try{
         {
-            h5fid = H5File("/home/victorw/ownCloud/IRCAM/03_DOCS/28_constraints_by_projections/02_python/solving_constraints_vocal_tract/simulations_test/03_data/data/results.h5", H5F_ACC_RDWR);
+            h5fid = H5File("/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/data/results.h5", H5F_ACC_RDWR);
         }
     }
     catch(FileIException error){
         {
-            cerr << "Failed opening /home/victorw/ownCloud/IRCAM/03_DOCS/28_constraints_by_projections/02_python/solving_constraints_vocal_tract/simulations_test/03_data/data/results.h5 file" << endl;
+            cerr << "Failed opening /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/data/results.h5 file" << endl;
             exit(1);
         }
     }
@@ -247,7 +247,7 @@ int main() {
 
     cout << endl;
     cout << "Results written in" << endl;
-    cout << "/home/victorw/ownCloud/IRCAM/03_DOCS/28_constraints_by_projections/02_python/solving_constraints_vocal_tract/simulations_test/03_data/data/results.h5"<< endl;
+    cout << "/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/data/results.h5"<< endl;
     cout << endl;
 
     //==========================================================================
