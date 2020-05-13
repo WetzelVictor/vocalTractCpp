@@ -19,7 +19,7 @@
 // "https://pyphs.github.io/pyphs/".
 // 
 // Created on:
-//     2020/05/11 15:37:50
+//     2020/05/13 14:36:42
 // 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -76,13 +76,13 @@ class VOCAL_TRACT {
     const vector<double> & o_vector() const;
     //==========================================================================
     // Acessors to Arguments, return Matrix<double, n, m>
-    const Matrix<double,21, 1> & x() const;
-    const Matrix<double,21, 1> & dx() const;
-    const Matrix<double,5, 1> & w() const;
-    const Matrix<double,5, 1> & u() const;
+    const Matrix<double,31, 1> & x() const;
+    const Matrix<double,31, 1> & dx() const;
+    const Matrix<double,7, 1> & w() const;
+    const Matrix<double,7, 1> & u() const;
     const Matrix<double,0, 0> & p() const;
-    const Matrix<double,26, 1> & vnl() const;
-    const Matrix<double,16, 1> & o() const;
+    const Matrix<double,38, 1> & vnl() const;
+    const Matrix<double,26, 1> & o() const;
     //==========================================================================
     // Mutators for Arguments, type = vector<double>
     void set_x(const vector<double> &);
@@ -94,13 +94,13 @@ class VOCAL_TRACT {
     void set_o(const vector<double> &);
     //==========================================================================
     // Mutators for Arguments, type = Matrix<double, n, m>
-    void set_x(const Matrix<double, 21, 1> &);
-    void set_dx(const Matrix<double, 21, 1> &);
-    void set_w(const Matrix<double, 5, 1> &);
-    void set_u(const Matrix<double, 5, 1> &);
+    void set_x(const Matrix<double, 31, 1> &);
+    void set_dx(const Matrix<double, 31, 1> &);
+    void set_w(const Matrix<double, 7, 1> &);
+    void set_u(const Matrix<double, 7, 1> &);
     void set_p(const Matrix<double, 0, 0> &);
-    void set_vnl(const Matrix<double, 26, 1> &);
-    void set_o(const Matrix<double, 16, 1> &);
+    void set_vnl(const Matrix<double, 38, 1> &);
+    void set_o(const Matrix<double, 26, 1> &);
     //==========================================================================
     // Mutators for a single argument, types are double with int index
     void set_x(const double &, unsigned int &);
@@ -112,12 +112,12 @@ class VOCAL_TRACT {
     void set_o(const double &, unsigned int &);
     //==========================================================================
     // Functions Results Accessors (matrix)
-    const Matrix<double,16, 1> & ud_o() const;
-    const Matrix<double,26, 1> & Gnl() const;
-    const Matrix<double,26, 26> & jacGnlnl() const;
-    const Matrix<double,21, 1> & dxH() const;
-    const Matrix<double,5, 1> & z() const;
-    const Matrix<double,5, 1> & y() const;
+    const Matrix<double,26, 1> & ud_o() const;
+    const Matrix<double,38, 1> & Gnl() const;
+    const Matrix<double,38, 38> & jacGnlnl() const;
+    const Matrix<double,31, 1> & dxH() const;
+    const Matrix<double,7, 1> & z() const;
+    const Matrix<double,7, 1> & y() const;
     //==========================================================================
     // Functions Results Accessors (vector)
     const vector<double> & ud_o_vector() const;
@@ -136,14 +136,14 @@ class VOCAL_TRACT {
     const double & y(unsigned int &) const;
     //==========================================================================
     // Oprations Results Accessors
-    const Matrix<double,21, 1> & ud_x() const;
-    const Matrix<double,26, 1> & Fnl() const;
-    const Matrix<double,26, 26> & jacFnl() const;
-    const Matrix<double,26, 26> & ijacFnl() const;
-    const Matrix<double,26, 1> & save_Fnl() const;
+    const Matrix<double,31, 1> & ud_x() const;
+    const Matrix<double,38, 1> & Fnl() const;
+    const Matrix<double,38, 38> & jacFnl() const;
+    const Matrix<double,38, 38> & ijacFnl() const;
+    const Matrix<double,38, 1> & save_Fnl() const;
     const double & res_Fnl() const;
     const double & step_Fnl() const;
-    const Matrix<double,26, 1> & ud_vnl() const;
+    const Matrix<double,38, 1> & ud_vnl() const;
     //==========================================================================
     // Oprations Results Accessors
     vector<double> ud_x_vector() const;
@@ -183,93 +183,137 @@ class VOCAL_TRACT {
     const double * ell_4 = & subs[indexParameters][13];
     const double * L_4 = & subs[indexParameters][14];
     const double * V_0_4 = & subs[indexParameters][15];
-    const double * k_1 = & subs[indexParameters][16];
-    const double * r_1 = & subs[indexParameters][17];
-    const double * k_2 = & subs[indexParameters][18];
-    const double * r_2 = & subs[indexParameters][19];
-    const double * k_3 = & subs[indexParameters][20];
-    const double * r_3 = & subs[indexParameters][21];
-    const double * k_4 = & subs[indexParameters][22];
-    const double * r_4 = & subs[indexParameters][23];
+    const double * ell_5 = & subs[indexParameters][16];
+    const double * L_5 = & subs[indexParameters][17];
+    const double * V_0_5 = & subs[indexParameters][18];
+    const double * ell_6 = & subs[indexParameters][19];
+    const double * L_6 = & subs[indexParameters][20];
+    const double * V_0_6 = & subs[indexParameters][21];
+    const double * k_1 = & subs[indexParameters][22];
+    const double * r_1 = & subs[indexParameters][23];
+    const double * k_2 = & subs[indexParameters][24];
+    const double * r_2 = & subs[indexParameters][25];
+    const double * k_3 = & subs[indexParameters][26];
+    const double * r_3 = & subs[indexParameters][27];
+    const double * k_4 = & subs[indexParameters][28];
+    const double * r_4 = & subs[indexParameters][29];
+    const double * k_5 = & subs[indexParameters][30];
+    const double * r_5 = & subs[indexParameters][31];
+    const double * k_6 = & subs[indexParameters][32];
+    const double * r_6 = & subs[indexParameters][33];
     //==========================================================================
     // Arguments
-    Matrix<double,68, 1> args;
+    Matrix<double,102, 1> args;
     double * nu_L1 = & args(0, 0);
     double * nu_12 = & args(1, 0);
     double * nu_23 = & args(2, 0);
     double * nu_34 = & args(3, 0);
-    double * nu_R4 = & args(4, 0);
-    double * Pi_y1 = & args(5, 0);
-    double * Pi_y2 = & args(6, 0);
-    double * Pi_y3 = & args(7, 0);
-    double * Pi_y4 = & args(8, 0);
-    double * V_1 = & args(9, 0);
-    double * V_2 = & args(10, 0);
-    double * V_3 = & args(11, 0);
-    double * V_4 = & args(12, 0);
-    double * rho_1 = & args(13, 0);
-    double * rho_2 = & args(14, 0);
-    double * rho_3 = & args(15, 0);
-    double * rho_4 = & args(16, 0);
-    double * x_k1 = & args(17, 0);
-    double * x_k2 = & args(18, 0);
-    double * x_k3 = & args(19, 0);
-    double * x_k4 = & args(20, 0);
-    double * dnu_L1 = & args(21, 0);
-    double * dnu_12 = & args(22, 0);
-    double * dnu_23 = & args(23, 0);
-    double * dnu_34 = & args(24, 0);
-    double * dnu_R4 = & args(25, 0);
-    double * dPi_y1 = & args(26, 0);
-    double * dPi_y2 = & args(27, 0);
-    double * dPi_y3 = & args(28, 0);
-    double * dPi_y4 = & args(29, 0);
-    double * dV_1 = & args(30, 0);
-    double * dV_2 = & args(31, 0);
-    double * dV_3 = & args(32, 0);
-    double * dV_4 = & args(33, 0);
-    double * drho_1 = & args(34, 0);
-    double * drho_2 = & args(35, 0);
-    double * drho_3 = & args(36, 0);
-    double * drho_4 = & args(37, 0);
-    double * dx_k1 = & args(38, 0);
-    double * dx_k2 = & args(39, 0);
-    double * dx_k3 = & args(40, 0);
-    double * dx_k4 = & args(41, 0);
-    double * v_k1 = & args(42, 0);
-    double * v_k2 = & args(43, 0);
-    double * v_k3 = & args(44, 0);
-    double * v_k4 = & args(45, 0);
-    double * q = & args(46, 0);
-    double * Psi_L = & args(47, 0);
-    double * v_m1 = & args(48, 0);
-    double * v_m2 = & args(49, 0);
-    double * v_m3 = & args(50, 0);
-    double * v_m4 = & args(51, 0);
-    double * mu_1 = & args(52, 0);
-    double * mu_2 = & args(53, 0);
-    double * mu_3 = & args(54, 0);
-    double * mu_4 = & args(55, 0);
-    double * (mu_1_add_mu_2) = & args(56, 0);
-    double * (mu_2_add_mu_3) = & args(57, 0);
-    double * (mu_3_add_mu_4) = & args(58, 0);
-    double * (mu_1minus_mu_2) = & args(59, 0);
-    double * (mu_2minus_mu_3) = & args(60, 0);
-    double * (mu_3minus_mu_4) = & args(61, 0);
-    double * RHS_1 = & args(62, 0);
-    double * RHS_2 = & args(63, 0);
-    double * RHS_3 = & args(64, 0);
-    double * Delta_12 = & args(65, 0);
-    double * Delta_23 = & args(66, 0);
-    double * Delta_34 = & args(67, 0);
+    double * nu_45 = & args(4, 0);
+    double * nu_56 = & args(5, 0);
+    double * nu_R6 = & args(6, 0);
+    double * Pi_y1 = & args(7, 0);
+    double * Pi_y2 = & args(8, 0);
+    double * Pi_y3 = & args(9, 0);
+    double * Pi_y4 = & args(10, 0);
+    double * Pi_y5 = & args(11, 0);
+    double * Pi_y6 = & args(12, 0);
+    double * V_1 = & args(13, 0);
+    double * V_2 = & args(14, 0);
+    double * V_3 = & args(15, 0);
+    double * V_4 = & args(16, 0);
+    double * V_5 = & args(17, 0);
+    double * V_6 = & args(18, 0);
+    double * rho_1 = & args(19, 0);
+    double * rho_2 = & args(20, 0);
+    double * rho_3 = & args(21, 0);
+    double * rho_4 = & args(22, 0);
+    double * rho_5 = & args(23, 0);
+    double * rho_6 = & args(24, 0);
+    double * x_k1 = & args(25, 0);
+    double * x_k2 = & args(26, 0);
+    double * x_k3 = & args(27, 0);
+    double * x_k4 = & args(28, 0);
+    double * x_k5 = & args(29, 0);
+    double * x_k6 = & args(30, 0);
+    double * dnu_L1 = & args(31, 0);
+    double * dnu_12 = & args(32, 0);
+    double * dnu_23 = & args(33, 0);
+    double * dnu_34 = & args(34, 0);
+    double * dnu_45 = & args(35, 0);
+    double * dnu_56 = & args(36, 0);
+    double * dnu_R6 = & args(37, 0);
+    double * dPi_y1 = & args(38, 0);
+    double * dPi_y2 = & args(39, 0);
+    double * dPi_y3 = & args(40, 0);
+    double * dPi_y4 = & args(41, 0);
+    double * dPi_y5 = & args(42, 0);
+    double * dPi_y6 = & args(43, 0);
+    double * dV_1 = & args(44, 0);
+    double * dV_2 = & args(45, 0);
+    double * dV_3 = & args(46, 0);
+    double * dV_4 = & args(47, 0);
+    double * dV_5 = & args(48, 0);
+    double * dV_6 = & args(49, 0);
+    double * drho_1 = & args(50, 0);
+    double * drho_2 = & args(51, 0);
+    double * drho_3 = & args(52, 0);
+    double * drho_4 = & args(53, 0);
+    double * drho_5 = & args(54, 0);
+    double * drho_6 = & args(55, 0);
+    double * dx_k1 = & args(56, 0);
+    double * dx_k2 = & args(57, 0);
+    double * dx_k3 = & args(58, 0);
+    double * dx_k4 = & args(59, 0);
+    double * dx_k5 = & args(60, 0);
+    double * dx_k6 = & args(61, 0);
+    double * v_k1 = & args(62, 0);
+    double * v_k2 = & args(63, 0);
+    double * v_k3 = & args(64, 0);
+    double * v_k4 = & args(65, 0);
+    double * v_k5 = & args(66, 0);
+    double * v_k6 = & args(67, 0);
+    double * q = & args(68, 0);
+    double * Psi_L = & args(69, 0);
+    double * v_m1 = & args(70, 0);
+    double * v_m2 = & args(71, 0);
+    double * v_m3 = & args(72, 0);
+    double * v_m4 = & args(73, 0);
+    double * v_m5 = & args(74, 0);
+    double * v_m6 = & args(75, 0);
+    double * mu_1 = & args(76, 0);
+    double * mu_2 = & args(77, 0);
+    double * mu_3 = & args(78, 0);
+    double * mu_4 = & args(79, 0);
+    double * mu_5 = & args(80, 0);
+    double * mu_6 = & args(81, 0);
+    double * mu_1_add_mu_2 = & args(82, 0);
+    double * mu_2_add_mu_3 = & args(83, 0);
+    double * mu_3_add_mu_4 = & args(84, 0);
+    double * mu_4_add_mu_5 = & args(85, 0);
+    double * mu_5_add_mu_6 = & args(86, 0);
+    double * mu_1minus_mu_2 = & args(87, 0);
+    double * mu_2minus_mu_3 = & args(88, 0);
+    double * mu_3minus_mu_4 = & args(89, 0);
+    double * mu_4minus_mu_5 = & args(90, 0);
+    double * mu_5minus_mu_6 = & args(91, 0);
+    double * RHS_1 = & args(92, 0);
+    double * RHS_2 = & args(93, 0);
+    double * RHS_3 = & args(94, 0);
+    double * RHS_4 = & args(95, 0);
+    double * RHS_5 = & args(96, 0);
+    double * Delta_12 = & args(97, 0);
+    double * Delta_23 = & args(98, 0);
+    double * Delta_34 = & args(99, 0);
+    double * Delta_45 = & args(100, 0);
+    double * Delta_56 = & args(101, 0);
     //==========================================================================
     // Functions Results Definitions
-    Matrix<double,16, 1> _ud_o;
-    Matrix<double,26, 1> _Gnl;
-    Matrix<double,26, 26> _jacGnlnl;
-    Matrix<double,21, 1> _dxH;
-    Matrix<double,5, 1> _z;
-    Matrix<double,5, 1> _y;
+    Matrix<double,26, 1> _ud_o;
+    Matrix<double,38, 1> _Gnl;
+    Matrix<double,38, 38> _jacGnlnl;
+    Matrix<double,31, 1> _dxH;
+    Matrix<double,7, 1> _z;
+    Matrix<double,7, 1> _y;
     //==========================================================================
     // Functions Results Updates
     void ud_o_update();
@@ -280,14 +324,14 @@ class VOCAL_TRACT {
     void y_update();
     //==========================================================================
     // Operations Results Definition
-    Matrix<double,21, 1> _ud_x;
-    Matrix<double,26, 1> _Fnl;
-    Matrix<double,26, 26> _jacFnl;
-    Matrix<double,26, 26> _ijacFnl;
-    Matrix<double,26, 1> _save_Fnl;
+    Matrix<double,31, 1> _ud_x;
+    Matrix<double,38, 1> _Fnl;
+    Matrix<double,38, 38> _jacFnl;
+    Matrix<double,38, 38> _ijacFnl;
+    Matrix<double,38, 1> _save_Fnl;
     double _res_Fnl;
     double _step_Fnl;
-    Matrix<double,26, 1> _ud_vnl;
+    Matrix<double,38, 1> _ud_vnl;
     //==========================================================================
     // Oprations Results Updates
     void ud_x_update();
