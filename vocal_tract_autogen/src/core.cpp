@@ -19,7 +19,7 @@
 // "https://pyphs.github.io/pyphs/".
 // 
 // Created on:
-//     2020/05/12 11:47:11
+//     2020/05/13 14:36:42
 // 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -166,7 +166,8 @@
         v[2] = *v_m2;    
         v[3] = *v_m3;    
         v[4] = *v_m4;    
-        v[5] = *v_m5;    v[6] = *v_m6;    
+        v[5] = *v_m5;    
+        v[6] = *v_m6;    
         return v;
     }
     const vector<double> & VOCAL_TRACT::p_vector() const {    
@@ -223,16 +224,16 @@
         v[3] = *mu_4;    
         v[4] = *mu_5;    
         v[5] = *mu_6;    
-        v[6] = *(mu_1_add_mu_2);    
-        v[7] = *(mu_2_add_mu_3);    
-        v[8] = *(mu_3_add_mu_4);    
-        v[9] = *(mu_4_add_mu_5);    
-        v[10] = *(mu_5_add_mu_6);    
-        v[11] = *(mu_1minus_mu_2);    
-        v[12] = *(mu_2minus_mu_3);    
-        v[13] = *(mu_3minus_mu_4);    
-        v[14] = *(mu_4minus_mu_5);    
-        v[15] = *(mu_5minus_mu_6);    
+        v[6] = *mu_1_add_mu_2;    
+        v[7] = *mu_2_add_mu_3;    
+        v[8] = *mu_3_add_mu_4;    
+        v[9] = *mu_4_add_mu_5;    
+        v[10] = *mu_5_add_mu_6;    
+        v[11] = *mu_1minus_mu_2;    
+        v[12] = *mu_2minus_mu_3;    
+        v[13] = *mu_3minus_mu_4;    
+        v[14] = *mu_4minus_mu_5;    
+        v[15] = *mu_5minus_mu_6;    
         v[16] = *RHS_1;    
         v[17] = *RHS_2;    
         v[18] = *RHS_3;    
@@ -393,16 +394,16 @@
         m(3, 0) = *mu_4;    
         m(4, 0) = *mu_5;    
         m(5, 0) = *mu_6;    
-        m(6, 0) = *(mu_1_add_mu_2);    
-        m(7, 0) = *(mu_2_add_mu_3);    
-        m(8, 0) = *(mu_3_add_mu_4);    
-        m(9, 0) = *(mu_4_add_mu_5);    
-        m(10, 0) = *(mu_5_add_mu_6);    
-        m(11, 0) = *(mu_1minus_mu_2);    
-        m(12, 0) = *(mu_2minus_mu_3);    
-        m(13, 0) = *(mu_3minus_mu_4);    
-        m(14, 0) = *(mu_4minus_mu_5);    
-        m(15, 0) = *(mu_5minus_mu_6);    
+        m(6, 0) = *mu_1_add_mu_2;    
+        m(7, 0) = *mu_2_add_mu_3;    
+        m(8, 0) = *mu_3_add_mu_4;    
+        m(9, 0) = *mu_4_add_mu_5;    
+        m(10, 0) = *mu_5_add_mu_6;    
+        m(11, 0) = *mu_1minus_mu_2;    
+        m(12, 0) = *mu_2minus_mu_3;    
+        m(13, 0) = *mu_3minus_mu_4;    
+        m(14, 0) = *mu_4minus_mu_5;    
+        m(15, 0) = *mu_5minus_mu_6;    
         m(16, 0) = *RHS_1;    
         m(17, 0) = *RHS_2;    
         m(18, 0) = *RHS_3;    
@@ -550,16 +551,16 @@
         *mu_4 = v[3];
         *mu_5 = v[4];
         *mu_6 = v[5];
-        *(mu_1_add_mu_2) = v[6];
-        *(mu_2_add_mu_3) = v[7];
-        *(mu_3_add_mu_4) = v[8];
-        *(mu_4_add_mu_5) = v[9];
-        *(mu_5_add_mu_6) = v[10];
-        *(mu_1minus_mu_2) = v[11];
-        *(mu_2minus_mu_3) = v[12];
-        *(mu_3minus_mu_4) = v[13];
-        *(mu_4minus_mu_5) = v[14];
-        *(mu_5minus_mu_6) = v[15];
+        *mu_1_add_mu_2 = v[6];
+        *mu_2_add_mu_3 = v[7];
+        *mu_3_add_mu_4 = v[8];
+        *mu_4_add_mu_5 = v[9];
+        *mu_5_add_mu_6 = v[10];
+        *mu_1minus_mu_2 = v[11];
+        *mu_2minus_mu_3 = v[12];
+        *mu_3minus_mu_4 = v[13];
+        *mu_4minus_mu_5 = v[14];
+        *mu_5minus_mu_6 = v[15];
         *RHS_1 = v[16];
         *RHS_2 = v[17];
         *RHS_3 = v[18];
@@ -706,16 +707,16 @@
         *mu_4 = m(3, 0);
         *mu_5 = m(4, 0);
         *mu_6 = m(5, 0);
-        *(mu_1_add_mu_2) = m(6, 0);
-        *(mu_2_add_mu_3) = m(7, 0);
-        *(mu_3_add_mu_4) = m(8, 0);
-        *(mu_4_add_mu_5) = m(9, 0);
-        *(mu_5_add_mu_6) = m(10, 0);
-        *(mu_1minus_mu_2) = m(11, 0);
-        *(mu_2minus_mu_3) = m(12, 0);
-        *(mu_3minus_mu_4) = m(13, 0);
-        *(mu_4minus_mu_5) = m(14, 0);
-        *(mu_5minus_mu_6) = m(15, 0);
+        *mu_1_add_mu_2 = m(6, 0);
+        *mu_2_add_mu_3 = m(7, 0);
+        *mu_3_add_mu_4 = m(8, 0);
+        *mu_4_add_mu_5 = m(9, 0);
+        *mu_5_add_mu_6 = m(10, 0);
+        *mu_1minus_mu_2 = m(11, 0);
+        *mu_2minus_mu_3 = m(12, 0);
+        *mu_3minus_mu_4 = m(13, 0);
+        *mu_4minus_mu_5 = m(14, 0);
+        *mu_5minus_mu_6 = m(15, 0);
         *RHS_1 = m(16, 0);
         *RHS_2 = m(17, 0);
         *RHS_3 = m(18, 0);
@@ -1103,34 +1104,34 @@
             *mu_6 = value;
         }
         if(index == 6) {
-            *(mu_1_add_mu_2) = value;
+            *mu_1_add_mu_2 = value;
         }
         if(index == 7) {
-            *(mu_2_add_mu_3) = value;
+            *mu_2_add_mu_3 = value;
         }
         if(index == 8) {
-            *(mu_3_add_mu_4) = value;
+            *mu_3_add_mu_4 = value;
         }
         if(index == 9) {
-            *(mu_4_add_mu_5) = value;
+            *mu_4_add_mu_5 = value;
         }
         if(index == 10) {
-            *(mu_5_add_mu_6) = value;
+            *mu_5_add_mu_6 = value;
         }
         if(index == 11) {
-            *(mu_1minus_mu_2) = value;
+            *mu_1minus_mu_2 = value;
         }
         if(index == 12) {
-            *(mu_2minus_mu_3) = value;
+            *mu_2minus_mu_3 = value;
         }
         if(index == 13) {
-            *(mu_3minus_mu_4) = value;
+            *mu_3minus_mu_4 = value;
         }
         if(index == 14) {
-            *(mu_4minus_mu_5) = value;
+            *mu_4minus_mu_5 = value;
         }
         if(index == 15) {
-            *(mu_5minus_mu_6) = value;
+            *mu_5minus_mu_6 = value;
         }
         if(index == 16) {
             *RHS_1 = value;
@@ -1614,17 +1615,15 @@
     _ud_o(13, 0) = (*mu_3) - (*mu_4);
     _ud_o(14, 0) = (*mu_4) - (*mu_5);
     _ud_o(15, 0) = (*mu_5) - (*mu_6);
-    _ud_o(16, 0) = -1.0/2.0*(*(mu_1minus_mu_2))*(*nu_12) + (1.0/2.0)*(*mu_1)*(*nu_L1) - 1.0/2.0*(*mu_2)*(*nu_23);
-    _ud_o(17, 0) = -1.0/2.0*(*(mu_2minus_mu_3))*(*nu_23) + (1.0/2.0)*(*mu_2)*(*nu_12) - 1.0/2.0*(*mu_3)*(*nu_34);
-    _ud_o(18, 0) = -1.0/2.0*(*(mu_3minus_mu_4))*(*nu_34) + (1.0/2.0)*(*mu_3)*(*nu_23) - 1.0/2.0*(*mu_4)*(*nu_45);
-    _ud_o(19, 0) = -1.0/2.0*(*(mu_4minus_mu_5))*(*nu_45) + (1.0/2.0)*(*mu_4)*(*nu_34) - 1.0/2.0*(*mu_5)*(*nu_56);
-    _ud_o(20, 0) = -1.0/2.0*(*(mu_5minus_mu_6))*(*nu_56) + (1.0/2.0)*(*mu_5)*(*nu_45) - 1.0/2.0*(*mu_6)*(*nu_R6);
+    _ud_o(16, 0) = (1.0/2.0)*(*mu_1)*(*nu_L1) - 1.0/2.0*(*mu_1minus_mu_2)*(*nu_12) - 1.0/2.0*(*mu_2)*(*nu_23);
+    _ud_o(17, 0) = (1.0/2.0)*(*mu_2)*(*nu_12) - 1.0/2.0*(*mu_2minus_mu_3)*(*nu_23) - 1.0/2.0*(*mu_3)*(*nu_34);
+    _ud_o(18, 0) = (1.0/2.0)*(*mu_3)*(*nu_23) - 1.0/2.0*(*mu_3minus_mu_4)*(*nu_34) - 1.0/2.0*(*mu_4)*(*nu_45);
+    _ud_o(19, 0) = (1.0/2.0)*(*mu_4)*(*nu_34) - 1.0/2.0*(*mu_4minus_mu_5)*(*nu_45) - 1.0/2.0*(*mu_5)*(*nu_56);
+    _ud_o(20, 0) = (1.0/2.0)*(*mu_5)*(*nu_45) - 1.0/2.0*(*mu_5minus_mu_6)*(*nu_56) - 1.0/2.0*(*mu_6)*(*nu_R6);
 
-    //// +++ Les expressions que l'on veut rendre implicites +++ ////
-    // Mise à jour du système linéaire
+    // Solving implicit system of linear equations
     A_update();
     RHS_update();
-    
     solver.compute(A);
 
     if(solver.info()!=Success) {
@@ -1636,15 +1635,13 @@
     if(solver.info()!=Success) {
       cout << "Solving failed" << endl;
     }
-
-    _ud_o(16, 0) = delta(0, 0);
-    _ud_o(17, 0) = delta(1, 0);
-    _ud_o(18, 0) = delta(2, 0);
-    _ud_o(19, 0) = delta(3, 0);
-    _ud_o(20, 0) = delta(4, 0);
-    };
-
-void VOCAL_TRACT::ud_o_init(){
+    _ud_o(21, 0) = delta(0, 0);
+    _ud_o(22, 0) = delta(1, 0);
+    _ud_o(23, 0) = delta(2, 0);
+    _ud_o(24, 0) = delta(3, 0);
+    _ud_o(25, 0) = delta(4, 0);
+}
+    void VOCAL_TRACT::ud_o_init(){
     _ud_o(0, 0) = ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))/pow((*ell_1), 2);
     _ud_o(1, 0) = ((*V_0_2) + (*V_2))*((*rho_0) + (*rho_2))/pow((*ell_2), 2);
     _ud_o(2, 0) = ((*V_0_3) + (*V_3))*((*rho_0) + (*rho_3))/pow((*ell_3), 2);
@@ -1661,11 +1658,11 @@ void VOCAL_TRACT::ud_o_init(){
     _ud_o(13, 0) = (*mu_3) - (*mu_4);
     _ud_o(14, 0) = (*mu_4) - (*mu_5);
     _ud_o(15, 0) = (*mu_5) - (*mu_6);
-    _ud_o(16, 0) = -1.0/2.0*(*(mu_1minus_mu_2))*(*nu_12) + (1.0/2.0)*(*mu_1)*(*nu_L1) - 1.0/2.0*(*mu_2)*(*nu_23);
-    _ud_o(17, 0) = -1.0/2.0*(*(mu_2minus_mu_3))*(*nu_23) + (1.0/2.0)*(*mu_2)*(*nu_12) - 1.0/2.0*(*mu_3)*(*nu_34);
-    _ud_o(18, 0) = -1.0/2.0*(*(mu_3minus_mu_4))*(*nu_34) + (1.0/2.0)*(*mu_3)*(*nu_23) - 1.0/2.0*(*mu_4)*(*nu_45);
-    _ud_o(19, 0) = -1.0/2.0*(*(mu_4minus_mu_5))*(*nu_45) + (1.0/2.0)*(*mu_4)*(*nu_34) - 1.0/2.0*(*mu_5)*(*nu_56);
-    _ud_o(20, 0) = -1.0/2.0*(*(mu_5minus_mu_6))*(*nu_56) + (1.0/2.0)*(*mu_5)*(*nu_45) - 1.0/2.0*(*mu_6)*(*nu_R6);
+    _ud_o(16, 0) = (1.0/2.0)*(*mu_1)*(*nu_L1) - 1.0/2.0*(*mu_1minus_mu_2)*(*nu_12) - 1.0/2.0*(*mu_2)*(*nu_23);
+    _ud_o(17, 0) = (1.0/2.0)*(*mu_2)*(*nu_12) - 1.0/2.0*(*mu_2minus_mu_3)*(*nu_23) - 1.0/2.0*(*mu_3)*(*nu_34);
+    _ud_o(18, 0) = (1.0/2.0)*(*mu_3)*(*nu_23) - 1.0/2.0*(*mu_3minus_mu_4)*(*nu_34) - 1.0/2.0*(*mu_4)*(*nu_45);
+    _ud_o(19, 0) = (1.0/2.0)*(*mu_4)*(*nu_34) - 1.0/2.0*(*mu_4minus_mu_5)*(*nu_45) - 1.0/2.0*(*mu_5)*(*nu_56);
+    _ud_o(20, 0) = (1.0/2.0)*(*mu_5)*(*nu_45) - 1.0/2.0*(*mu_5minus_mu_6)*(*nu_56) - 1.0/2.0*(*mu_6)*(*nu_R6);
 
     // Solving implicit system of linear equations
     A_init();
@@ -1681,62 +1678,55 @@ void VOCAL_TRACT::ud_o_init(){
     if(solver.info()!=Success) {
       cout << "Solving failed" << endl;
     }
-
-    _ud_o(16, 0) = delta(0, 0);
-    _ud_o(17, 0) = delta(1, 0);
-    _ud_o(18, 0) = delta(2, 0);
-    _ud_o(19, 0) = delta(3, 0);
-    _ud_o(20, 0) = delta(4, 0);
-
-    };
-
-
-  void VOCAL_TRACT::A_update(){
-    // Update method for matrice A (AKA matrix Q22 in doc 28), the one we need
-    A.coeffRef(0,0) = (*mu_1_add_mu_2);
-    A.coeffRef(0,1) = 0.5*(*mu_2);
-    A.coeffRef(1,0) = 0.5*(*mu_2);
-    A.coeffRef(1,1) = (*mu_2_add_mu_3);
-    A.coeffRef(1,2) = 0.5*(*mu_3);
-    A.coeffRef(2,1) = 0.5*(*mu_3);
-    A.coeffRef(2,2) = (*mu_3_add_mu_4);
-    A.coeffRef(2,3) = 0.5*(*mu_4);
-    A.coeffRef(3,2) = 0.5*(*mu_4);
-    A.coeffRef(3,3) = (*mu_4_add_mu_5);
-    A.coeffRef(3,4) = 0.5*(*mu_5);
-    A.coeffRef(4,3) = 0.5*(*mu_5);
-    A.coeffRef(4,4) = (*mu_5_add_mu_6);
-  };
-
-  void VOCAL_TRACT::A_init(){
-    // Init method for matrice A (AKA matrix Q22 in doc 28), the one we need
-    A.resize(5,5);
-    A.reserve(3*5-2);
-    A.insert(0,0) = (*mu_1_add_mu_2);
-    A.insert(0,1) = 0.5*(*mu_2);
-    A.insert(1,0) = 0.5*(*mu_2);
-    A.insert(1,1) = (*mu_2_add_mu_3);
-    A.insert(1,2) = 0.5*(*mu_3);
-    A.insert(2,1) = 0.5*(*mu_3);
-    A.insert(2,2) = (*mu_3_add_mu_4);
-    A.insert(2,3) = 0.5*(*mu_4);
-    A.insert(3,2) = 0.5*(*mu_4);
-    A.insert(3,3) = (*mu_4_add_mu_5);
-    A.insert(3,4) = 0.5*(*mu_5);
-    A.insert(4,3) = 0.5*(*mu_5);
-    A.insert(4,4) = (*mu_5_add_mu_6);
-  };
-
-  void VOCAL_TRACT::RHS_update(){
+    _ud_o(21, 0) = delta(0, 0);
+    _ud_o(22, 0) = delta(1, 0);
+    _ud_o(23, 0) = delta(2, 0);
+    _ud_o(24, 0) = delta(3, 0);
+    _ud_o(25, 0) = delta(4, 0);
+}
+void VOCAL_TRACT::A_update(){
+    // Update method for matrice A (AKA matrix Q22 in doc 28)
+		A.coeffRef(0,0) = (*mu_1_add_mu_2);
+		A.coeffRef(0,1) = 0.5*(*mu_2);
+		A.coeffRef(1,0) = 0.5*(*mu_2);
+		A.coeffRef(1,1) = (*mu_2_add_mu_3);
+		A.coeffRef(1,2) = 0.5*(*mu_3);
+		A.coeffRef(2,1) = 0.5*(*mu_3);
+		A.coeffRef(2,2) = (*mu_3_add_mu_4);
+		A.coeffRef(2,3) = 0.5*(*mu_4);
+		A.coeffRef(3,2) = 0.5*(*mu_4);
+		A.coeffRef(3,3) = (*mu_4_add_mu_5);
+		A.coeffRef(3,4) = 0.5*(*mu_5);
+		A.coeffRef(4,3) = 0.5*(*mu_5);
+		A.coeffRef(4,4) = (*mu_5_add_mu_6);
+}
+void VOCAL_TRACT::A_init(){
+    // Init method for matrice A (AKA matrix Q22 in doc 28)
+    A.resize(5, 5); // giving matrix the right size 
+    A.reserve(3*5 -2); // allocating memory for sparse mat
+		A.insert(0,0) = (*mu_1_add_mu_2);
+		A.insert(0,1) = 0.5*(*mu_2);
+		A.insert(1,0) = 0.5*(*mu_2);
+		A.insert(1,1) = (*mu_2_add_mu_3);
+		A.insert(1,2) = 0.5*(*mu_3);
+		A.insert(2,1) = 0.5*(*mu_3);
+		A.insert(2,2) = (*mu_3_add_mu_4);
+		A.insert(2,3) = 0.5*(*mu_4);
+		A.insert(3,2) = 0.5*(*mu_4);
+		A.insert(3,3) = (*mu_4_add_mu_5);
+		A.insert(3,4) = 0.5*(*mu_5);
+		A.insert(4,3) = 0.5*(*mu_5);
+		A.insert(4,4) = (*mu_5_add_mu_6);
+}
+	void VOCAL_TRACT::RHS_update(){
     // Update method for matrice B (AKA matrix Q12 in doc 28), in the RHS of
     // the auxiliary variable set of linear equations
-    RHS_vec(0,0) = (*RHS_1);
-    RHS_vec(1,0) = (*RHS_2);
-    RHS_vec(2,0) = (*RHS_3);
-    RHS_vec(3,0) = (*RHS_4);
-    RHS_vec(4,0) = (*RHS_5);
-  }
-
+	RHS_vec(0, 0) = (*RHS_1);
+	RHS_vec(1, 0) = (*RHS_2);
+	RHS_vec(2, 0) = (*RHS_3);
+	RHS_vec(3, 0) = (*RHS_4);
+	RHS_vec(4, 0) = (*RHS_5);
+}
     void VOCAL_TRACT::Gnl_update(){
     _Gnl(0, 0) = (*F_S)*(*dnu_L1) + (*Pi_y1)*(((*dPi_y1) < -1.4901161193847656e-8) ? (
        (-3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) + (3.0/2.0)*pow((*Pi_y1) + (*dPi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))))/(*dPi_y1)
@@ -1749,8 +1739,7 @@ void VOCAL_TRACT::ud_o_init(){
     )))/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - (*Psi_L) + (((*drho_1) < -1.4901161193847656e-8) ? (
        (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_1), 2)*((*V_0_1) + (*V_1))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_1) + (*V_1))*pow((*drho_1) + (*rho_1), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*drho_1) + (*rho_0) + (*rho_1))) - 3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*V_0_1) + (*V_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))*((*drho_1) + (*rho_0) + (*rho_1))/pow((*ell_1), 2))/(*drho_1)
     )
-    : (((*drho_1) < 1.4901161193847656e-8) ? (
-       (*P_0)*(*gamma)*(*rho_1)*((*V_0_1) + (*V_1))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*pow((*rho_0) + (*rho_1), 2)) + (*drho_1)*(0.5*(*P_0)*(*gamma)*((*V_0_1) + (*V_1))/pow((*rho_0), 2) + 1.5*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*pow((*rho_0) + (*rho_1), 3))) + ((*V_0_1) + (*V_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2)
+    : (((*drho_1) < 1.4901161193847656e-8) ? ( (*P_0)*(*gamma)*(*rho_1)*((*V_0_1) + (*V_1))/pow((*rho_0), 2) - 3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*pow((*rho_0) + (*rho_1), 2)) + (*drho_1)*(0.5*(*P_0)*(*gamma)*((*V_0_1) + (*V_1))/pow((*rho_0), 2) + 1.5*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*pow((*rho_0) + (*rho_1), 3))) + ((*V_0_1) + (*V_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2)
     )
     : (
        (-1.0/2.0*(*P_0)*(*gamma)*pow((*rho_1), 2)*((*V_0_1) + (*V_1))/pow((*rho_0), 2) + (1.0/2.0)*(*P_0)*(*gamma)*((*V_0_1) + (*V_1))*pow((*drho_1) + (*rho_1), 2)/pow((*rho_0), 2) + (3.0/2.0)*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*drho_1) + (*rho_0) + (*rho_1))) - 3.0/2.0*pow((*Pi_y1), 2)/(((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))) - ((*V_0_1) + (*V_1))*((*rho_0) + (*rho_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))/pow((*ell_1), 2) + ((*V_0_1) + (*V_1))*((*nu_L1)*(-1.0/2.0*(*Delta_12) - 1.0/4.0*(*nu_12) + (*nu_L1)) + ((*Delta_12) + (1.0/2.0)*(*nu_12))*((*Delta_12) + (1.0/2.0)*(*nu_12) - 1.0/2.0*(*nu_L1)))*((*drho_1) + (*rho_0) + (*rho_1))/pow((*ell_1), 2))/(*drho_1)
@@ -3717,11 +3706,7 @@ void VOCAL_TRACT::ud_o_init(){
         vector<double> w_data = {0., 0., 0., 0., 0., 0., 0.};
         vector<double> u_data = {0., 0., 0., 0., 0., 0., 0.};
         vector<double> p_data = {};
-        vector<double> o_data = { 0.06720000000000019, 0.06720000000000019,
-          0.06720000000000019, 0.06720000000000019, 0.06720000000000019,
-          0.06720000000000019, 0.13440000000000038, 0.13440000000000038,
-          0.13440000000000038, 0.13440000000000038, 0.13440000000000038, 0.0,
-          0.0, 0.0, 0.0, 0.0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+        vector<double> o_data = {0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.};
         //==========================================================================
         // Arguments Initialisation
         set_x(x_data);

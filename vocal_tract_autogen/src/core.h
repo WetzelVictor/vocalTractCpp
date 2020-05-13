@@ -45,6 +45,10 @@
 #include <Eigen/Dense>
 #include "parameters.h"
 
+// new include ++++
+#include <Eigen/SparseCholesky>
+#include <Eigen/Sparse>
+typedef Eigen::SparseMatrix<double> SpMat; 
 
 
 using namespace std;
@@ -341,6 +345,17 @@ class VOCAL_TRACT {
     //==========================================================================
     // Initialization
     void init();
-};
+
+    //==========================================================================
+    // New functions for the LDL.T solve update
+    SpMat A;
+    void ud_o_init();
+    void A_update();
+    void A_init();
+    void RHS_update();
+    Matrix<double, 5, 1> delta;
+    Matrix<double, 5, 1> RHS_vec;
+
+    Eigen::SimplicialCholesky <SpMat> solver;};
 
 #endif /* VOCAL_TRACT_H */

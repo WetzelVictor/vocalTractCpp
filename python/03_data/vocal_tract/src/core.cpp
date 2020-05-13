@@ -19,7 +19,7 @@
 // "https://pyphs.github.io/pyphs/".
 // 
 // Created on:
-//     2020/05/12 11:47:11
+//     2020/05/13 14:36:42
 // 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -224,16 +224,16 @@
         v[3] = *mu_4;    
         v[4] = *mu_5;    
         v[5] = *mu_6;    
-        v[6] = *(mu_1_add_mu_2);    
-        v[7] = *(mu_2_add_mu_3);    
-        v[8] = *(mu_3_add_mu_4);    
-        v[9] = *(mu_4_add_mu_5);    
-        v[10] = *(mu_5_add_mu_6);    
-        v[11] = *(mu_1minus_mu_2);    
-        v[12] = *(mu_2minus_mu_3);    
-        v[13] = *(mu_3minus_mu_4);    
-        v[14] = *(mu_4minus_mu_5);    
-        v[15] = *(mu_5minus_mu_6);    
+        v[6] = *mu_1_add_mu_2;    
+        v[7] = *mu_2_add_mu_3;    
+        v[8] = *mu_3_add_mu_4;    
+        v[9] = *mu_4_add_mu_5;    
+        v[10] = *mu_5_add_mu_6;    
+        v[11] = *mu_1minus_mu_2;    
+        v[12] = *mu_2minus_mu_3;    
+        v[13] = *mu_3minus_mu_4;    
+        v[14] = *mu_4minus_mu_5;    
+        v[15] = *mu_5minus_mu_6;    
         v[16] = *RHS_1;    
         v[17] = *RHS_2;    
         v[18] = *RHS_3;    
@@ -394,16 +394,16 @@
         m(3, 0) = *mu_4;    
         m(4, 0) = *mu_5;    
         m(5, 0) = *mu_6;    
-        m(6, 0) = *(mu_1_add_mu_2);    
-        m(7, 0) = *(mu_2_add_mu_3);    
-        m(8, 0) = *(mu_3_add_mu_4);    
-        m(9, 0) = *(mu_4_add_mu_5);    
-        m(10, 0) = *(mu_5_add_mu_6);    
-        m(11, 0) = *(mu_1minus_mu_2);    
-        m(12, 0) = *(mu_2minus_mu_3);    
-        m(13, 0) = *(mu_3minus_mu_4);    
-        m(14, 0) = *(mu_4minus_mu_5);    
-        m(15, 0) = *(mu_5minus_mu_6);    
+        m(6, 0) = *mu_1_add_mu_2;    
+        m(7, 0) = *mu_2_add_mu_3;    
+        m(8, 0) = *mu_3_add_mu_4;    
+        m(9, 0) = *mu_4_add_mu_5;    
+        m(10, 0) = *mu_5_add_mu_6;    
+        m(11, 0) = *mu_1minus_mu_2;    
+        m(12, 0) = *mu_2minus_mu_3;    
+        m(13, 0) = *mu_3minus_mu_4;    
+        m(14, 0) = *mu_4minus_mu_5;    
+        m(15, 0) = *mu_5minus_mu_6;    
         m(16, 0) = *RHS_1;    
         m(17, 0) = *RHS_2;    
         m(18, 0) = *RHS_3;    
@@ -551,16 +551,16 @@
         *mu_4 = v[3];
         *mu_5 = v[4];
         *mu_6 = v[5];
-        *(mu_1_add_mu_2) = v[6];
-        *(mu_2_add_mu_3) = v[7];
-        *(mu_3_add_mu_4) = v[8];
-        *(mu_4_add_mu_5) = v[9];
-        *(mu_5_add_mu_6) = v[10];
-        *(mu_1minus_mu_2) = v[11];
-        *(mu_2minus_mu_3) = v[12];
-        *(mu_3minus_mu_4) = v[13];
-        *(mu_4minus_mu_5) = v[14];
-        *(mu_5minus_mu_6) = v[15];
+        *mu_1_add_mu_2 = v[6];
+        *mu_2_add_mu_3 = v[7];
+        *mu_3_add_mu_4 = v[8];
+        *mu_4_add_mu_5 = v[9];
+        *mu_5_add_mu_6 = v[10];
+        *mu_1minus_mu_2 = v[11];
+        *mu_2minus_mu_3 = v[12];
+        *mu_3minus_mu_4 = v[13];
+        *mu_4minus_mu_5 = v[14];
+        *mu_5minus_mu_6 = v[15];
         *RHS_1 = v[16];
         *RHS_2 = v[17];
         *RHS_3 = v[18];
@@ -707,16 +707,16 @@
         *mu_4 = m(3, 0);
         *mu_5 = m(4, 0);
         *mu_6 = m(5, 0);
-        *(mu_1_add_mu_2) = m(6, 0);
-        *(mu_2_add_mu_3) = m(7, 0);
-        *(mu_3_add_mu_4) = m(8, 0);
-        *(mu_4_add_mu_5) = m(9, 0);
-        *(mu_5_add_mu_6) = m(10, 0);
-        *(mu_1minus_mu_2) = m(11, 0);
-        *(mu_2minus_mu_3) = m(12, 0);
-        *(mu_3minus_mu_4) = m(13, 0);
-        *(mu_4minus_mu_5) = m(14, 0);
-        *(mu_5minus_mu_6) = m(15, 0);
+        *mu_1_add_mu_2 = m(6, 0);
+        *mu_2_add_mu_3 = m(7, 0);
+        *mu_3_add_mu_4 = m(8, 0);
+        *mu_4_add_mu_5 = m(9, 0);
+        *mu_5_add_mu_6 = m(10, 0);
+        *mu_1minus_mu_2 = m(11, 0);
+        *mu_2minus_mu_3 = m(12, 0);
+        *mu_3minus_mu_4 = m(13, 0);
+        *mu_4minus_mu_5 = m(14, 0);
+        *mu_5minus_mu_6 = m(15, 0);
         *RHS_1 = m(16, 0);
         *RHS_2 = m(17, 0);
         *RHS_3 = m(18, 0);
@@ -1104,34 +1104,34 @@
             *mu_6 = value;
         }
         if(index == 6) {
-            *(mu_1_add_mu_2) = value;
+            *mu_1_add_mu_2 = value;
         }
         if(index == 7) {
-            *(mu_2_add_mu_3) = value;
+            *mu_2_add_mu_3 = value;
         }
         if(index == 8) {
-            *(mu_3_add_mu_4) = value;
+            *mu_3_add_mu_4 = value;
         }
         if(index == 9) {
-            *(mu_4_add_mu_5) = value;
+            *mu_4_add_mu_5 = value;
         }
         if(index == 10) {
-            *(mu_5_add_mu_6) = value;
+            *mu_5_add_mu_6 = value;
         }
         if(index == 11) {
-            *(mu_1minus_mu_2) = value;
+            *mu_1minus_mu_2 = value;
         }
         if(index == 12) {
-            *(mu_2minus_mu_3) = value;
+            *mu_2minus_mu_3 = value;
         }
         if(index == 13) {
-            *(mu_3minus_mu_4) = value;
+            *mu_3minus_mu_4 = value;
         }
         if(index == 14) {
-            *(mu_4minus_mu_5) = value;
+            *mu_4minus_mu_5 = value;
         }
         if(index == 15) {
-            *(mu_5minus_mu_6) = value;
+            *mu_5minus_mu_6 = value;
         }
         if(index == 16) {
             *RHS_1 = value;
@@ -1615,11 +1615,11 @@
     _ud_o(13, 0) = (*mu_3) - (*mu_4);
     _ud_o(14, 0) = (*mu_4) - (*mu_5);
     _ud_o(15, 0) = (*mu_5) - (*mu_6);
-    _ud_o(16, 0) = -1.0/2.0*(*(mu_1minus_mu_2))*(*nu_12) + (1.0/2.0)*(*mu_1)*(*nu_L1) - 1.0/2.0*(*mu_2)*(*nu_23);
-    _ud_o(17, 0) = -1.0/2.0*(*(mu_2minus_mu_3))*(*nu_23) + (1.0/2.0)*(*mu_2)*(*nu_12) - 1.0/2.0*(*mu_3)*(*nu_34);
-    _ud_o(18, 0) = -1.0/2.0*(*(mu_3minus_mu_4))*(*nu_34) + (1.0/2.0)*(*mu_3)*(*nu_23) - 1.0/2.0*(*mu_4)*(*nu_45);
-    _ud_o(19, 0) = -1.0/2.0*(*(mu_4minus_mu_5))*(*nu_45) + (1.0/2.0)*(*mu_4)*(*nu_34) - 1.0/2.0*(*mu_5)*(*nu_56);
-    _ud_o(20, 0) = -1.0/2.0*(*(mu_5minus_mu_6))*(*nu_56) + (1.0/2.0)*(*mu_5)*(*nu_45) - 1.0/2.0*(*mu_6)*(*nu_R6);
+    _ud_o(16, 0) = (1.0/2.0)*(*mu_1)*(*nu_L1) - 1.0/2.0*(*mu_1minus_mu_2)*(*nu_12) - 1.0/2.0*(*mu_2)*(*nu_23);
+    _ud_o(17, 0) = (1.0/2.0)*(*mu_2)*(*nu_12) - 1.0/2.0*(*mu_2minus_mu_3)*(*nu_23) - 1.0/2.0*(*mu_3)*(*nu_34);
+    _ud_o(18, 0) = (1.0/2.0)*(*mu_3)*(*nu_23) - 1.0/2.0*(*mu_3minus_mu_4)*(*nu_34) - 1.0/2.0*(*mu_4)*(*nu_45);
+    _ud_o(19, 0) = (1.0/2.0)*(*mu_4)*(*nu_34) - 1.0/2.0*(*mu_4minus_mu_5)*(*nu_45) - 1.0/2.0*(*mu_5)*(*nu_56);
+    _ud_o(20, 0) = (1.0/2.0)*(*mu_5)*(*nu_45) - 1.0/2.0*(*mu_5minus_mu_6)*(*nu_56) - 1.0/2.0*(*mu_6)*(*nu_R6);
     _ud_o(21, 0) = (*RHS_1);
     _ud_o(22, 0) = (*RHS_2);
     _ud_o(23, 0) = (*RHS_3);

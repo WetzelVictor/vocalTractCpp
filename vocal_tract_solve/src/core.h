@@ -348,7 +348,7 @@ class VOCAL_TRACT {
     // Initialization
     void init();
     //==========================================================================
-    // Nouvelles fonctions pour le solve LDL.T
+    // New functions for the LDL.T solve update
     SpMat A;
     void ud_o_init();
     void A_update();
