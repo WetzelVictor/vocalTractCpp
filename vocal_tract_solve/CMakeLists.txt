@@ -3,7 +3,7 @@
 cmake_minimum_required(VERSION 3.1.0 FATAL_ERROR)
 
 # Activate C++ 11
-set (CMAKE_CXX_STANDARD 11)
+set (CMAKE_CXX_STANDARD 17)
 
 # Project's name
 project(vocal_tract CXX)
@@ -15,6 +15,8 @@ set(CMAKE_BUILD_TYPE Release)
 set(CMAKE_BINARY_DIR ${CMAKE_SOURCE_DIR}/bin)
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
+
+add_compile_options("-fno-stack-protector")
 
 # Set the needed source files
 set(SOURCE_FILES
