@@ -48,6 +48,7 @@
 
     // new include ++++
     #include <Eigen/SparseCholesky>
+    #include<Eigen/IterativeLinearSolvers>
     #include <Eigen/Sparse>
     typedef Eigen::SparseMatrix<double> SpMat; 
 
@@ -383,7 +384,9 @@ class VOCAL_TRACT {
     Matrix<double, 5, 1> delta;
     Matrix<double, 5, 1> RHS_vec;
 
-    Eigen::SimplicialCholesky <SpMat> solver;};
+    // Eigen::SimplicialCholesky <SpMat> solver;
+    Eigen::BiCGSTAB<SparseMatrix<double> > solver;
+    };
 
 
 #endif /* VOCAL_TRACT_H */

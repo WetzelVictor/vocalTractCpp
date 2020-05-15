@@ -62,7 +62,7 @@
         _step_Fnl = 1;
 
         // Header for log file
-        FID_log_shp << "iter \t resF \t stepF \t det \t cond" << endl;
+        FID_log_shp << "iter \t\t resF \t\t stepF \t\t det \t\t cond" << endl;
 
         while ((iter_res_Fnl<20) & (res_Fnl()>2.220446049250313e-16) & (step_Fnl()>2.220446049250313e-16)){    
             save_Fnl_update();
@@ -78,11 +78,13 @@
 
 
             // logging infos
+            JacobiSVD<MatrixXd> svd(_jacFnl);
+            double cond = svd.singularValues()(0) / svd.singularValues()(svd.singularValues().size()-1);
             FID_log_shp << iter_res_Fnl 
-              << "\t" << _res_Fnl 
-              << "\t" << _step_Fnl 
-              << "\t" << _jacFnl.determinant()
-              << "\t" << _jacFnl.norm() * _ijacFnl.norm()
+              << "\t\t" << _res_Fnl 
+              << "\t\t" << _step_Fnl 
+              << "\t\t" << _jacFnl.determinant()
+              << "\t\t" << cond
               << endl;
         } // end of while
         dxH_update();
@@ -1862,8 +1864,13 @@
         }
 
     // logging infos about inversion
-    FID_log_Q22 << "relative error" << "\t" << endl;
-    FID_log_Q22 << (A * delta - RHS_vec).norm() / RHS_vec.norm();
+    FID_log_Q22 << "Relative error " << "\t\t" 
+                << "Det" << "\t\t"
+                <<  endl;
+
+    FID_log_Q22 //<< (A * delta - RHS_vec).norm() / RHS_vec.norm() 
+                << "\t\t" << solver.error() 
+                << endl;
 
     // storing results
     _ud_o(25, 0) = delta(0, 0);
