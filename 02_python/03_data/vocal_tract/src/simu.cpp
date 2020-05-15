@@ -19,7 +19,7 @@
 // "https://pyphs.github.io/pyphs/".
 // 
 // Created on:
-//     2020/05/15 10:31:46
+//     2020/05/15 11:22:59
 // 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -86,7 +86,7 @@ int main() {
     //==========================================================================
     // Number of time-steps to process
 
-    const unsigned int nt = 1000000;
+    const unsigned int nt = 250000;
 
     //==========================================================================
     // Define Progressbar refresh time
@@ -112,12 +112,12 @@ int main() {
     H5File h5fid;
     try{
         {
-            h5fid = H5File("/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/data/results.h5", H5F_ACC_RDWR);
+            h5fid = H5File("/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/02_python/03_data/data/results.h5", H5F_ACC_RDWR);
         }
     }
     catch(FileIException error){
         {
-            cerr << "Failed opening /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/data/results.h5 file" << endl;
+            cerr << "Failed opening /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/02_python/03_data/data/results.h5 file" << endl;
             exit(1);
         }
     }
@@ -247,7 +247,7 @@ int main() {
 
     cout << endl;
     cout << "Results written in" << endl;
-    cout << "/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/python/03_data/data/results.h5"<< endl;
+    cout << "/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/02_python/03_data/data/results.h5"<< endl;
     cout << endl;
 
     //==========================================================================
