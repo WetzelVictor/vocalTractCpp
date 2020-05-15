@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/vocal_tract.dir/src/core.cpp.o CMakeFiles/vocal_tract.dir/src/parameters.cpp.o CMakeFiles/vocal_tract.dir/src/simu.cpp.o  -o ../bin/vocal_tract  -lhdf5_cpp -lhdf5 -lsz -lz -ldl -lm 
