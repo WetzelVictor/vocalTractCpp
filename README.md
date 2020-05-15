@@ -27,3 +27,10 @@ simulation produced by `PyPHS`.
 
 Third goal is to automatically generate the code for an arbitrary number of
 tubes.
+
+
+## Debug cpp
+Simulation is diverging. We are trying to see if the system is correctly inverting (see folder `04_debug_cpp`). Hypothesis are:
+  1. The system to invert is ill-conditionned at some point
+  2. The discrete PHS is ill-condtionnned
+
