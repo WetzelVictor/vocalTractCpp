@@ -44,6 +44,7 @@
 #include <cmath>
 #include <Eigen/Dense>
 #include "parameters.h"
+#include <fstream>
 
     // new include ++++
     #include <Eigen/SparseCholesky>
@@ -160,6 +161,10 @@ class VOCAL_TRACT {
 //==========================================================================
 // PRIVATE    
     private:
+
+    // Debug log file
+    ofstream FID_log_Q22; 
+    ofstream FID_log_shp; 
     //==========================================================================
     // Sample Rate
     double sampleRate = 1000000.0;
@@ -368,16 +373,17 @@ class VOCAL_TRACT {
     // Initialization
     void init();
 
-        //==========================================================================
-        // New functions for the LDL.T solve update
-        SpMat A;
-        void ud_o_init();
-        void A_update();
-        void A_init();
-        void RHS_update();
-        Matrix<double, 5, 1> delta;
-        Matrix<double, 5, 1> RHS_vec;
+    //==========================================================================
+    // New functions for the LDL.T solve update
+    SpMat A;
+    void ud_o_init();
+    void A_update();
+    void A_init();
+    void RHS_update();
+    Matrix<double, 5, 1> delta;
+    Matrix<double, 5, 1> RHS_vec;
 
-        Eigen::SimplicialCholesky <SpMat> solver;};
+    Eigen::SimplicialCholesky <SpMat> solver;};
+
 
 #endif /* VOCAL_TRACT_H */

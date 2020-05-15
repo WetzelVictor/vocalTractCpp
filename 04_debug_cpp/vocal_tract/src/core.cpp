@@ -60,6 +60,10 @@
         res_Fnl_update();    
         unsigned int iter_res_Fnl = 0;
         _step_Fnl = 1;
+
+        // Header for log file
+        FID_log_shp << "iter \t resF \t stepF \t det \t cond" << endl;
+
         while ((iter_res_Fnl<20) & (res_Fnl()>2.220446049250313e-16) & (step_Fnl()>2.220446049250313e-16)){    
             save_Fnl_update();
             jacGnlnl_update();
@@ -71,7 +75,16 @@
             Fnl_update();
             res_Fnl_update();
             step_Fnl_update();iter_res_Fnl += 1;
-        }    
+
+
+            // logging infos
+            FID_log_shp << iter_res_Fnl 
+              << "\t" << _res_Fnl 
+              << "\t" << _step_Fnl 
+              << "\t" << _jacFnl.determinant()
+              << "\t" << _jacFnl.norm() * _ijacFnl.norm()
+              << endl;
+        } // end of while
         dxH_update();
         z_update();
         y_update();
@@ -1847,7 +1860,13 @@
         if(solver.info()!=Success) {
         cout << "Solving failed" << endl;
         }
-        _ud_o(25, 0) = delta(0, 0);
+
+    // logging infos about inversion
+    FID_log_Q22 << "relative error" << "\t" << endl;
+    FID_log_Q22 << (A * delta - RHS_vec).norm() / RHS_vec.norm();
+
+    // storing results
+    _ud_o(25, 0) = delta(0, 0);
     _ud_o(26, 0) = delta(1, 0);
     _ud_o(27, 0) = delta(2, 0);
     _ud_o(28, 0) = delta(3, 0);
@@ -4241,6 +4260,9 @@ void VOCAL_TRACT::A_init(){
     //==========================================================================
     // Initialization
     void VOCAL_TRACT::init(){    
+        // Opening log files
+        FID_log_shp.open("log_residu.txt");
+        FID_log_Q22.open("log_conditionnement_matrice.txt");
         //==========================================================================
         // Arguments Initialisation Data
         vector<double> x_data = {0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.};
