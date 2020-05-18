@@ -60,10 +60,6 @@
         res_Fnl_update();    
         unsigned int iter_res_Fnl = 0;
         _step_Fnl = 1;
-
-        // Header for log file
-        FID_log_shp << "iter \t\t resF \t\t stepF \t\t det \t\t cond" << endl;
-
         while ((iter_res_Fnl<20) & (res_Fnl()>2.220446049250313e-16) & (step_Fnl()>2.220446049250313e-16)){    
             save_Fnl_update();
             jacGnlnl_update();
@@ -75,18 +71,7 @@
             Fnl_update();
             res_Fnl_update();
             step_Fnl_update();iter_res_Fnl += 1;
-
-
-            // logging infos
-            JacobiSVD<MatrixXd> svd(_jacFnl);
-            double cond = svd.singularValues()(0) / svd.singularValues()(svd.singularValues().size()-1);
-            FID_log_shp << iter_res_Fnl 
-              << "\t\t" << _res_Fnl 
-              << "\t\t" << _step_Fnl 
-              << "\t\t" << _jacFnl.determinant()
-              << "\t\t" << cond
-              << endl;
-        } // end of while
+        }    
         dxH_update();
         z_update();
         y_update();
@@ -1853,9 +1838,6 @@
         RHS_update();
         solver.compute(A);
 
-        // For direct solvers only
-        //solver.factorize(A);
-
         if(solver.info()!=Success) {
         cout << "Decomposition failed" << endl;
         }
@@ -1865,21 +1847,7 @@
         if(solver.info()!=Success) {
         cout << "Solving failed" << endl;
         }
-
-    // For direct solvers
-    // FID_log_Q22 << "Relative error : " 
-                // <<  (A * delta - RHS_vec).norm() / RHS_vec.norm() << endl;
-
-
-
-    // For iterative solvers
-    FID_log_Q22 << "Relative error " << "\t\t" 
-                << "N_it" << "\t\t"
-                <<  endl;
-    FID_log_Q22 << solver.error() << "\t\t" << solver.iterations() << endl;
-
-    // storing results
-    _ud_o(25, 0) = delta(0, 0);
+        _ud_o(25, 0) = delta(0, 0);
     _ud_o(26, 0) = delta(1, 0);
     _ud_o(27, 0) = delta(2, 0);
     _ud_o(28, 0) = delta(3, 0);
@@ -1917,11 +1885,6 @@
         A_init();
         RHS_update();
         solver.compute(A);
-
-        /* For direct solvers only
-        solver.analyzePattern(A);
-        solver.factorize(A);
-        */
 
         if(solver.info()!=Success) {
         cout << "Decomposition failed" << endl;
@@ -4278,9 +4241,6 @@ void VOCAL_TRACT::A_init(){
     //==========================================================================
     // Initialization
     void VOCAL_TRACT::init(){    
-        // Opening log files
-        FID_log_shp.open("log_residu.txt");
-        FID_log_Q22.open("log_conditionnement_matrice.txt");
         //==========================================================================
         // Arguments Initialisation Data
         vector<double> x_data = {0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.};
