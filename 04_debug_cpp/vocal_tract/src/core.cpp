@@ -78,13 +78,13 @@
 
 
             // logging infos
-            JacobiSVD<MatrixXd> svd(_jacFnl);
-            double cond = svd.singularValues()(0) / svd.singularValues()(svd.singularValues().size()-1);
+            // JacobiSVD<MatrixXd> svd(_jacFnl);
+            // double cond = svd.singularValues()(0) / svd.singularValues()(svd.singularValues().size()-1);
             FID_log_shp << iter_res_Fnl 
               << "\t\t" << _res_Fnl 
               << "\t\t" << _step_Fnl 
               << "\t\t" << _jacFnl.determinant()
-              << "\t\t" << cond
+              // << "\t\t" << cond
               << endl;
         } // end of while
         dxH_update();
@@ -1860,7 +1860,8 @@
         cout << "Decomposition failed" << endl;
         }
 
-        delta = solver.solve(RHS_vec);
+        // delta = solver.solve(RHS_vec); // error: malloc() unsorted
+        Eigen::VectorXd delta = solver.solve(RHS_vec); // error: malloc() unsorted
 
         if(solver.info()!=Success) {
         cout << "Solving failed" << endl;

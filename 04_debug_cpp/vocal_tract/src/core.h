@@ -381,7 +381,7 @@ class VOCAL_TRACT {
     void A_update();
     void A_init();
     void RHS_update();
-    Matrix<double, 5, 1> delta;
+    VectorXd delta;
     Matrix<double, 5, 1> RHS_vec;
     
     // DIrect solvers: not robust, too many errors
@@ -391,8 +391,8 @@ class VOCAL_TRACT {
     // Iterative Solvers
     // Eigen::BiCGSTAB<SparseMatrix<double>> solver;
     Eigen::ConjugateGradient<SparseMatrix<double>, 
-                             Lower|Upper//,
-                             // IncompleteCholesky<double>
+                             Lower|Upper,
+                             DiagonalPreconditioner<double>
                             > solver;
   };
 
