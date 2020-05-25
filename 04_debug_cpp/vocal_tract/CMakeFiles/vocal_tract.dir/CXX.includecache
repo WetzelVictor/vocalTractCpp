@@ -32,26 +32,6 @@ Eigen/Sparse
 
 /home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/04_debug_cpp/vocal_tract/src/parameters.h
 
-/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/04_debug_cpp/vocal_tract/src/simu.cpp
-iostream
--
-vector
--
-fstream
--
-string
--
-cstdio
--
-time.h
--
-math.h
--
-H5Cpp.h
--
-core.h
-/home/victorw/ownCloud/IRCAM/03_DOCS/30_code_cpp_vocal_tract/vocalTractCpp/04_debug_cpp/vocal_tract/src/core.h
-
 /usr/local/include/eigen3/Eigen/Cholesky
 Core
 /usr/local/include/eigen3/Eigen/Core

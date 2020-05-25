@@ -19,7 +19,7 @@
 // "https://pyphs.github.io/pyphs/".
 // 
 // Created on:
-//     2020/05/15 11:22:59
+//     2020/05/19 15:50:59
 // 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -96,13 +96,13 @@ int main() {
     // Initialize struct
 
     typedef struct argstruct{    
-        double u[8];
-        double x[36];
-        double dx[36];
-        double dxH[36];
-        double w[8];
-        double z[8];
-        double y[8];
+        double u[6];
+        double x[21];
+        double dx[21];
+        double dxH[21];
+        double w[5];
+        double z[5];
+        double y[6];
     } argstruct;
     argstruct mystruct;
 
@@ -126,7 +126,7 @@ int main() {
     // Initialize HDF5 objects for read/write
 
     const unsigned int h5rank = 2;
-    hsize_t h5count[h5rank] = {1, 140};
+    hsize_t h5count[h5rank] = {1, 85};
     hsize_t h5offset[h5rank] = {0, 0};
 
 
@@ -174,7 +174,7 @@ int main() {
         //======================================================================
         // Update controls
                 
-        vocal_tract.set_u((Matrix<double, 8, 1> &)mystruct.u);
+        vocal_tract.set_u((Matrix<double, 6, 1> &)mystruct.u);
 
         //======================================================================
         // Process update
@@ -184,22 +184,22 @@ int main() {
         //======================================================================
         // Update Results
                 
-        for (unsigned int ind=0; ind<36; ind++){
+        for (unsigned int ind=0; ind<21; ind++){
             mystruct.x[ind] = vocal_tract.x_vector()[ind];
         }
-        for (unsigned int ind=0; ind<36; ind++){
+        for (unsigned int ind=0; ind<21; ind++){
             mystruct.dx[ind] = vocal_tract.dx_vector()[ind];
         }
-        for (unsigned int ind=0; ind<36; ind++){
+        for (unsigned int ind=0; ind<21; ind++){
             mystruct.dxH[ind] = vocal_tract.dxH_vector()[ind];
         }
-        for (unsigned int ind=0; ind<8; ind++){
+        for (unsigned int ind=0; ind<5; ind++){
             mystruct.w[ind] = vocal_tract.w_vector()[ind];
         }
-        for (unsigned int ind=0; ind<8; ind++){
+        for (unsigned int ind=0; ind<5; ind++){
             mystruct.z[ind] = vocal_tract.z_vector()[ind];
         }
-        for (unsigned int ind=0; ind<8; ind++){
+        for (unsigned int ind=0; ind<6; ind++){
             mystruct.y[ind] = vocal_tract.y_vector()[ind];
         }
 

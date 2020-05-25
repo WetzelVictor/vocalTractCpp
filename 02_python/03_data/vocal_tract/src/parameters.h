@@ -19,7 +19,7 @@
 // "https://pyphs.github.io/pyphs/".
 // 
 // Created on:
-//     2020/05/15 11:22:53
+//     2020/05/19 15:50:53
 // 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -38,6 +38,6 @@
 #ifndef PARAMETERS_H
 #define PARAMETERS_H
 
-extern const double subs[1][39];
+extern const double subs[1][24];
 
 #endif /* defined(PARAMETERS_H) */

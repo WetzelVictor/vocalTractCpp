@@ -75,7 +75,11 @@ class VocalTractLumpedParameter(VocalTractBase):
             for i, w in enumerate(equations.w):
                 zw = w * equations.zw[i]
                 self.add_dissipations(w, zw)
-            self.set_Jwx(equations.Jwx)
+        zw = equations.zturb
+        w  = equations.w_turb
+        self.add_dissipations(w, zw)
+        self.set_Jwx(equations.Jwx)
+
 
         # Interconnexion matrix
         self.set_Jxx(equations.Jxx)
@@ -129,7 +133,7 @@ class VocalTractEquations():
         for i in range(self.N_lambda):
             self.observers[self.O[i]] = self.rhs(i+1)
 
-        # Dissipations
+        # Dissipations visqueuses
         self.compute_w()
         self.compute_zw()
             
@@ -335,9 +339,15 @@ class VocalTractEquations():
         #Jyx[2::,2*N-N_lambda:3*N-N_lambda]= -1* sy.eye(N)
 
     def compute_Jwx(self):
-        self.Jwx = sy.SparseMatrix(sy.zeros(self.N+1,
+        if False:
+            self.Jwx = sy.SparseMatrix(sy.zeros(self.N+1,
                                             self.Nxi*self.N-self.N_lambda))
-        self.Jwx[0:self.N+1, 0:self.N+1] = sy.SparseMatrix(sy.eye(self.N+1))
+            self.Jwx[0:self.N+1, 0:self.N+1] = sy.SparseMatrix(sy.eye(self.N+1))
+
+        # terminal dissipation
+        self.Jwx = sy.zeros(1, self.Nxi*self.N-self.N_lambda)
+        self.Jwx[0, 2*self.N - self.N_lambda - 1] = 1
+        print(self.Jwx)
 
     ''' =========================================== '''
     ''' ======= Changement de variable ============ '''
@@ -404,6 +414,8 @@ class VocalTractEquations():
     ''' =========== Dissipation ============ '''
     def compute_w(self):
         self.w = [self.qL, *(self.q_nm_vec), self.qR]
+        self.w_turb   = sy.symbols('w_turb', **PPTY_STATE_VAR) # diss sortie
+        
 
     def compute_zw(self):
         self.zw = []
@@ -423,6 +435,12 @@ class VocalTractEquations():
         # Dernière
         expr = coef_visq * self.ell(self.N)**2 / self.vol(self.N)
         self.zw.append(expr)
+
+        # terminal dissipation (see GSI, 2017, Hélie & Silva)
+        from sympy import Abs
+        surf =  self.vol(self.N) / (2*self.ell(self.N))
+        heavyside = (Abs(self.w_turb) + self.w_turb)/(2*self.rho(self.N))
+        self.zturb = 1/2 * (heavyside/surf)**2
         
     ''' =========================================== '''
     ''' =================== Accesseurs ============ '''
