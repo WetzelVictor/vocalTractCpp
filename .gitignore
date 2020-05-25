@@ -24,3 +24,6 @@ cabal.project.local~
 *.h5
 *.pdf
 *.png
+*.txt
+*.log
+
