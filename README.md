@@ -33,4 +33,10 @@ tubes.
 Simulation is diverging. We are trying to see if the system is correctly inverting (see folder `04_debug_cpp`). Hypothesis are:
   1. The system to invert is ill-conditionned at some point
   2. The discrete PHS is ill-condtionnned
+Changing the constraints solver to "ConjugateGradient" solved part of the
+problem. Now we need to adress deeper problems about the problems
 
+## Numerical investigations
+We will be looking at the SVD of the system to see how stiff the problem is,
+and if it needs further pre-condtionning to make it easier for the solver to
+inverse the Jacobian.
