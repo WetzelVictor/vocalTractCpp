@@ -40,10 +40,14 @@ def insert_solver(folder_path_in, N_tube):
         void A_update();
         void A_init();
         void RHS_update();
-        Matrix<double, 5, 1> delta;
-        Matrix<double, 5, 1> RHS_vec;
+        Matrix<double, {0}, 1> delta;
+        Matrix<double, {0}, 1> RHS_vec;
 
-        Eigen::SimplicialCholesky <SpMat> solver;'''
+        Eigen::ConjugateGradient<SparseMatrix<double>, 
+                             Lower|Upper,
+                             DiagonalPreconditioner<double>
+                            > solver;
+        '''.format(N_tube)
 
     # Includes à entrer au début du fichier
     str_includes = '''
@@ -121,7 +125,7 @@ def insert_solver(folder_path_in, N_tube):
         cout << "Decomposition failed" << endl;
         }
 
-        delta = solver.solve(RHS_vec);
+        Eigen::VectorXd delta = solver.solve(RHS_vec);
 
         if(solver.info()!=Success) {
         cout << "Solving failed" << endl;
